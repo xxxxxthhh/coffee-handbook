@@ -129,6 +129,15 @@ export function runChecks(root){
                   add('lab/snapshot', rel, `#${id} 的 ${k}="${attrs[k]}" ≠ 默认参数重算结果 ${Number(v).toFixed(2)}`);
               }
             }
+            /* expect() 必须覆盖 paint() 会改写的每一个 id：
+               否则模块里改了文案、页面静态文本还留着旧结论，而门禁看不见（QUALITY 第 6 类衰减）。 */
+            const src = fs.readFileSync(labAbs, 'utf8');
+            const touched = new Set([...src.matchAll(/getElementById\('([^']+)'\)/g)].map(m => m[1]));
+            const covered = new Set(Object.keys(exp));
+            [...touched].filter(id => !covered.has(id)).forEach(id =>
+              add('lab/expect-coverage', rel,
+                  `paint() 会改写 #${id}，但 expect() 未覆盖——页面静态文本可能与模块静默漂移`));
+
             (mod.controls || []).forEach(id => {
               const a = selfClosingById(html, id);
               if(!a){ add('lab/control-default', rel, `缺少控件 id="${id}"`); return; }

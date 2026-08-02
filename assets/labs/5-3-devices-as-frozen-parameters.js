@@ -78,6 +78,7 @@
     },
     expect: function(s){
       var out = {
+        devSymptom: { text: s.symptom },
         devName: { text: s.name }, devLocks: { text: s.locks },
         devGives: { text: s.gives }, devWhere: { text: s.where },
         d0: { r: 11, 'fill-opacity': 1 },

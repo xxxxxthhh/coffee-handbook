@@ -68,6 +68,7 @@
     },
     expect: function(s){
       return {
+        skipOut: { text: s.skip },
         n0: { 'fill-opacity': 0.9 }, n1: { 'fill-opacity': 0.15 }, n5: { 'fill-opacity': 0.15 },
         stepName: { text: s.name }, stepControls: { text: s.controls }, stepWhy: { text: s.why }
       };

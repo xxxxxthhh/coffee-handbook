@@ -68,6 +68,7 @@
     paint: paint,
     expect: function(s){
       return {
+        advOut: { text: s.advice },
         rdot: { cx: s.cx, cy: s.cy },
         vA: { text: s.aText }, vB: { text: s.bText },
         ghOut: { text: s.ghText }, khOut: { text: s.khText },

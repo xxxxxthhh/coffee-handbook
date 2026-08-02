@@ -81,6 +81,9 @@
     paint: paint,
     expect: function(s){
       return {
+        kfOut: { text: s.kfText },
+        kbOut: { text: s.kbText },
+        advOut: { text: s.advice },
         curveF: { points: s.pF }, curveB: { points: s.pB },
         tMark: { x1: s.cxF, x2: s.cxF },
         dotF: { cx: s.cxF, cy: s.cyF }, dotB: { cx: s.cxF, cy: s.cyB },

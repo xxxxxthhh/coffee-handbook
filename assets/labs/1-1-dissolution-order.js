@@ -75,6 +75,7 @@
     paint: paint,
     expect: function(s){
       return {
+        advOut: { text: s.advice },
         tmark: { x1: s.x, x2: s.x },
         dotA: { cx: s.x, cy: s.ya }, dotS: { cx: s.x, cy: s.ys }, dotB: { cx: s.x, cy: s.yb },
         curveAcid: { points: s.pAcid }, curveSweet: { points: s.pSweet }, curveBitter: { points: s.pBitter },

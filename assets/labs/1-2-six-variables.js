@@ -57,6 +57,7 @@
     },
     expect: function(s){
       return {
+        focusOut: { text: s.focus },
         'cb-grind': { text: s.backs.grind },
         'cb-temp':  { text: s.backs.temp },
         'cb-time':  { text: s.backs.time },

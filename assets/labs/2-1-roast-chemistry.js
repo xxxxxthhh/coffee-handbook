@@ -76,6 +76,7 @@
     paint: paint,
     expect: function(s){
       return {
+        advOut: { text: s.advice },
         roastCurve: { points: s.curve },
         dropMark: { x1: s.x, x2: s.x },
         dropDot: { cx: s.x, cy: s.y },

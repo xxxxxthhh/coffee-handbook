@@ -74,6 +74,7 @@
     paint: paint,
     expect: function(s){
       return {
+        noteOut: { text: s.note },
         curveIm: { points: s.pIm }, curvePe: { points: s.pPe },
         tmark: { x1: s.xNow, x2: s.xNow },
         dotIm: { cx: s.xNow, cy: s.yIm }, dotPe: { cx: s.xNow, cy: s.yPe },

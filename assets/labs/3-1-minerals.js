@@ -57,6 +57,7 @@
     paint: paint,
     expect: function(s){
       return {
+        advOut: { text: s.advice },
         wdot: { cx: s.cx, cy: s.cy },
         vGh: { text: s.ghText }, vKh: { text: s.khText },
         ratioOut: { text: s.ratioText }, zoneOut: { text: s.zone }

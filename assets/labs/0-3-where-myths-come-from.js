@@ -55,6 +55,7 @@
     paint: paint,
     expect: function(s){
       return {
+        verdictOut: { text: s.verdict },
         barS: { width: s.wS }, barT: { width: s.wT }, barE: { width: s.wE },
         vGrind: { text: s.grindText }, sOut: { text: s.sText },
         tOut: { text: s.tText }, eyOut: { text: s.eyText }

@@ -70,6 +70,8 @@
     },
     expect: function(s){
       return {
+        elWhy: { text: s.why },
+        pathOut: { text: s.path },
         e0: { 'fill-opacity': 0.9 }, e1: { 'fill-opacity': 0.12 }, e4: { 'fill-opacity': 0.12 },
         elName: { text: s.name }, elRole: { text: s.role }, elForm: { text: s.form }
       };

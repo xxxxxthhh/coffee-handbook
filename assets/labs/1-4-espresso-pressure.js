@@ -67,6 +67,7 @@
     paint: paint,
     expect: function(s){
       return {
+        advOut: { text: s.advice },
         barC: { width: s.wC }, barR: { width: s.wR },
         avgMark: { x1: s.xAvg, x2: s.xAvg },
         flowC: { width: s.wFlowC }, flowR: { x: s.xFlowR, width: s.wFlowR },

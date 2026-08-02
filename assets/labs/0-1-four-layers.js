@@ -75,6 +75,9 @@
     },
     expect: function(s){
       return {
+        layerLocks: { text: s.locks },
+        layerLeaves: { text: s.leaves },
+        chainOut: { text: s.chain },
         l0: { 'fill-opacity': 0.9 }, l1: { 'fill-opacity': 0.12 },
         l2: { 'fill-opacity': 0.12 }, l3: { 'fill-opacity': 0.12 },
         layerName: { text: s.name },

@@ -70,6 +70,7 @@
     paint: paint,
     expect: function(s){
       return {
+        advOut: { text: s.advice },
         curveCo2: { points: s.pCo2 }, curveAroma: { points: s.pAroma },
         dayMark: { x1: s.x, x2: s.x },
         dotC: { cx: s.x, cy: s.yc }, dotA: { cx: s.x, cy: s.ya },

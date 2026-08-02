@@ -89,6 +89,7 @@
     },
     expect: function(s){
       var out = {
+        catRefs: { text: s.refs },
         catName: { text: s.name }, catSubs: { text: s.subs }, catConfuse: { text: s.confuse },
         sec0: { 'fill-opacity': 0.85 }, sec3: { 'fill-opacity': 0.18 }
       };

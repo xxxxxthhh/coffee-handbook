@@ -108,6 +108,12 @@ const MUTATIONS = [
   { name: 'chapters/ 里多出未登记的文件', rule: 'count/manifest-vs-files',
     apply: (tmp) => fs.writeFileSync(path.join(tmp, 'chapters', '9-9-stray.html'), '<html></html>') },
 
+  { name: 'expect() 漏掉 paint() 会改写的诊断文案', rule: 'lab/expect-coverage',
+    apply: edit('assets/labs/1-3-control-chart.js', '        zoneOut: { text: s.zone },\n', '') },
+
+  { name: 'theme.js 不再在打印前强制浅色', rule: 'print/force-light',
+    apply: edit('assets/theme.js', "window.addEventListener('beforeprint'", "window.addEventListener('noop'") },
+
   { name: '打印样式退回只写 html 选择器', rule: 'print/force-light',
     apply: edit('assets/handbook.css', 'html,\n  html[data-theme],\n  html:not([data-theme="light"]){', 'html{') },
 

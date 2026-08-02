@@ -67,6 +67,7 @@
     paint: paint,
     expect: function(s){
       return {
+        advOut: { text: s.advice },
         rdot: { cx: s.cx, cy: s.cy },
         vRoast: { text: s.rText }, vEy: { text: s.eyText },
         rangeOut: { text: s.rangeText }, zoneOut: { text: s.zone }

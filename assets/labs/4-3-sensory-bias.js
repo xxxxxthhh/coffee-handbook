@@ -60,6 +60,7 @@
     paint: paint,
     expect: function(s){
       return {
+        advOut: { text: s.advice },
         barS: { width: s.wS }, barB: { width: s.wB }, barA: { width: s.wA },
         vTemp: { text: s.tempText }, sOut: { text: s.sText }, bOut: { text: s.bText },
         aOut: { text: s.aText }, relOut: { text: s.relText }, zoneOut: { text: s.zone }
