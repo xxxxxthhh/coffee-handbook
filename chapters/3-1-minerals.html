@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3.1 矿物质的角色 · 咖啡风味科学手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/handbook.css">
+</head>
+<body>
+<button class="theme-toggle" type="button" aria-label="切换深色/浅色模式" title="切换深色/浅色模式">
+  <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+</button>
+
+<div class="wrap">
+
+<header class="ch">
+  <div class="dotrow" aria-hidden="true">
+    <i></i><i class="a"></i><i></i><i class="s"></i><i class="a"></i><i></i><i class="b"></i><i></i><i class="a"></i><i></i>
+  </div>
+  <div class="kicker"><a href="../index.html">咖啡风味科学手册</a> · Part 3 · Water 水</div>
+  <h1>3.1 What Minerals Do
+    <span class="zh">矿物质的角色：硬度是手，碱度是缓冲垫</span>
+  </h1>
+  <div class="meta">
+    <span>难度 <b>★★☆</b></span>
+    <span>阅读 + 玩 <b>~14 min</b></span>
+    <span>玄学祛魅指数 <b>极高</b></span>
+    <span>前置 <b><a href="1-3-control-chart.html">1.3 萃取率与浓度</a></b></span>
+  </div>
+</header>
+
+<!-- ============ 先猜一次 ============ -->
+<section id="guess">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Guess First 先猜一次</span></div>
+  <h2>凭直觉，别查</h2>
+  <p class="big">用纯净水（几乎不含矿物质）冲咖啡，结果会是？</p>
+  <div class="guess" id="guessBox">
+    <div class="opts">
+      <button data-g="clean">最干净，杂味最少</button>
+      <button data-g="thin">偏薄、偏空</button>
+      <button data-g="same">和自来水差不多</button>
+    </div>
+    <div class="after">已记住你的选择。提示：水在这里不只是溶剂，它还是反应的参与者。</div>
+  </div>
+</section>
+
+<!-- ============ 核心概念 ============ -->
+<section id="concept">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Core Concept 核心概念</span></div>
+  <h2>水不是背景，是试剂</h2>
+  <p>一杯咖啡里约 98% 是水，可它在讨论中常被当成「无色无味的背景」。实际上，水中溶解的离子直接参与萃取，而且两类离子做的是<b>两件不同的事</b>。</p>
+  <h3>硬度：萃取的「手」</h3>
+  <p><span class="term" data-term="General Hardness, GH" data-zh="总硬度" data-def="水中钙离子与镁离子的总量，通常以「相当于多少 mg/L 碳酸钙」表示。它参与结合咖啡中带负电的风味分子，是决定萃取效率的主要水质变量。">总硬度</span>指的是水里的钙离子与镁离子（习惯上换算成「相当于多少 ppm 碳酸钙」）。这些二价阳离子能与咖啡中带负电的风味分子结合，把它们更有效地从粉里「拉」进水中。硬度太低，水抓取风味物质的能力弱，同样参数下萃取率偏低，杯子薄而空——这就是纯净水直冲的结果。</p>
+  <h3>碱度：酸质的「缓冲垫」</h3>
+  <p><span class="term" data-term="Alkalinity, KH" data-zh="碱度" data-def="水中和酸的能力，主要由碳酸氢根提供，同样以碳酸钙当量表示。它决定咖啡中的酸被中和掉多少，进而决定杯中酸的强度与形态。">碱度</span>衡量的是水中和酸的能力，主要来自碳酸氢根。咖啡里的有机酸进入水中后，会被碱度「吃掉」一部分。碱度低，酸感直接、明亮，但也容易显得尖锐不稳定；碱度高，酸被抹平，杯子变得圆钝——过高时会出现一种发干、类似粉笔的口感，明亮度与层次一起消失。</p>
+  <div class="formula">硬度 GH ↑ → 萃取效率 ↑ → 更厚、更多风味物质（也更容易带出苦涩）<br>碱度 KH ↑ → 酸被中和 ↑ → 更圆钝（过高则平板、发干）<br><br>两个轴各管一件事，<b>它们不能互相替代</b>——这正是「TDS 一个数字定水质」失效的原因</div>
+  <p data-diag="杯子发钝、发平，酸感被抹掉，甚至有粉笔般的干感|水的碱度过高|换用碱度更低的水源，或用低碱度水稀释；不要靠磨细来「找回明亮度」">最常见的误解是把水质压缩成一个数字。市售 TDS 笔测的是电导率，它给出的是「离子总量」的粗略代理——<b>同样是 150 ppm 的读数，可以是高硬度低碱度（明亮饱满），也可以是低硬度高碱度（薄而平）</b>。两杯咖啡会天差地别，而那个数字一模一样。所以水质需要两个轴，而不是一个刻度。</p>
+</section>
+
+<!-- ============ 交互实验 ============ -->
+<section id="lab">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Interactive Lab 交互实验</span></div>
+  <h2>把你的水放到二维图上</h2>
+  <p>横轴硬度、纵轴碱度，中间的方框是常见的参考带。拖动两个滑块，看落点掉进哪个区。默认停在硬度 68 ppm、碱度 40 ppm——落在参考区。</p>
+
+  <div class="lab" data-print-note="（在线版可拖动硬度与碱度滑块；打印版展示默认场景：硬度 68 ppm、碱度 40 ppm，落在参考区）">
+    <div class="lab-head">
+      <span class="t">Hardness × Alkalinity · 硬度与碱度</span>
+      <span class="presets">
+        <button data-p="gh=5,kh=5">纯净水</button>
+        <button data-p="gh=68,kh=40">参考区</button>
+        <button data-p="gh=120,kh=110">高矿物质自来水</button>
+      </span>
+    </div>
+    <div class="lab-body">
+      <div class="sliders">
+        <div class="sl">
+          <label>总硬度 GH（以 CaCO₃ 计）<b id="vGh">68 ppm</b></label>
+          <input type="range" id="gh" min="0" max="250" step="1" value="68">
+        </div>
+        <div class="sl">
+          <label>碱度 KH（以 CaCO₃ 计）<b id="vKh">40 ppm</b></label>
+          <input type="range" id="kh" min="0" max="200" step="1" value="40">
+        </div>
+      </div>
+
+      <div class="chartbox">
+        <svg viewBox="0 0 640 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="硬度与碱度的二维图，中间为参考带">
+          <rect x="70" y="40" width="104" height="280" fill="var(--sour)" opacity="0.08"/>
+          <rect x="382" y="40" width="208" height="280" fill="var(--bitter)" opacity="0.10"/>
+          <rect x="174" y="215" width="208" height="70" fill="var(--accent)" opacity="0.18" stroke="var(--accent)" stroke-width="2" rx="4"/>
+          <text x="278" y="207" text-anchor="middle" class="zl" fill="var(--accent)">参考区</text>
+
+          <line x1="174" y1="40" x2="174" y2="320" stroke="var(--ink-soft)" stroke-width="1" stroke-dasharray="4 4" opacity=".5"/>
+          <line x1="382" y1="40" x2="382" y2="320" stroke="var(--ink-soft)" stroke-width="1" stroke-dasharray="4 4" opacity=".5"/>
+          <line x1="70" y1="285" x2="590" y2="285" stroke="var(--ink-soft)" stroke-width="1" stroke-dasharray="4 4" opacity=".5"/>
+          <line x1="70" y1="215" x2="590" y2="215" stroke="var(--ink-soft)" stroke-width="1" stroke-dasharray="4 4" opacity=".5"/>
+
+          <text x="120" y="60" text-anchor="middle" class="zl">硬度不足</text>
+          <text x="486" y="60" text-anchor="middle" class="zl">硬度偏高</text>
+          <text x="596" y="120" text-anchor="end" class="rl">碱度偏高：酸被抹平</text>
+          <text x="596" y="312" text-anchor="end" class="rl">碱度不足：酸无遮拦</text>
+
+          <line x1="70" y1="320" x2="590" y2="320" stroke="var(--ink)" stroke-width="1.5"/>
+          <line x1="70" y1="40"  x2="70"  y2="320" stroke="var(--ink)" stroke-width="1.5"/>
+          <g class="ax">
+            <text x="70"  y="338" text-anchor="middle">0</text>
+            <text x="174" y="338" text-anchor="middle">50</text>
+            <text x="278" y="338" text-anchor="middle">100</text>
+            <text x="382" y="338" text-anchor="middle">150</text>
+            <text x="486" y="338" text-anchor="middle">200</text>
+            <text x="590" y="338" text-anchor="middle">250</text>
+            <text x="62" y="324" text-anchor="end">0</text>
+            <text x="62" y="254" text-anchor="end">50</text>
+            <text x="62" y="184" text-anchor="end">100</text>
+            <text x="62" y="114" text-anchor="end">150</text>
+            <text x="62" y="44"  text-anchor="end">200</text>
+          </g>
+          <text x="330" y="362" text-anchor="middle" class="axt">总硬度 GH (ppm as CaCO₃)</text>
+          <text x="20" y="180" text-anchor="middle" class="axt" transform="rotate(-90 20 180)">碱度 KH (ppm)</text>
+
+          <circle id="wdot" cx="211.4" cy="264" r="9" fill="var(--accent)" stroke="var(--paper)" stroke-width="2.5"/>
+        </svg>
+      </div>
+
+      <div class="readout">
+        <div class="tds">
+          <div class="n" id="ratioOut">1.70</div>
+          <div class="l">硬度 / 碱度 之比<br>（两个轴的相对位置）</div>
+        </div>
+        <div class="diag">
+          <div class="zone" id="zoneOut">参考区</div>
+          <div class="adv" id="advOut">硬度足以带出风味，碱度足以让酸质圆润而不被抹平。多数冲煮的舒适区。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>三个预设讲了一个完整的故事。<b>纯净水</b>落在左下角：没有手去抓风味，也没有垫子接住酸——薄而尖，很多人第一次用纯净水冲会以为豆子坏了。<b>高矿物质自来水</b>落在右上：萃取效率不低，但碱度把酸压得很平，于是「怎么冲都发闷」。<b>参考区</b>在中间偏左下：足够的硬度 + 克制的碱度。</p>
+  <p>方框的位置是<b>参考带而非标准</b>：它来自行业手册的归纳，也随豆子（浅烘对碱度更敏感）与个人偏好移动。本书的用法和 <a href="1-3-control-chart.html">1.3 章</a>的控制图一致——它是让你定位问题的坐标系，不是打分表。具体数值见工具层。</p>
+</section>
+
+<!-- ============ 真实案例 ============ -->
+<section id="case">
+  <div class="sec-tag"><span class="cell" style="background:var(--sour)"></span><span class="lab">Case Study 真实案例</span></div>
+  <h2>不是所有离子都一样：2014 年那篇论文</h2>
+  <div class="case">
+    <div class="case-head"><span class="cell"></span>Hendon, Colonna-Dashwood &amp; Colonna-Dashwood · JAFC · 2014</div>
+    <div class="case-body">
+      <p>一位计算化学家与两位咖啡从业者合作，用分子层面的计算配合冲煮实验，逐个考察水中常见阳离子与咖啡风味分子的结合能力，再看它们对萃取的实际影响。</p>
+      <div class="stats">
+        <div class="stat"><div class="n g">Mg²⁺ / Ca²⁺</div><div class="l">二价阳离子与风味分子结合，显著参与萃取</div></div>
+        <div class="stat"><div class="n g">Na⁺</div><div class="l">一价钠离子的作用明显弱得多</div></div>
+        <div class="stat"><div class="n g">HCO₃⁻</div><div class="l">碱度中和酸，是另一条独立的作用路径</div></div>
+      </div>
+      <p>这项工作的价值不在于给出一份「最佳配方」，而在于把水质从一个含混的整体拆成<b>可分别讨论的成分</b>：镁与钙参与萃取（且两者偏好的分子不完全相同），钠几乎不帮忙，碳酸氢根走的是完全不同的一条路——中和酸。这正是本章那张二维图的理论依据。</p>
+      <p>它也解释了一个长期存在的混乱：为什么「加点矿物质水更好喝」有时灵、有时不灵。如果补进去的主要是钠盐，萃取几乎不会改善；如果补进去的同时带来了大量碳酸氢根，酸质反而会被压平。<b>加什么，比加多少更重要。</b></p>
+      <p>需要标注的边界：该研究考察的是特定的化合物与冲煮条件，把其中的定量结论直接推广到任意豆子与器具并不稳妥。可迁移的是分解方式——先问离子种类，再问浓度。</p>
+      <div class="src">来源：Hendon, Colonna-Dashwood &amp; Colonna-Dashwood (2014), The Role of Dissolved Cations in Coffee Extraction, Journal of Agricultural and Food Chemistry 62(21)；同作者的科普专著 Water for Coffee (2015) 汇总了后续的实践方法。水质建议区间见 SCA 相关文件，具体数值以现行版本为准。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 工具层 ============ -->
+<section id="tools">
+  <div class="sec-tag"><span class="cell" style="background:var(--neutral)"></span><span class="lab">Tooling Sidebar 工具层</span></div>
+  <div class="toolbox">
+    <div class="toolbox-head">
+      <span class="t">测水与读数（会过期，正文不依赖本区块）</span>
+      <span class="date">截至 2026-08</span>
+    </div>
+    <div class="toolbox-body">
+      <p><b>常被引用的参考区间</b>：行业手册中常见的冲煮水建议为总硬度约 50–175 ppm（以 CaCO₃ 计，目标值常取 ~68）、碱度约 40 ppm 上下、pH 接近中性、钠含量低。这些数字来自特定年代的归纳，其内部一致性与适用范围近年受到讨论——把它当参考起点，以现行标准文件与你的杯子为准。</p>
+      <p><b>TDS 笔的局限</b>：它测的是电导率并按经验系数折算，无法区分硬度与碱度，也无法区分钙、镁与钠。用它监测「水源有没有变」尚可，用它判断「水好不好」不行。</p>
+      <p><b>硬度/碱度试纸与滴定套件</b>：水族与泳池用的 GH / KH 测试套件能分别读出两个轴，精度足够做冲煮判断，价格远低于实验室方法。滴定法比试纸更稳定。</p>
+      <p><b>自来水报告</b>：多数自来水公司会公布水质年报，其中的硬度与碱度数据可作为起点，但管网末端与季节波动都会让实际值偏离。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Quiz ============ -->
+<section id="quiz">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Quiz 自测</span></div>
+  <h2>章末自测</h2>
+  <div class="quiz">
+
+    <details>
+      <summary><span class="qtype">概念题</span>两瓶水的 TDS 读数都是 150 ppm，冲出来却一杯明亮饱满、一杯薄而平。请解释。</summary>
+      <div class="answer">
+        <p>TDS 笔读的是电导率，反映离子总量，不区分种类。第一瓶可能是<b>高硬度、低碱度</b>：钙镁离子帮助萃取，杯子饱满，而低碱度让酸质保留下来，显得明亮。第二瓶可能是<b>低硬度、高碱度</b>（例如以碳酸氢钠为主）：抓取风味的能力弱，酸又被大量中和，于是薄而平。</p>
+        <p>本章那张二维图正是为此存在：<b>水质有两个自由度</b>，压成一个数字就会丢掉其中一维。要判断水的行为，需要分别知道硬度与碱度。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">场景判断</span>你搬了家，同样的豆子、同样的参数，咖啡突然变得「发闷、没有酸」。怎么用两个轴来诊断？</summary>
+      <div class="answer">
+        <p>先怀疑碱度：新水源的碳酸氢根含量高，把酸中和掉了，症状正是发闷、明亮度消失，严重时带粉笔般的干感。验证方法很直接——<b>用瓶装低碱度水或自配水冲一杯对照</b>，如果酸质回来了，问题在水而不在参数。</p>
+        <p>不要先动研磨。提高萃取率并不能「找回」被中和掉的酸，反而会把苦涩物质一起带出来，让杯子更糟。<b>水的问题要用水解决</b>——这是本章最实用的一条纪律。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">计算题</span>某水样硬度 30 ppm、碱度 90 ppm。它落在图上哪个区？如果你只能用纯净水按比例稀释，稀释一半后落在哪里？这解决问题了吗？</summary>
+      <div class="answer">
+        <p>原始水样：硬度 30（低于 50，硬度不足）、碱度 90（高于 75，碱度偏高）→ 落在左上角的「<b>软而钝：又薄又平</b>」区。</p>
+        <p>稀释一半：硬度 15、碱度 45。碱度回到了参考带内，但硬度更低了——落点从左上移到左中，也就是「<b>软而平衡</b>」：发闷改善了，杯子却更薄。</p>
+        <p>所以稀释只解决了一半问题：它同时降低两个轴，而你只想降一个。要同时修好，需要<b>先稀释、再补硬度</b>——这正是 <a href="3-2-water-recipes.html">3.2 章</a>自配水的思路：从零矿物质出发，两个轴分别加。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">思考题</span>为什么说「水质是被低估最狠的变量」？它和研磨度这类变量在诊断上有什么不同？</summary>
+      <div class="answer">
+        <p>因为它<b>不在你的操作清单里</b>。研磨度、水温、时间每次冲煮都会被设定，一旦出问题，它们自然进入怀疑名单；而水通常是「打开水龙头」这一步，既不记录也不变化——直到你搬家、换季或换了净水滤芯。</p>
+        <p>更麻烦的是它的症状会<b>伪装成别的问题</b>：碱度过高像「豆子不新鲜」，硬度不足像「萃取不足」。于是人们花很多时间调研磨与时间，却在修一个不在那里的问题。</p>
+        <p>诊断上的区别因此是：研磨度的问题可以通过小步调整收敛，而水的问题需要<b>替换法</b>验证——换一瓶已知成分的水冲一杯对照。这也是本书把「用参照物验证」当作通用手段的又一次应用（<a href="0-1-four-layers.html">0.1 章</a>用参照豆，这里用参照水）。</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- nav:auto -->
+<nav class="next">
+  <a href="2-3-degassing.html">← 2.3 养豆与排气</a>
+  <a href="3-2-water-recipes.html">3.2 配水实践 →</a>
+</nav>
+<!-- /nav:auto -->
+
+</div>
+
+<script src="../assets/theme.js"></script>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/lab-core.js"></script>
+<script src="../assets/labs/3-1-minerals.js"></script>
+</body>
+</html>

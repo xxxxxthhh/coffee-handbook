@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3.2 配水实践 · 咖啡风味科学手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/handbook.css">
+</head>
+<body>
+<button class="theme-toggle" type="button" aria-label="切换深色/浅色模式" title="切换深色/浅色模式">
+  <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+</button>
+
+<div class="wrap">
+
+<header class="ch">
+  <div class="dotrow" aria-hidden="true">
+    <i class="a"></i><i></i><i class="a"></i><i></i><i class="s"></i><i></i><i class="a"></i><i class="b"></i><i></i><i></i>
+  </div>
+  <div class="kicker"><a href="../index.html">咖啡风味科学手册</a> · Part 3 · Water 水</div>
+  <h1>3.2 Building Your Water
+    <span class="zh">配水实践：从零矿物质开始，两个轴分别加</span>
+  </h1>
+  <div class="meta">
+    <span>难度 <b>★★★</b></span>
+    <span>阅读 + 玩 <b>~13 min</b></span>
+    <span>玄学祛魅指数 <b>高</b></span>
+    <span>前置 <b><a href="3-1-minerals.html">3.1 矿物质的角色</a></b></span>
+  </div>
+</header>
+
+<!-- ============ 先猜一次 ============ -->
+<section id="guess">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Guess First 先猜一次</span></div>
+  <h2>凭直觉，别查</h2>
+  <p class="big">你想自己配一份冲煮水。下面哪种起点最容易做到「可复算」？</p>
+  <div class="guess" id="guessBox">
+    <div class="opts">
+      <button data-g="tap">自来水 + 净水壶</button>
+      <button data-g="bottle">挑一款瓶装矿泉水</button>
+      <button data-g="ro">零矿物质水 + 自己加盐</button>
+    </div>
+    <div class="after">已记住你的选择。提示：可复算的前提是「你知道里面有什么」——哪一种起点满足这个条件？</div>
+  </div>
+</section>
+
+<!-- ============ 核心概念 ============ -->
+<section id="concept">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Core Concept 核心概念</span></div>
+  <h2>加法比减法容易</h2>
+  <p><a href="3-1-minerals.html">3.1 章</a>把水质拆成两个轴：硬度与碱度。问题是，现成的水源上这两个轴<b>是绑在一起的</b>——自来水的硬度和碱度通常同涨同落，净水滤芯也很难只降其中一个。你想动一个轴，另一个跟着动，于是又回到 <a href="0-3-where-myths-come-from.html">0.3 章</a>的变量耦合。</p>
+  <p>解耦的办法是把水拆成「空白 + 两份添加」：先用反渗透或蒸馏得到近乎零矿物质的水作为<b>空白</b>，再用两份浓缩<span class="term" data-term="Stock Solution" data-zh="母液" data-def="预先配好的高浓度溶液，使用时按体积稀释到目标浓度。用两份母液分别控制硬度与碱度，可以让水质的两个轴独立可调、且每次可复算。">母液</span>分别补硬度与碱度。两个轴从此独立可调，而且每一步都能算出来。</p>
+  <div class="formula">母液 A（硬度）：4 g 七水硫酸镁 MgSO₄·7H₂O 溶于 1 L 水<br>　4 ÷ 246.47 × 1000 = 16.23 mmol/L　→ 以 CaCO₃ 计：16.23 × 100.09 ≈ <b>1624 ppm</b><br><br>母液 B（碱度）：4 g 碳酸氢钠 NaHCO₃ 溶于 1 L 水<br>　4 ÷ 84.007 × 1000 = 47.62 mmol/L　→ 碱度以 CaCO₃ 计：47.62 × 50.04 ≈ <b>2383 ppm</b><br><br>取 a mL 母液 A + b mL 母液 B 加进 1 L 零矿物质水：<br>　<b>GH = 1624 × a/1000　　KH = 2383 × b/1000</b></div>
+  <p>为什么硬度用镁而不是钙：镁盐（七水硫酸镁）易溶、易称量，而钙盐在与碳酸氢根共存时容易析出碳酸钙，既改变浓度又在器皿上结垢。为什么碱度用碳酸氢钠：它提供碳酸氢根的同时带入的钠离子对萃取影响较小（<a href="3-1-minerals.html">3.1 章</a>的案例），所以它相对「干净」地只动一个轴。</p>
+  <p data-diag="自配水后杯子发闷、酸被抹平|碱度母液加多了|减少碳酸氢钠母液的用量，硬度母液保持不变——两个轴分别调，别整体稀释">实践上最容易犯的错是<b>碱度加多</b>。硬度加多了杯子会厚、会略苦，还算可控；碱度加多了明亮度直接消失，而且很多人会把这种「闷」归咎于豆子或萃取不足，转头去磨细，结果更糟。</p>
+</section>
+
+<!-- ============ 交互实验 ============ -->
+<section id="lab">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Interactive Lab 交互实验</span></div>
+  <h2>两支母液，落到 3.1 的那张图上</h2>
+  <p>拖动两个滑块，看这升水落在硬度—碱度图的哪里。坐标系与 <a href="3-1-minerals.html">3.1 章</a>完全一致。默认配比是每升加 42 mL 母液 A、17 mL 母液 B——硬度 68.2 ppm、碱度 40.5 ppm，两个轴都在参考带内。</p>
+
+  <div class="lab" data-print-note="（在线版可拖动两支母液的用量；打印版展示默认场景：每升 42 mL 母液 A + 17 mL 母液 B → 硬度 68.2 ppm、碱度 40.5 ppm）">
+    <div class="lab-head">
+      <span class="t">Water Recipe · 母液配水计算器</span>
+      <span class="presets">
+        <button data-p="a=42,b=17">参考带中心</button>
+        <button data-p="a=42,b=6">低碱度实验水</button>
+        <button data-p="a=0,b=0">零矿物质对照</button>
+      </span>
+    </div>
+    <div class="lab-body">
+      <div class="sliders">
+        <div class="sl">
+          <label>母液 A（硫酸镁，管硬度）每升加入<b id="vA">42 mL</b></label>
+          <input type="range" id="a" min="0" max="120" step="1" value="42">
+        </div>
+        <div class="sl">
+          <label>母液 B（碳酸氢钠，管碱度）每升加入<b id="vB">17 mL</b></label>
+          <input type="range" id="b" min="0" max="60" step="1" value="17">
+        </div>
+      </div>
+
+      <div class="chartbox">
+        <svg viewBox="0 0 640 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="自配水落在硬度与碱度二维图上的位置">
+          <rect x="70" y="40" width="104" height="280" fill="var(--sour)" opacity="0.08"/>
+          <rect x="382" y="40" width="208" height="280" fill="var(--bitter)" opacity="0.10"/>
+          <rect x="174" y="215" width="208" height="70" fill="var(--accent)" opacity="0.18" stroke="var(--accent)" stroke-width="2" rx="4"/>
+          <text x="278" y="207" text-anchor="middle" class="zl" fill="var(--accent)">参考区</text>
+
+          <line x1="70" y1="320" x2="590" y2="320" stroke="var(--ink)" stroke-width="1.5"/>
+          <line x1="70" y1="40"  x2="70"  y2="320" stroke="var(--ink)" stroke-width="1.5"/>
+          <g class="ax">
+            <text x="70"  y="338" text-anchor="middle">0</text>
+            <text x="174" y="338" text-anchor="middle">50</text>
+            <text x="278" y="338" text-anchor="middle">100</text>
+            <text x="382" y="338" text-anchor="middle">150</text>
+            <text x="486" y="338" text-anchor="middle">200</text>
+            <text x="590" y="338" text-anchor="middle">250</text>
+            <text x="62" y="324" text-anchor="end">0</text>
+            <text x="62" y="254" text-anchor="end">50</text>
+            <text x="62" y="184" text-anchor="end">100</text>
+            <text x="62" y="114" text-anchor="end">150</text>
+            <text x="62" y="44"  text-anchor="end">200</text>
+          </g>
+          <text x="330" y="362" text-anchor="middle" class="axt">总硬度 GH (ppm as CaCO₃)</text>
+          <text x="20" y="180" text-anchor="middle" class="axt" transform="rotate(-90 20 180)">碱度 KH (ppm)</text>
+
+          <circle id="rdot" cx="211.9" cy="263.3" r="9" fill="var(--accent)" stroke="var(--paper)" stroke-width="2.5"/>
+        </svg>
+      </div>
+
+      <div class="readout">
+        <div class="tds">
+          <div class="n" id="ghOut">68.2 ppm</div>
+          <div class="l">总硬度 GH<br>碱度 KH <span id="khOut">40.5 ppm</span></div>
+        </div>
+        <div class="diag">
+          <div class="zone" id="stateOut">硬度参考带内 · 碱度参考带内</div>
+          <div class="adv" id="advOut">两个轴都在参考带内。把这组配比记下来当基准水，以后调豆子、调参数时它就是不动的那个变量。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>试试「低碱度实验水」这个预设：硬度不变、碱度降到 14 ppm。这是很多人拿来冲浅烘的配置——酸质更直接、明亮度更高，代价是容错变小，萃取上的小偏差会立刻显得尖锐。<b>它不是更好的水，是把杯子往一个方向推的水。</b></p>
+  <p>自配水的真正价值不在「配得准」，而在<b>把水变成一个你知道的常量</b>。一旦水固定下来，你调研磨、调烘焙度时的观察才算数——否则每次换一批自来水，实验就白做了（<a href="0-3-where-myths-come-from.html">0.3 章</a>）。</p>
+</section>
+
+<!-- ============ 真实案例 ============ -->
+<section id="case">
+  <div class="sec-tag"><span class="cell" style="background:var(--sour)"></span><span class="lab">Case Study 真实案例</span></div>
+  <h2>从一个数字到两个轴：水质建议的演变</h2>
+  <div class="case">
+    <div class="case-head"><span class="cell"></span>行业手册 → 分子层面研究 → 社区自配水</div>
+    <div class="case-body">
+      <p>咖啡行业对水的建议经历了一条清晰的演化线，它本身就是一个「结论如何被修订」的样本。</p>
+      <div class="stats">
+        <div class="stat"><div class="n g">早期</div><div class="l">以 TDS（总溶解固体）单一数字为主的水质建议</div></div>
+        <div class="stat"><div class="n g">2014</div><div class="l">分子层面研究指出：离子<b>种类</b>的作用各不相同</div></div>
+        <div class="stat"><div class="n g">此后</div><div class="l">硬度与碱度分开讨论，自配水成为可复算的常规做法</div></div>
+      </div>
+      <p>第一阶段的建议把水质压缩成一个总量指标。它的好处是可测（一支笔就够），代价是丢掉了组成信息——<a href="3-1-minerals.html">3.1 章</a>那道「两瓶 150 ppm 的水」的题目就是这个代价的具体形式。</p>
+      <p>第二阶段，2014 年的阳离子研究把「水质」拆成可分别讨论的成分，随后的科普与实践把它翻译成两个可操作的轴。第三阶段是社区层面的：自配水配方开始流行，人们用母液把水做成可重复的常量，从而让其他变量的实验变得可信。</p>
+      <p>这条线索里有两点值得记住。其一，<b>被修订的不是「水重要」这个结论，而是描述水的坐标系</b>——从一维变成二维。其二，新的坐标系也不是终点：不同豆子、不同烘焙度对碱度的敏感度不同，「参考区」在浅烘与深烘之间并不重合。所以本书给的是轴与方向，具体数字放在工具层并标注日期。</p>
+      <div class="src">来源：SCAA / SCA 水质相关手册与标准（数值以现行版本为准）；Hendon, Colonna-Dashwood &amp; Colonna-Dashwood (2014), Journal of Agricultural and Food Chemistry；Colonna-Dashwood &amp; Hendon, Water for Coffee (2015)。本章母液换算为标准化学计算，可自行核对：摩尔质量取 MgSO₄·7H₂O 246.47、NaHCO₃ 84.007、CaCO₃ 100.09 g/mol。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 工具层 ============ -->
+<section id="tools">
+  <div class="sec-tag"><span class="cell" style="background:var(--neutral)"></span><span class="lab">Tooling Sidebar 工具层</span></div>
+  <div class="toolbox">
+    <div class="toolbox-head">
+      <span class="t">自配水的器材与操作（会过期，正文不依赖本区块）</span>
+      <span class="date">截至 2026-08</span>
+    </div>
+    <div class="toolbox-body">
+      <p><b>空白水</b>：反渗透水或蒸馏水皆可，关键是矿物质接近零、来源稳定。市售「纯净水」的实际含量各家不同，若要精确，仍需以测试套件确认一次。</p>
+      <p><b>称量精度</b>：母液是浓缩的，称 4 g 时的误差会按稀释比例放大到每一升水里。0.01 g 精度的秤更稳妥；没有的话，可以一次配大批量母液（例如 40 g / 10 L）来摊薄称量误差。</p>
+      <p><b>母液保存</b>：装在干净的密闭容器里冷藏，用干净器具取用。碳酸氢钠溶液久置会缓慢分解，建议按周配制；出现浑浊或异味就弃用重配。</p>
+      <p><b>不要照抄矿泉水标签</b>：标签上的数值常是范围或批次平均，且「钙镁总量」与「碱度」未必都列出。要把某款瓶装水当基准水，先用测试套件实测一次。</p>
+      <p><b>器具维护</b>：高硬度水会在加热设备里结垢。自配水的另一个附带好处是可控——你知道自己往壶里放了多少矿物质。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Quiz ============ -->
+<section id="quiz">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Quiz 自测</span></div>
+  <h2>章末自测</h2>
+  <div class="quiz">
+
+    <details>
+      <summary><span class="qtype">计算题</span>自己推一遍母液 A 的浓度：4 g MgSO₄·7H₂O（M = 246.47 g/mol）溶于 1 L 水，以 CaCO₃ 计的硬度是多少 ppm？取 42 mL 加入 1 L 水后呢？</summary>
+      <div class="answer">
+        <p>物质的量：4 ÷ 246.47 = 0.016229 mol = 16.229 mmol，溶于 1 L → 16.229 mmol/L 的 Mg²⁺。</p>
+        <p>换算成碳酸钙当量：二价离子按 1 mmol 对应 1 mmol CaCO₃（M = 100.09 g/mol），得 16.229 × 100.09 ≈ <b>1624 mg/L，即 1624 ppm</b>。</p>
+        <p>取 42 mL 加入 1 L：稀释倍数 42/1000，得 1624 × 0.042 ≈ <b>68.2 ppm</b>。这正是交互里的默认落点。<b>整条链路可核对</b>——这也是自配水相对「换瓶装水试试」的根本优势。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">概念题</span>为什么碱度母液用碳酸氢钠，而硬度母液不用钙盐？</summary>
+      <div class="answer">
+        <p>碱度用碳酸氢钠，是因为它提供碳酸氢根的同时带入的钠离子对萃取影响较小（<a href="3-1-minerals.html">3.1 章</a>的阳离子研究），因此它相对干净地只动碱度这一个轴。</p>
+        <p>硬度不用钙盐，主要是化学上的实用考虑：钙离子与碳酸氢根共存时容易生成碳酸钙沉淀，既让实际浓度偏离计算值，又在容器和加热设备上结垢。镁盐（七水硫酸镁）溶解性好、称量方便，作为「硬度提供者」更可控。</p>
+        <p>这不意味着钙没有作用——它和镁在萃取中的偏好并不完全相同。这里的选择是<b>为了可复算而做的工程取舍</b>，不是风味上的最优解。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">场景判断</span>你按配方配好水，冲出来偏薄、偏尖。检查发现母液 A 只加了 20 mL。现在该怎么调？调完如何验证？</summary>
+      <div class="answer">
+        <p>20 mL 对应硬度 1624 × 0.020 ≈ <b>32 ppm</b>，低于参考带（约 50–150）。症状「薄」正对应硬度不足：水抓取风味物质的能力弱。把母液 A 补到 40–45 mL 附近（硬度约 65–73 ppm），碱度先不动。</p>
+        <p>验证要用对照：<b>同一支豆子、同一组冲煮参数，只换水</b>，两杯并排尝。如果厚度和甜感上来了，说明改动有效；如果没有变化，问题可能不在水，回到 <a href="1-2-six-variables.html">1.2 章</a>逐个变量排查。一次只改一个轴，这样每次的结论都能保留下来。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">思考题</span>自配水最大的价值真的是「更好喝」吗？如果不是，那是什么？</summary>
+      <div class="answer">
+        <p>更好喝只是可能的副产品。真正的价值是<b>把一个隐藏变量变成已知常量</b>。自来水会随季节、管网、滤芯状态波动，而这些波动不会出现在任何人的冲煮笔记里——于是它成了实验里最大的噪声源之一。</p>
+        <p>固定了水，你调研磨度得到的结论才能跨天成立，你比较两支豆子时才知道差异来自豆子。这与 <a href="0-3-where-myths-come-from.html">0.3 章</a>的方法论一脉相承：<b>要让实验有意义，先把不打算研究的变量钉死。</b></p>
+        <p>反过来说，如果你并不打算做参数实验，用一款稳定的瓶装水或过滤水同样合理——本书不认为自配水是必需品，它只是把「可复算」这件事做到底的一种方式。</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- nav:auto -->
+<nav class="next">
+  <a href="3-1-minerals.html">← 3.1 矿物质的角色</a>
+  <a href="4-1-flavor-wheel.html">4.1 风味轮与描述词校准 →</a>
+</nav>
+<!-- /nav:auto -->
+
+</div>
+
+<script src="../assets/theme.js"></script>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/lab-core.js"></script>
+<script src="../assets/labs/3-2-water-recipes.js"></script>
+</body>
+</html>
