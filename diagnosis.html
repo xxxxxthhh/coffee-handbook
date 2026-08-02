@@ -35,9 +35,9 @@
         <td><a href="chapters/0-1-four-layers.html">0.1</a></td>
       </tr>
       <tr>
-        <td><span class="sym">改了几个参数后杯子变了，说不清是哪个起的作用</span></td>
-        <td>一次动了多个变量（或一个变量耦合了多个下游量）</td>
-        <td>回到基准参数，一次只动一个旋钮，并记录粉重、水温、时间与落点</td>
+        <td><span class="sym">同一个改动，这次有效、下次无效</span></td>
+        <td>变量耦合：一个旋钮同时改了多个下游量，效果随场景变号</td>
+        <td>回到基准参数，一次只动一个旋钮；先分辨这个改动走的是萃取率还是均匀度</td>
         <td><a href="chapters/0-3-where-myths-come-from.html">0.3</a></td>
       </tr>
       <tr>
@@ -47,9 +47,9 @@
         <td><a href="chapters/1-1-dissolution-order.html">1.1</a></td>
       </tr>
       <tr>
-        <td><span class="sym">每次冲的结果都不一样，说不清哪个变量在起作用</span></td>
-        <td>同时变动了多个变量，且没有记录</td>
-        <td>固定其余五个变量，一次只动一个；每次记录粉重、水温、时间与杯感</td>
+        <td><span class="sym">同一组参数，每次冲出来都不一样（重现性差）</span></td>
+        <td>有未被固定的变量在漂：水源、豆龄、注水节奏</td>
+        <td>先把水与豆龄钉死（3.2 / 2.3），再固定注水节奏与粉床整理；重现性稳定之前不要调参</td>
         <td><a href="chapters/1-2-six-variables.html">1.2</a></td>
       </tr>
       <tr>

@@ -108,6 +108,9 @@ const MUTATIONS = [
   { name: 'chapters/ 里多出未登记的文件', rule: 'count/manifest-vs-files',
     apply: (tmp) => fs.writeFileSync(path.join(tmp, 'chapters', '9-9-stray.html'), '<html></html>') },
 
+  { name: '章节缺少 nav:auto 标记（导航链不再被生成）', rule: 'structure/nav-marker',
+    apply: edit(CH, '<!-- nav:auto -->', '<!-- nav -->') },
+
   { name: 'expect() 漏掉 paint() 会改写的诊断文案', rule: 'lab/expect-coverage',
     apply: edit('assets/labs/1-3-control-chart.js', '        zoneOut: { text: s.zone },\n', '') },
 

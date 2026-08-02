@@ -130,7 +130,9 @@ export function runChecks(root){
               }
             }
             /* expect() 必须覆盖 paint() 会改写的每一个 id：
-               否则模块里改了文案、页面静态文本还留着旧结论，而门禁看不见（QUALITY 第 6 类衰减）。 */
+               否则模块里改了文案、页面静态文本还留着旧结论，而门禁看不见（QUALITY 第 6 类衰减）。
+               已知边界：只认字面量 getElementById('x')，循环拼出来的 id（如 'l'+i、'sec'+i）扫不到。
+               影响面仅限「JS 失效时某几个扇区停在旧的高亮透明度」，不涉及数值与文案。 */
             const src = fs.readFileSync(labAbs, 'utf8');
             const touched = new Set([...src.matchAll(/getElementById\('([^']+)'\)/g)].map(m => m[1]));
             const covered = new Set(Object.keys(exp));

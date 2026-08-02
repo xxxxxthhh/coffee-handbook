@@ -17,7 +17,7 @@
 ## 常用命令
 
 ```bash
-node tools/check.mjs      # 程序化门禁：24 条规则，提交前必跑
+node tools/check.mjs      # 程序化门禁，提交前必跑（规则数以脚本输出为准）
 node tools/mutate.mjs     # 对门禁本身的 mutation test，改动 check.mjs 后必跑
 node tools/build.mjs      # 重新生成目录页、附录 A/B/C、章节导航链
 node tools/publish.mjs    # 白名单式发布到 dist/（先跑门禁，reference/ 与 tools/ 不发布）
