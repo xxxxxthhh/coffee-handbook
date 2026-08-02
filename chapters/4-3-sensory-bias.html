@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4.3 味觉这台仪器的系统误差 · 咖啡风味科学手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/handbook.css">
+</head>
+<body>
+<button class="theme-toggle" type="button" aria-label="切换深色/浅色模式" title="切换深色/浅色模式">
+  <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+</button>
+
+<div class="wrap">
+
+<header class="ch">
+  <div class="dotrow" aria-hidden="true">
+    <i class="b"></i><i class="s"></i><i></i><i class="a"></i><i></i><i class="s"></i><i class="a"></i><i></i><i></i><i class="b"></i>
+  </div>
+  <div class="kicker"><a href="../index.html">咖啡风味科学手册</a> · Part 4 · Sensory 感官</div>
+  <h1>4.3 Systematic Error in Your Palate
+    <span class="zh">味觉这台仪器的系统误差</span>
+  </h1>
+  <div class="meta">
+    <span>难度 <b>★★☆</b></span>
+    <span>阅读 + 玩 <b>~14 min</b></span>
+    <span>玄学祛魅指数 <b>极高</b></span>
+    <span>前置 <b><a href="4-2-cupping.html">4.2 杯测方法</a></b></span>
+  </div>
+</header>
+
+<!-- ============ 先猜一次 ============ -->
+<section id="guess">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Guess First 先猜一次</span></div>
+  <h2>凭直觉，别查</h2>
+  <p class="big">同一杯咖啡，刚出杯时和放到室温时，哪个尝起来更酸？</p>
+  <div class="guess" id="guessBox">
+    <div class="opts">
+      <button data-g="hot">刚出杯更酸</button>
+      <button data-g="cold">放凉更酸</button>
+      <button data-g="same">酸度不会变</button>
+    </div>
+    <div class="after">已记住你的选择。提示：杯子里的酸含量确实没变——变的是你这台仪器的灵敏度分布。</div>
+  </div>
+</section>
+
+<!-- ============ 核心概念 ============ -->
+<section id="concept">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Core Concept 核心概念</span></div>
+  <h2>三种有方向的偏移</h2>
+  <p>前两章把描述词与流程标准化了，但还剩最后一个误差源：<b>做测量的这台仪器</b>。它的误差不是随机噪声——那样反而好办，多测几次就能平均掉。它是<b>有方向的系统偏移</b>，会稳定地把你带向同一边。三种最常见：</p>
+  <h3>一、温度</h3>
+  <p>味觉受体对温度并不中立。甜味的感知在温热区间最强，随着液体变冷显著减弱；苦的感知同样随温度下降而减弱；而酸的感知受温度影响相对小。三条曲线错开的后果是：<b>咖啡变凉时，酸并没有增加，只是别人都退场了</b>——酸在整体中的占比自然上升。</p>
+  <p>这解释了两个日常现象：为什么「凉了更酸」几乎是普遍体验；以及为什么刚出杯时下的判断往往偏严厉——高温下苦感占上风、甜感还没到峰值。</p>
+  <h3>二、期望效应</h3>
+  <p><span class="term" data-term="Expectation Effect" data-zh="期望效应" data-def="事先获得的信息（价格、品牌、产地、他人评价）改变实际的感知体验与评分，而不仅仅是改变口头报告。属于有方向的系统偏移。">期望效应</span>指的是：在你尝到之前已经获得的信息——价格、产地、烘焙商、朋友的评价——会改变你实际感受到的东西。它不只是「嘴上说得好听」；相关领域的研究（其中最著名的一批做在葡萄酒上）显示，被告知价格更高时，受试者报告的愉悦度更高，而且大脑中与愉悦相关的活动也随之变化。</p>
+  <p>对咖啡的实际含义是：<b>只要你知道哪杯是哪杯，对比实验就已经被污染了</b>。这不是意志力问题，编号盲评之所以是 <a href="4-2-cupping.html">4.2 章</a>流程的一部分，正是因为没有人能靠自律绕过它。</p>
+  <h3>三、顺序效应</h3>
+  <p>先尝的样品会成为后面所有样品的参照点，而感官适应会随着连续品尝逐渐钝化你的灵敏度。同一组样品换个顺序，排名可能就变了。对策也很朴素：<b>轮换顺序、限制单次样品数量、中间用清水复位</b>——专业杯测的桌面安排里都藏着这些设计。</p>
+  <p data-diag="同一杯咖啡前后评价不一致，或换个顺序结论就变了|感官仪器的系统偏移（温度、期望、顺序）|固定评价温度、编号盲评、轮换顺序；重要判断在同一温度段做两次">三者合起来给出一条纪律：<b>先固定测量条件，再谈杯中的差异。</b>否则你测到的是「测量条件的差异」——而它常常比豆子的差异还大。</p>
+</section>
+
+<!-- ============ 交互实验 ============ -->
+<section id="lab">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Interactive Lab 交互实验</span></div>
+  <h2>一杯咖啡在降温过程中的三条读数</h2>
+  <p>三条是同一杯咖啡的甜、苦、酸<b>感知强度</b>（不是含量——含量几乎没变）。拖动温度，看它们如何各自变化，以及酸在整体中的占比如何被动上升。默认停在 55 °C：甜 89、苦 58、酸 69，酸占 32%。</p>
+
+  <div class="lab" data-print-note="（在线版可拖动温度滑块；打印版展示默认场景：55 °C，甜 89、苦 58、酸 69，相对酸度 32%，落在甜感峰值区）">
+    <div class="lab-head">
+      <span class="t">Temperature × Perception · 温度与感知</span>
+      <span class="presets">
+        <button data-p="temp=85">刚出杯 85 °C</button>
+        <button data-p="temp=55">适口 55 °C</button>
+        <button data-p="temp=28">放凉 28 °C</button>
+      </span>
+    </div>
+    <div class="lab-body">
+      <div class="sliders">
+        <div class="sl">
+          <label>液体温度<b id="vTemp">55 °C</b></label>
+          <input type="range" id="temp" min="20" max="90" step="1" value="55">
+        </div>
+      </div>
+
+      <div class="chartbox">
+        <svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="甜、苦、酸的感知强度随温度变化">
+          <text x="132" y="42"  text-anchor="end" class="axt">甜感</text>
+          <rect id="barS" x="140" y="24" width="375.83" height="28" rx="4" fill="var(--accent)" fill-opacity="0.8"/>
+          <text x="132" y="92"  text-anchor="end" class="axt">苦感</text>
+          <rect id="barB" x="140" y="74" width="244.68" height="28" rx="4" fill="var(--bitter)" fill-opacity="0.8"/>
+          <text x="132" y="142" text-anchor="end" class="axt">酸感</text>
+          <rect id="barA" x="140" y="124" width="289.8" height="28" rx="4" fill="var(--sour)" fill-opacity="0.85"/>
+
+          <line x1="140" y1="168" x2="560" y2="168" stroke="var(--ink)" stroke-width="1.5"/>
+          <g class="ax">
+            <text x="140" y="186" text-anchor="middle">0</text>
+            <text x="245" y="186" text-anchor="middle">25</text>
+            <text x="350" y="186" text-anchor="middle">50</text>
+            <text x="455" y="186" text-anchor="middle">75</text>
+            <text x="560" y="186" text-anchor="middle">100</text>
+          </g>
+          <text x="350" y="208" text-anchor="middle" class="axt">感知强度（示意刻度）</text>
+        </svg>
+      </div>
+
+      <div class="readout">
+        <div class="tds">
+          <div class="n" id="relOut">32%</div>
+          <div class="l">酸在三者中的占比<br>甜 <span id="sOut">89</span> · 苦 <span id="bOut">58</span> · 酸 <span id="aOut">69</span></div>
+        </div>
+        <div class="diag">
+          <div class="zone" id="zoneOut">甜感峰值区</div>
+          <div class="adv" id="advOut">甜感接近最强、苦感明显回落——同一杯咖啡在这个温度区间最讨喜。专业杯测要求跨温度评价，正是为了避免只取这一段的印象。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>把温度拖到 28 °C：甜掉到 64、苦掉到 16，酸几乎没动（72），于是酸的占比从 32% 升到 47%。<b>杯子里的酸一分没多，你尝到的酸却明显更强。</b>这就是「系统误差」的确切含义——偏移可预测、有方向，因此可以被扣除，但前提是你知道它存在。</p>
+  <p>反过来用，它还是个诊断工具：<b>缺陷在低温段最容易暴露</b>（甜与苦不再遮掩），而<b>厚度与平衡在偏热段最好判断</b>。专业杯测要求在降温过程中分几个温度段评价，就是为了不漏掉任一段的信息。</p>
+</section>
+
+<!-- ============ 真实案例 ============ -->
+<section id="case">
+  <div class="sec-tag"><span class="cell" style="background:var(--sour)"></span><span class="lab">Case Study 真实案例</span></div>
+  <h2>甜味受体为什么怕冷：一条分子层面的解释</h2>
+  <div class="case">
+    <div class="case-head"><span class="cell"></span>Talavera 等 · Nature · 2005（另见 Green &amp; Frankmann, 1987）</div>
+    <div class="case-body">
+      <p>「凉了更酸」长期被当成经验。它在 2000 年代得到了一个分子层面的解释：味觉信号通路中的一个关键离子通道 TRPM5 具有<b>温度依赖性</b>——它在温热条件下活性更高，而在低温下活性显著下降。</p>
+      <div class="stats">
+        <div class="stat"><div class="n g">TRPM5</div><div class="l">甜、苦、鲜味信号通路中的关键离子通道</div></div>
+        <div class="stat"><div class="n g">温度依赖</div><div class="l">温热时活性高，低温下响应明显减弱</div></div>
+        <div class="stat"><div class="n g">酸味通路不同</div><div class="l">酸的感知不依赖同一通道，受温度影响较小</div></div>
+      </div>
+      <p>这条机制正好解释了本章交互里三条曲线的形状：甜与苦的信号通路共享了这个温度敏感的环节，所以它们随降温一起减弱；酸走的是另一条路，几乎不受影响。于是「变凉 → 相对更酸」不是心理作用，而是<b>感受器层面就已经决定的结果</b>。</p>
+      <p>更早的心理物理学研究也给出过一致的行为学证据：在较低温度下，蔗糖与苦味物质的感知强度下降，而酸与咸的变化相对小。两条证据链——一条来自分子生理，一条来自人类感知实验——指向同一个结论。</p>
+      <p>边界要说清楚：这些研究用的是模型化合物与受控条件，咖啡是上千种化合物的混合体，实际的温度响应比模型复杂（香气的挥发速率也随温度变化，那是另一条通道）。可迁移的是方向与量级，不是精确数值——本章交互中的曲线是示意，不是拟合。</p>
+      <div class="src">来源：Talavera et al. (2005), Heat activation of TRPM5 underlies thermal sensitivity of sweet taste, Nature 438；Green &amp; Frankmann (1987) 关于温度对味觉强度影响的心理物理学研究，Chemical Senses。期望效应的经典研究见 Plassmann et al. (2008), PNAS——该实验以葡萄酒为对象，迁移到咖啡属于合理外推而非直接证据。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 工具层 ============ -->
+<section id="tools">
+  <div class="sec-tag"><span class="cell" style="background:var(--neutral)"></span><span class="lab">Tooling Sidebar 工具层</span></div>
+  <div class="toolbox">
+    <div class="toolbox-head">
+      <span class="t">给自己这台仪器做校准（会过期，正文不依赖本区块）</span>
+      <span class="date">截至 2026-08</span>
+    </div>
+    <div class="toolbox-body">
+      <p><b>温度计</b>：一支即时读数的探针温度计（或带温度显示的手冲壶）就够。重点不是精确到度，而是<b>每次都在同一个温度段下判断</b>——例如固定「出杯后 4 分钟」这个时间点，比追求某个具体数字更容易执行。</p>
+      <p><b>盲评的家庭做法</b>：杯子编号后请人打乱；或把编号写在杯底，摆好后自己转身几秒。成本为零，挡掉的偏移量往往大于半天的调参。</p>
+      <p><b>顺序轮换</b>：同一组样品尝两轮，第二轮反过来。若两轮的排名不一致，说明差异小于你的分辨力——这本身就是有价值的结论。</p>
+      <p><b>参照豆</b>：常备一支熟悉、稳定的豆子，隔一段时间用固定参数冲一次。它测的不是豆子，是你今天的状态与器具的漂移。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Quiz ============ -->
+<section id="quiz">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Quiz 自测</span></div>
+  <h2>章末自测</h2>
+  <div class="quiz">
+
+    <details>
+      <summary><span class="qtype">概念题</span>「咖啡凉了变酸」——杯子里的酸真的变多了吗？请给出机制层面的回答。</summary>
+      <div class="answer">
+        <p>没有。液体里的有机酸含量在降温过程中基本不变（若不考虑长时间氧化）。变的是<b>感知的相对权重</b>：甜与苦的信号通路里有温度敏感的环节（如 TRPM5 通道），低温下响应减弱；酸的感知走另一条通路，受影响小。于是甜与苦退场，酸在整体印象中的占比上升。</p>
+        <p>这个区分很实用：如果你的目标是「让这杯不那么酸」，降温不是原因，也不该成为对策——真正能改变酸含量的是萃取率与水的碱度（<a href="1-1-dissolution-order.html">1.1</a>、<a href="3-1-minerals.html">3.1</a> 章）。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">计算题</span>用交互里的模型：85 °C 时甜 17、苦 91、酸 66；28 °C 时甜 64、苦 16、酸 72。两个温度下的相对酸度各是多少？说明这对「什么时候下判断」的启示。</summary>
+      <div class="answer">
+        <p>85 °C：66 ÷ (17 + 91 + 66) = 66 ÷ 174 ≈ <b>38%</b>。28 °C：72 ÷ (64 + 16 + 72) = 72 ÷ 152 ≈ <b>47%</b>。</p>
+        <p>两端的相对酸度都高于中间温度段（55 °C 时约 32%），但原因不同：高温端是甜感尚未展开、苦感压制，低温端是甜与苦一起退场。<b>中间温度段是「甜感最讨喜」的一段，两端则各自放大不同的问题。</b></p>
+        <p>启示是：如果只在一个温度点下判断，你会系统性地高估或低估某些属性。要么固定同一个温度段做所有比较（保证公平），要么像杯测那样跨温度评价（保证完整）。最糟的做法是每次在不同温度下随手评价，然后比较这些结论。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">场景判断</span>你想验证一支贵三倍的豆子是否真的更好。设计一个能压住本章三种偏移的对比。</summary>
+      <div class="answer">
+        <p><b>压期望</b>：请人把两支豆子编号后冲好递上来，你不知道哪杯是哪支；连价格差都不要在实验前重温。这一条最关键，因为价格信息带来的偏移是有方向的。</p>
+        <p><b>压温度</b>：两杯同时冲好、同时开始计时，在同一个时间点（因而大致同一温度）品尝；如果要跨温度评价，两杯必须同步进行。</p>
+        <p><b>压顺序</b>：先 A 后 B 尝一轮，再先 B 后 A 尝一轮，中间用清水复位。若两轮结论相反，说明差异在你的分辨力之内——这同样是个结论。</p>
+        <p>最后接受一种可能：<b>差异存在，但不在你在意的维度上</b>。贵的那支可能在杯测桌上得分更高，而你偏好的方向未必是它。分数是坐标，不是审判（<a href="4-2-cupping.html">4.2 章</a>）。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">思考题</span>本章说系统误差「可预测、有方向，因此可以被扣除」。这与随机噪声的处理方式有什么不同？为什么这个区分对整本书都重要？</summary>
+      <div class="answer">
+        <p>随机噪声可以靠<b>重复</b>解决：多测几次取平均，误差会互相抵消。系统偏移不行——重复一百次，偏移仍在原地，平均值只会更精确地偏在同一侧。它需要靠<b>设计</b>解决：盲评、固定温度、轮换顺序，都是在实验设计层面把偏移消掉。</p>
+        <p>这个区分贯穿全书。<a href="1-4-espresso-pressure.html">1.4 章</a>的通道效应也是同类问题：平均萃取率是个「多测几次」都救不了的指标，因为问题出在分布而非噪声。<a href="0-3-where-myths-come-from.html">0.3 章</a>的变量耦合同理——多冲几杯不会让耦合消失，只有控制变量才行。</p>
+        <p>一句话总结本书的方法论：<b>能重复解决的交给重复，重复解决不了的，交给实验设计。</b>（本系列的概率手册用整整一章讨论这个区分，那里的语境是统计推断——同一件事在两本书里各出现一次，说明它不是咖啡特有的问题。）</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- nav:auto -->
+<nav class="next">
+  <a href="4-2-cupping.html">← 4.2 杯测方法</a>
+  <a href="5-1-percolation-vs-immersion.html">5.1 渗滤 vs 浸泡 →</a>
+</nav>
+<!-- /nav:auto -->
+
+</div>
+
+<script src="../assets/theme.js"></script>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/lab-core.js"></script>
+<script src="../assets/labs/4-3-sensory-bias.js"></script>
+</body>
+</html>
