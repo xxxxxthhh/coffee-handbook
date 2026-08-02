@@ -53,11 +53,11 @@ window.Lab = (function(){
       b.addEventListener('click', function(){
         b.getAttribute('data-p').split(',').forEach(function(pair){
           var kv = pair.split('=');
-          var name = kv[0].trim(), value = parseFloat(kv[1]);
+          var name = kv[0].trim(), num = parseFloat(kv[1]);
+          var value = isNaN(num) ? kv[1].trim() : num;   /* 点击类交互的预设可以是字符串 */
           var el = doc.getElementById(name);
           if(el) el.value = value; else custom[name] = value;
         });
-        if(def.onPreset) def.onPreset(params(), doc);
         update();
       });
     });

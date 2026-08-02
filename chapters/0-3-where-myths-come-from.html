@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>0.3 「玄学」的来源 · 咖啡风味科学手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/handbook.css">
+</head>
+<body>
+<button class="theme-toggle" type="button" aria-label="切换深色/浅色模式" title="切换深色/浅色模式">
+  <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+</button>
+
+<div class="wrap">
+
+<header class="ch">
+  <div class="dotrow" aria-hidden="true">
+    <i class="b"></i><i></i><i class="a"></i><i></i><i class="s"></i><i class="s"></i><i></i><i class="a"></i><i></i><i class="b"></i>
+  </div>
+  <div class="kicker"><a href="../index.html">咖啡风味科学手册</a> · Part 0 · Prologue 导读</div>
+  <h1>0.3 Where the Myths Come From
+    <span class="zh">「玄学」的来源：变量耦合与感官偏差</span>
+  </h1>
+  <div class="meta">
+    <span>难度 <b>★★☆</b></span>
+    <span>阅读 + 玩 <b>~12 min</b></span>
+    <span>玄学祛魅指数 <b>高</b></span>
+    <span>前置 <b><a href="0-1-four-layers.html">0.1 风味的四层来源</a></b></span>
+  </div>
+</header>
+
+<!-- ============ 先猜一次 ============ -->
+<section id="guess">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Guess First 先猜一次</span></div>
+  <h2>凭直觉，别查</h2>
+  <p class="big">「我换了个滤杯，同一支豆子明显变好喝了。」最可能的解释是哪个？</p>
+  <div class="guess" id="guessBox">
+    <div class="opts">
+      <button data-g="device">这个滤杯确实更好</button>
+      <button data-g="coupling">换器具时还有别的变量跟着变了</button>
+      <button data-g="bias">你期待它更好，于是它更好</button>
+    </div>
+    <div class="after">已记住你的选择。提示：这三个选项并不互斥——本章要说的是，在没有做过控制的情况下，你没有办法把它们分开。</div>
+  </div>
+</section>
+
+<!-- ============ 核心概念 ============ -->
+<section id="concept">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Core Concept 核心概念</span></div>
+  <h2>两团乱麻：一团在壶里，一团在舌头上</h2>
+  <p>咖啡圈的「玄学」不是因为缺少知识，而是因为两类干扰同时存在，且都不容易被察觉。</p>
+  <h3>第一团：变量耦合</h3>
+  <p><span class="term" data-term="Variable Coupling" data-zh="变量耦合" data-def="调整一个操作变量时，多个下游物理量被同时改变，导致效果无法归因到单一机制。咖啡冲煮里最典型的例子是研磨度。">变量耦合</span>指的是：你在界面上动了一个旋钮，物理上却同时改变了好几个量。研磨度是最典型的例子——把粉磨细，你同时做了三件事：</p>
+  <ul>
+    <li><b>比表面积变大</b>：同样重量的粉，与水接触的面积更多，溶出更快。</li>
+    <li><b>扩散路径变短</b>：可溶物从粉粒内部走到表面的距离更短。</li>
+    <li><b>粉床阻力变大</b>：颗粒间空隙变小，水流变慢，接触时间被动拉长。</li>
+  </ul>
+  <p>三件事都把萃取率往上推，但它们的机制不同、副作用也不同：前两件提高效率，第三件同时提高了「细粉过萃、粗粒不足」的分化风险。所以当你磨细一档、咖啡变苦，说「因为萃取时间变长了」和说「因为表面积变大了」都对了一部分，也都不足以指导下一步。<b>能被归因的是旋钮，不是机制。</b></p>
+  <p data-diag="改了几个参数后杯子变了，说不清是哪个起的作用|一次动了多个变量（或一个变量耦合了多个下游量）|回到基准参数，一次只动一个旋钮，并记录粉重、水温、时间与落点">这直接给出一条纪律：<b>一次只动一个旋钮，并且记录。</b>不记录的实验等于没做——三天后你只会记得「那次好像更好喝」。</p>
+  <h3>第二团：感官偏差</h3>
+  <p><span class="term" data-term="Sensory Bias" data-zh="感官偏差" data-def="感官评价中可预测的系统性偏移，来源包括温度、期望（价格与信息）、顺序与适应等，而非随机误差。">感官偏差</span>不是「不专业」，而是所有人的味觉仪器都自带的系统性偏移。温度会改变甜与酸的相对强度；知道价格或产地会改变评分；同一组样品换个顺序尝，排名会变。这些偏移是<b>有方向、可预测</b>的——所以可以被控制（这也正是杯测流程长成那样的原因，见 <a href="4-2-cupping.html">4.2 章</a>），但如果不控制，它们会稳定地把你带偏，而不是互相抵消。</p>
+  <p>两团乱麻叠加，就产生了咖啡玄学的标准配方：<b>一次改动多个变量 + 一次不设盲的品尝 = 一条自信的口诀。</b>口诀本身往往指向一个真实相关性（「淡了就磨细」通常有效），问题在于它把机制、条件和边界一起丢掉了，于是在下一个场景里失灵，然后被解释成「玄学」。</p>
+</section>
+
+<!-- ============ 交互实验 ============ -->
+<section id="lab">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Interactive Lab 交互实验</span></div>
+  <h2>只拖一个滑块，看三个量一起动</h2>
+  <p>下面只给你一个旋钮：研磨度。前两条是相对指数（基准档 700 μm 记为 100），第三条是萃取率本身。默认参数下三个量分别是 100、100、20.0%——往任一方向拖动，看它们如何同时移动。</p>
+
+  <div class="lab" data-print-note="（在线版可拖动研磨度滑块；打印版展示默认场景：700 μm，比表面积指数 100、接触时间指数 100、萃取率 20.0%）">
+    <div class="lab-head">
+      <span class="t">Variable Coupling · 变量耦合</span>
+      <span class="presets">
+        <button data-p="d=550">细一档</button>
+        <button data-p="d=700">基准</button>
+        <button data-p="d=900">粗一档</button>
+      </span>
+    </div>
+    <div class="lab-body">
+      <div class="sliders">
+        <div class="sl">
+          <label>研磨度（颗粒特征尺寸，越小越细）<b id="vGrind">700 μm</b></label>
+          <input type="range" id="d" min="300" max="1100" step="10" value="700">
+        </div>
+      </div>
+
+      <div class="chartbox">
+        <svg viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="研磨度变化时三个下游量的相对变化">
+          <line x1="308" y1="18" x2="308" y2="182" stroke="var(--ink-soft)" stroke-width="1" stroke-dasharray="4 4" opacity=".6"/>
+          <text x="312" y="16" class="rl">基准 100</text>
+          <rect id="barS" x="140" y="30" width="168" height="26" rx="4" fill="var(--accent)" fill-opacity="0.75"/>
+          <rect id="barT" x="140" y="86" width="168" height="26" rx="4" fill="var(--sour)"  fill-opacity="0.75"/>
+          <rect id="barE" x="140" y="142" width="323.04" height="26" rx="4" fill="var(--bitter)" fill-opacity="0.75"/>
+          <text x="132" y="48"  text-anchor="end" class="axt">比表面积</text>
+          <text x="132" y="104" text-anchor="end" class="axt">接触时间</text>
+          <text x="132" y="160" text-anchor="end" class="axt">萃取率</text>
+          <text x="140" y="72"  class="rl">指数，基准档 = 100</text>
+          <text x="140" y="128" class="rl">指数，基准档 = 100（粉床限流的情形）</text>
+          <text x="140" y="184" class="rl">EY %，满幅 = 26%</text>
+        </svg>
+      </div>
+
+      <div class="readout">
+        <div class="tds">
+          <div class="n" id="eyOut">20.0%</div>
+          <div class="l">萃取率<br>（比表面积 <span id="sOut">100</span> · 接触时间 <span id="tOut">100</span>）</div>
+        </div>
+        <div class="diag">
+          <div class="zone">名义 1 个变量</div>
+          <div class="adv" id="verdictOut">基准档：三个下游量都定为 100。往两边拖，看它们如何一起动。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>这个模型是<b>耦合方向的示意，不是产量预测</b>：它按「流速完全由粉床决定」的极端情形建模，所以在粗端把萃取率压得偏低。真实手冲里注水速率也在限流，耦合会弱一些；意式则更接近这个极端。要点不在数字，而在于<b>一个滑块下面挂着三个机制</b>——这就是为什么「磨细一档」在不同器具上的效果差异会大到像玄学。</p>
+</section>
+
+<!-- ============ 真实案例 ============ -->
+<section id="case">
+  <div class="sec-tag"><span class="cell" style="background:var(--sour)"></span><span class="lab">Case Study 真实案例</span></div>
+  <h2>被高估的水温：当耦合被切断之后</h2>
+  <div class="case">
+    <div class="case-head"><span class="cell"></span>UC Davis Coffee Center · Batali, Ristenpart &amp; Guinard · 2020</div>
+    <div class="case-body">
+      <p>「水温差几度，风味天差地别」是流传最广的说法之一。加州大学戴维斯分校咖啡中心做了一组反直觉的实验：用滤泡式冲煮，在 <b>87 °C 与 93 °C</b> 两个水温下取样，然后<b>把浓度 (TDS) 与萃取率 (EY) 配平</b>——也就是说，两组样品除了水温，落点位置一致。随后交给训练过的描述性感官小组盲评。</p>
+      <div class="stats">
+        <div class="stat"><div class="n g">87 / 93 °C</div><div class="l">对比的两个冲煮水温</div></div>
+        <div class="stat"><div class="n g">配平 TDS 与 EY</div><div class="l">切断水温与萃取率之间的耦合</div></div>
+        <div class="stat"><div class="n g">差异有限</div><div class="l">配平之后，感官剖面的差别远小于常见说法</div></div>
+      </div>
+      <p>结论不是「水温不重要」，而是更精确的一句话：<b>水温的大部分效果，是通过改变萃取率实现的。</b>一旦落点被固定，剩下的直接效应就小得多。日常经验之所以觉得温度是大杠杆，是因为平时降低水温时，萃取率<b>同时</b>掉了下去——我们把耦合的总效果记在了温度头上。</p>
+      <p>这也说明控制实验的价值：它不产生新口诀，而是把一个含混的因果拆成「通过什么路径」。本书 <a href="1-2-six-variables.html">1.2 章</a>会逐个变量做这件事，<a href="1-3-control-chart.html">1.3 章</a>则给出配平所需的坐标系。</p>
+      <div class="src">来源：Batali, Ristenpart &amp; Guinard (2020), Brew temperature, at fixed strength and extraction, has little impact on the sensory profile of drip brew coffee, Scientific Reports；UC Davis Coffee Center 感官系列研究。研究使用特定豆源、烘焙度与滤泡设备，结论迁移到其他器具（尤其意式）需谨慎。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Quiz ============ -->
+<section id="quiz">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Quiz 自测</span></div>
+  <h2>章末自测</h2>
+  <div class="quiz">
+
+    <details>
+      <summary><span class="qtype">概念题</span>「磨细能提高萃取率」——在本章的框架里，这句话为什么既正确又没什么用？</summary>
+      <div class="answer">
+        <p>正确，是因为它描述了一个稳定的相关性：动这个旋钮，萃取率大概率上升。没什么用，是因为它把三个机制（比表面积、扩散路径、粉床阻力）压成了一句话，而这三者的副作用不同——前两者主要提升效率，第三者会同时放大细粉过萃与粗粒不足的分化。</p>
+                <p>后果是它无法预测边界：当粉床阻力成为主导（磨得过细、粉层过厚），继续磨细会让接触时间失控、萃取变得不均匀，杯子同时变苦、变涩、变薄。口诀在这里失灵，于是被归为玄学——其实只是机制换了主角。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">场景判断</span>你想验证「新滤杯更好」。手上有一台磨、一支豆、一个秤。设计一个能把耦合和期望效应都压下去的对比。</summary>
+      <div class="answer">
+        <p>先固定能固定的：同一支豆、同一批研磨设定、同粉重、同水温、同注水节奏与总水量。<b>让两杯的落点尽量落在同一处</b>——如果有折射仪，配平 TDS 与萃取率（这正是上面那项温度研究的做法）；没有的话，至少配平粉水比与总时间。</p>
+        <p>再压期望效应：请人把两杯编号后端上来，你不知道哪杯是哪个器具（简单盲评）；同一组对比重复两三轮，并交换先后顺序以抵消顺序效应。</p>
+        <p>最后接受一个可能的结果：<b>差异小到你分不出来。</b>这也是有价值的答案——它把「换器具」从待选方案里划掉，让你把注意力放回研磨与落点上。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">计算题</span>用交互里的示意模型：把研磨从 700 μm 调到 900 μm，比表面积指数与接触时间指数各变成多少？为什么后者掉得更快？</summary>
+      <div class="answer">
+        <p>比表面积指数 = 100 × (700/900) ≈ <b>78</b>；接触时间指数 = 100 × (700/900)² ≈ <b>60</b>。</p>
+        <p>后者掉得更快，是因为它对尺寸的依赖是<b>平方</b>关系：粉床的渗透率近似正比于颗粒尺寸的平方（Kozeny–Carman 近似），流速随之提高，接触时间反比于流速。所以粗磨时「水哗一下就过去了」的体验，量级上比「表面积变小」更剧烈——这也是粗磨常常同时带来淡和酸的原因（<a href="1-3-control-chart.html">1.3 章</a>会把它翻译成落点向左下方移动）。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">思考题</span>本章的两团乱麻里，哪一团更难对付？为什么本书把感官单列一个 Part？</summary>
+      <div class="answer">
+        <p>感官那团更难。壶里的耦合可以靠控制变量与测量（秤、温度计、折射仪）逐步拆开；而感官偏差发生在测量仪器<b>内部</b>——你用来判断结果的那台仪器本身带着系统性偏移，而且偏移的方向会随温度、信息、顺序变化。</p>
+        <p>所以 Part 4 的定位不是「学会品鉴」，而是<b>校准仪器</b>：知道温度会把甜感往哪边推、知道知道价格之后评分会往哪边偏、知道第三杯之后你的参照点已经漂了。校准之后，前面那些控制实验的读数才值得相信。</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- nav:auto -->
+<nav class="next">
+  <a href="0-2-how-to-read.html">← 0.2 这本书怎么读：先猜、再玩、后懂</a>
+  <a href="1-1-dissolution-order.html">1.1 溶解的顺序 →</a>
+</nav>
+<!-- /nav:auto -->
+
+</div>
+
+<script src="../assets/theme.js"></script>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/lab-core.js"></script>
+<script src="../assets/labs/0-3-where-myths-come-from.js"></script>
+</body>
+</html>

@@ -200,6 +200,30 @@ export function runChecks(root){
     });
   }
 
+  /* ---------- 3j. 交互模块里的可见文案同样受红线约束 ---------- */
+  const labDir = path.join(root, 'assets', 'labs');
+  if(fs.existsSync(labDir)){
+    for(const f of fs.readdirSync(labDir).filter(f => f.endsWith('.js'))){
+      const rel = 'assets/labs/' + f;
+      const src = fs.readFileSync(path.join(labDir, f), 'utf8');
+      ABSOLUTE_WORDS.forEach(w => {
+        if(src.includes(w) && !allowed('wording/absolute', rel, w))
+          add('wording/absolute', rel, `交互文案里的绝对化措辞「${w}」`);
+      });
+      HEALTH_WORDS.forEach(w => {
+        if(src.includes(w) && !allowed('redline/health', rel, w))
+          add('redline/health', rel, `交互文案里的健康类措辞「${w}」`);
+      });
+      BRANDS.forEach(b => {
+        if(src.includes(b) && !allowed('redline/brand', rel, b))
+          add('redline/brand', rel, `交互文案里的品牌名「${b}」——正文与交互只讲器具类型`);
+      });
+      const hex = src.match(/#[0-9a-fA-F]{6}\b|#[0-9a-fA-F]{3}\b|rgba?\(|hsla?\(/g);
+      if(hex) add('style/hardcoded-color', rel, `交互模块里写死色值 ${[...new Set(hex)].join(', ')}`);
+      if(/localStorage|sessionStorage/.test(src)) add('deps/storage', rel, '禁止使用 localStorage/sessionStorage');
+    }
+  }
+
   /* ---------- 4. 术语定义唯一且在首次出现处 ---------- */
   const firstSeen = new Map(), defCount = new Map();
   for(const c of CHAPTERS){
