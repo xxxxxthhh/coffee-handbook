@@ -118,6 +118,12 @@ export function runChecks(root){
               for(const [k, v] of Object.entries(want)){
                 if(k === 'text') continue;
                 const attrs = sc || (el && el.attrs) || {};
+                if(typeof v === 'string'){
+                  /* 曲线几何等字符串属性：逐字符比对（图形是量化图的高危区） */
+                  if(attrs[k] !== v)
+                    add('lab/snapshot', rel, `#${id} 的 ${k} 与模型重算的几何不一致`);
+                  continue;
+                }
                 const got = parseFloat(attrs[k]);
                 if(!(Math.abs(got - v) < 0.2))
                   add('lab/snapshot', rel, `#${id} 的 ${k}="${attrs[k]}" ≠ 默认参数重算结果 ${Number(v).toFixed(2)}`);

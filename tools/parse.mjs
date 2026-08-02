@@ -13,7 +13,7 @@ export function elById(html, id){
 
 export function attrsOf(s){
   const out = {};
-  const re = /([a-zA-Z-]+)\s*=\s*"([^"]*)"/g;
+  const re = /([a-zA-Z][a-zA-Z0-9-]*)\s*=\s*"([^"]*)"/g;   /* 属性名可含数字，如 x1/y2 */
   let m;
   while((m = re.exec(s))) out[m[1]] = m[2];
   return out;

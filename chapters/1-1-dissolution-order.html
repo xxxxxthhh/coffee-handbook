@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1.1 溶解的顺序 · 咖啡风味科学手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/handbook.css">
+</head>
+<body>
+<button class="theme-toggle" type="button" aria-label="切换深色/浅色模式" title="切换深色/浅色模式">
+  <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+</button>
+
+<div class="wrap">
+
+<header class="ch">
+  <div class="dotrow" aria-hidden="true">
+    <i class="s"></i><i class="s"></i><i class="a"></i><i></i><i class="a"></i><i></i><i class="b"></i><i></i><i></i><i class="b"></i>
+  </div>
+  <div class="kicker"><a href="../index.html">咖啡风味科学手册</a> · Part 1 · Extraction 萃取</div>
+  <h1>1.1 The Order of Dissolution
+    <span class="zh">溶解的顺序：酸为什么总是先到</span>
+  </h1>
+  <div class="meta">
+    <span>难度 <b>★★☆</b></span>
+    <span>阅读 + 玩 <b>~14 min</b></span>
+    <span>玄学祛魅指数 <b>极高</b></span>
+    <span>前置 <b><a href="0-3-where-myths-come-from.html">0.3 玄学的来源</a></b></span>
+  </div>
+</header>
+
+<!-- ============ 先猜一次 ============ -->
+<section id="guess">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Guess First 先猜一次</span></div>
+  <h2>凭直觉，别查</h2>
+  <p class="big">冲煮开始后，最先被水带走的是哪一类味道？</p>
+  <div class="guess" id="guessBox">
+    <div class="opts">
+      <button data-g="acid">酸</button>
+      <button data-g="sweet">甜</button>
+      <button data-g="bitter">苦</button>
+      <button data-g="same">差不多同时</button>
+    </div>
+    <div class="after">已记住你的选择。提示：如果你能把一杯手冲分成三段分别接住，第一段和第三段尝起来几乎不像同一支豆子。</div>
+  </div>
+</section>
+
+<!-- ============ 核心概念 ============ -->
+<section id="concept">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Core Concept 核心概念</span></div>
+  <h2>不是「萃取了多少」，而是「先萃取了谁」</h2>
+  <p>咖啡粉不是一块均质的固体，而是一堆多孔的细胞壁碎片，可溶物质藏在孔隙与细胞残骸里。水要把它们带走，得走完三步：<b>渗入孔隙 → 把物质溶解 → 让溶质扩散到颗粒外的水里</b>。第三步——<span class="term" data-term="Mass Transfer" data-zh="传质" data-def="溶质从固体颗粒内部经由扩散进入周围液体的过程。咖啡萃取的速率主要受颗粒内扩散控制，因此研磨度（扩散路径长度）比水温更有杠杆。">传质</span>——通常是最慢的一步，也因此成了整个萃取的节拍器。</p>
+  <p>不同物质走完这三步的速度差别很大，大致由分子大小与溶解度决定：</p>
+  <ul>
+    <li><b>有机酸（最快）</b>：柠檬酸、苹果酸、乙酸，以及<span class="term" data-term="Chlorogenic Acid" data-zh="绿原酸" data-def="咖啡中含量最高的一类多酚酸，生豆中占比可观。烘焙中大量降解，其降解产物（绿原酸内酯、苯基林丹等）是咖啡苦味的主要来源之一。">绿原酸</span>类。分子小、亲水，最先进入杯子。</li>
+    <li><b>糖类与美拉德产物（居中）</b>：可溶性糖、小分子美拉德反应产物，贡献甜感与焦糖、坚果类香气。</li>
+    <li><b>苦涩物质（最慢）</b>：绿原酸的降解产物、酚类聚合物，以及分子量很大的<span class="term" data-term="Melanoidins" data-zh="类黑精" data-def="烘焙中由美拉德反应生成的褐色高分子聚合物，贡献颜色、body（醇厚度）与后段的苦感。分子量大，溶出较慢。">类黑精</span>。它们分子大、扩散慢，属于后半程才大量出场的角色。</li>
+  </ul>
+  <p>这就是全书最重要的一条因果链：<b>萃取率不是一个「多与少」的旋钮，而是一条时间轴上的配方。</b>停得太早，杯子里主要是酸；走得太远，后段涌进来的是苦与涩，而甜感的增量早已趋缓。所谓「萃取不足偏酸、过萃偏苦」不是经验口诀，它就是这三条曲线的形状。</p>
+  <p data-diag="入口只有酸，甜感与厚度都不足|萃取率偏低（接触时间/研磨度/水温）|把落点向右推：磨细一档或延长接触时间，让中段的糖与美拉德产物跟上来">顺带解决一个常见误解：<b>「苦」不等于「咖啡因」。</b>咖啡因确实是苦的，但它在杯中的贡献有限，而且溶出较早；后段主导苦与涩的是绿原酸的降解产物与酚类聚合物。所以「多泡一会儿更苦」并不是因为泡出了更多咖啡因，而是因为分子更大的那批苦涩物质终于跟上来了。</p>
+</section>
+
+<!-- ============ 交互实验 ============ -->
+<section id="lab">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Interactive Lab 交互实验</span></div>
+  <h2>把时间轴拖过去，看谁先到</h2>
+  <p>三条曲线是三类物质的<b>累积溶出比例</b>（各自以自身溶尽为 100%）。拖动时间滑块，竖线上的三个点告诉你此刻杯子里的配方。默认停在 2.5 分钟：酸已出 96%、甜 74%、苦 44%，萃取率约 20.0%。</p>
+
+  <div class="lab" data-print-note="（在线版可拖动时间滑块；打印版展示默认场景：150 s，酸 96%、甜 74%、苦 44%，萃取率 20.0%，落在「平衡」）">
+    <div class="lab-head">
+      <span class="t">Dissolution Timeline · 溶出时间轴</span>
+      <span class="presets">
+        <button data-p="t=45">45 秒：只有酸</button>
+        <button data-p="t=150">2.5 分：平衡</button>
+        <button data-p="t=330">5.5 分：苦涩上台</button>
+      </span>
+    </div>
+    <div class="lab-body">
+      <div class="sliders">
+        <div class="sl">
+          <label>接触时间（水与粉在一起的时长）<b id="vTime">2.5 min（150 s）</b></label>
+          <input type="range" id="t" min="10" max="360" step="5" value="150">
+        </div>
+      </div>
+
+      <div class="chartbox">
+        <svg viewBox="0 0 640 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="三类风味物质的累积溶出曲线：酸最快、甜居中、苦最慢">
+          <line x1="70" y1="330" x2="610" y2="330" stroke="var(--ink)" stroke-width="1.5"/>
+          <line x1="70" y1="30"  x2="70"  y2="330" stroke="var(--ink)" stroke-width="1.5"/>
+          <g class="ax">
+            <text x="70"  y="348" text-anchor="middle">0</text>
+            <text x="160" y="348" text-anchor="middle">1</text>
+            <text x="250" y="348" text-anchor="middle">2</text>
+            <text x="340" y="348" text-anchor="middle">3</text>
+            <text x="430" y="348" text-anchor="middle">4</text>
+            <text x="520" y="348" text-anchor="middle">5</text>
+            <text x="610" y="348" text-anchor="middle">6</text>
+            <text x="62" y="334" text-anchor="end">0</text>
+            <text x="62" y="259" text-anchor="end">25</text>
+            <text x="62" y="184" text-anchor="end">50</text>
+            <text x="62" y="109" text-anchor="end">75</text>
+            <text x="62" y="34"  text-anchor="end">100</text>
+          </g>
+          <text x="340" y="370" text-anchor="middle" class="axt">接触时间（分钟）</text>
+          <text x="20" y="180" text-anchor="middle" class="axt" transform="rotate(-90 20 180)">累积溶出比例 (%)</text>
+
+          <line id="tmark" x1="295" y1="30" x2="295" y2="330" stroke="var(--ink-soft)" stroke-width="1" stroke-dasharray="4 4" opacity=".7"/>
+
+          <polyline id="curveAcid" fill="none" stroke="var(--sour)" stroke-width="2.5"
+            points="70.0,330.0 85.0,270.2 100.0,222.4 115.0,184.0 130.0,153.3 145.0,128.8 160.0,109.1 175.0,93.3 190.0,80.7 205.0,70.6 220.0,62.5 235.0,56.0 250.0,50.8 265.0,46.7 280.0,43.4 295.0,40.7 310.0,38.6 325.0,36.9 340.0,35.5 355.0,34.4 370.0,33.5 385.0,32.8 400.0,32.3 415.0,31.8 430.0,31.4 445.0,31.2 460.0,30.9 475.0,30.7 490.0,30.6 505.0,30.5 520.0,30.4 535.0,30.3 550.0,30.2 565.0,30.2 580.0,30.2 595.0,30.1 610.0,30.1"/>
+          <polyline id="curveSweet" fill="none" stroke="var(--accent)" stroke-width="2.5"
+            points="70.0,330.0 85.0,303.9 100.0,280.1 115.0,258.4 130.0,238.5 145.0,220.4 160.0,203.9 175.0,188.8 190.0,175.0 205.0,162.4 220.0,150.9 235.0,140.4 250.0,130.8 265.0,122.0 280.0,114.0 295.0,106.7 310.0,100.1 325.0,94.0 340.0,88.4 355.0,83.3 370.0,78.7 385.0,74.5 400.0,70.6 415.0,67.1 430.0,63.9 445.0,60.9 460.0,58.2 475.0,55.8 490.0,53.5 505.0,51.5 520.0,49.6 535.0,47.9 550.0,46.4 565.0,44.9 580.0,43.6 595.0,42.5 610.0,41.4"/>
+          <polyline id="curveBitter" fill="none" stroke="var(--bitter)" stroke-width="2.5"
+            points="70.0,330.0 85.0,318.7 100.0,307.8 115.0,297.3 130.0,287.2 145.0,277.5 160.0,268.2 175.0,259.2 190.0,250.5 205.0,242.2 220.0,234.2 235.0,226.5 250.0,219.1 265.0,212.0 280.0,205.1 295.0,198.5 310.0,192.1 325.0,186.0 340.0,180.1 355.0,174.5 370.0,169.0 385.0,163.8 400.0,158.7 415.0,153.9 430.0,149.2 445.0,144.7 460.0,140.4 475.0,136.2 490.0,132.2 505.0,128.3 520.0,124.6 535.0,121.1 550.0,117.6 565.0,114.3 580.0,111.1 595.0,108.1 610.0,105.1"/>
+
+          <circle id="dotA" cx="295" cy="40.7"  r="6" fill="var(--sour)"   stroke="var(--card)" stroke-width="2"/>
+          <circle id="dotS" cx="295" cy="106.7" r="6" fill="var(--accent)" stroke="var(--card)" stroke-width="2"/>
+          <circle id="dotB" cx="295" cy="198.5" r="6" fill="var(--bitter)" stroke="var(--card)" stroke-width="2"/>
+
+          <g>
+            <line x1="400" y1="322" x2="424" y2="322" stroke="var(--sour)" stroke-width="2.5"/>
+            <text x="430" y="326" class="rl">酸类（τ≈45 s）</text>
+            <line x1="400" y1="304" x2="424" y2="304" stroke="var(--accent)" stroke-width="2.5"/>
+            <text x="430" y="308" class="rl">糖与美拉德产物（τ≈110 s）</text>
+            <line x1="400" y1="286" x2="424" y2="286" stroke="var(--bitter)" stroke-width="2.5"/>
+            <text x="430" y="290" class="rl">苦涩物质（τ≈260 s）</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="readout">
+        <div class="tds">
+          <div class="n" id="eyOut">20.0%</div>
+          <div class="l">萃取率 EY<br>（酸 <span id="aOut">96%</span> · 甜 <span id="sOut">74%</span> · 苦 <span id="bOut">44%</span>）</div>
+        </div>
+        <div class="diag">
+          <div class="zone" id="zoneOut">平衡</div>
+          <div class="adv" id="advOut">酸出齐、甜过大半、苦味物质刚露头，三者比例正好。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>拖到 45 秒你会看到手冲「断流太早」的样子：酸出了六成，甜才两成半，苦几乎没动——这就是「又酸又薄」。拖到 5.5 分钟，酸和甜的曲线都已经躺平，只有苦还在稳步爬升：<b>继续延长时间，增加的几乎全是苦涩。</b>这条曲线的形状解释了为什么「过萃」的惩罚比「萃取不足」更难挽回——甜感没有余量可补，苦涩却还有很长的上升空间。</p>
+  <p>时间常数（45 / 110 / 260 秒）是示意值，用来表达三类物质<b>拉开的量级差</b>；真实数值随研磨度、水温、搅动而变（都是缩放这条时间轴的因素）。要点是三条曲线的<b>先后顺序与陡缓关系</b>，那是由分子大小和溶解度决定的，换器具也不会翻转。</p>
+</section>
+
+<!-- ============ 真实案例 ============ -->
+<section id="case">
+  <div class="sec-tag"><span class="cell" style="background:var(--sour)"></span><span class="lab">Case Study 真实案例</span></div>
+  <h2>把一杯咖啡写成方程：萃取动力学的两个阶段</h2>
+  <div class="case">
+    <div class="case-head"><span class="cell"></span>Moroney, Lee, O'Brien, Suijver &amp; Marra · 2015–2016</div>
+    <div class="case-body">
+      <p>一组应用数学家（爱尔兰利默里克大学与飞利浦研究院合作）做了件很少有人做的事：把咖啡萃取写成偏微分方程组，用多尺度方法同时描述<b>粉床尺度</b>的流动和<b>颗粒尺度</b>的扩散，再和实测数据对照。</p>
+      <div class="stats">
+        <div class="stat"><div class="n g">两个阶段</div><div class="l">快速的颗粒表面冲刷 + 慢速的颗粒内部扩散</div></div>
+        <div class="stat"><div class="n g">秒级 vs 分钟级</div><div class="l">两阶段的特征时间相差一个量级以上</div></div>
+        <div class="stat"><div class="n g">颗粒尺寸</div><div class="l">扩散阶段的时间尺度随颗粒尺寸显著变化</div></div>
+      </div>
+      <p>模型给出的图像和本章的三条曲线是同一件事的两种画法：开始阶段，颗粒表面（以及研磨时被撕开的断面）上的可溶物被迅速冲走，速度很快；随后进入扩散主导阶段，速率由物质从颗粒<b>内部</b>走出来的距离决定——于是分子越大、路径越长，越晚到场。</p>
+      <p>这也从机制上解释了为什么研磨度是杠杆最大的变量（<a href="1-2-six-variables.html">1.2 章</a>）：它直接改写扩散路径的长度，而不像水温那样只是缩放速率常数。同时它也提示了一个陷阱：颗粒尺寸分布不均时，「平均萃取率」会同时掩盖细粉的过萃和粗粒的不足——这个陷阱在 <a href="1-4-espresso-pressure.html">1.4 章</a>的意式场景里会被放到最大。</p>
+      <div class="src">来源：Moroney, Lee, O'Brien, Suijver &amp; Marra (2015), Modelling of coffee extraction during brewing using multiscale methods, Chemical Engineering Science；同组 (2016) Coffee extraction kinetics in a well mixed system, Journal of Mathematics in Industry。苦味物质的化学身份见 Frank, Hofmann 等关于绿原酸内酯与苯基林丹的系列工作（2006–2008）。本章交互中的时间常数为示意值，非上述论文的拟合参数。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 工具层 ============ -->
+<section id="tools">
+  <div class="sec-tag"><span class="cell" style="background:var(--neutral)"></span><span class="lab">Tooling Sidebar 工具层</span></div>
+  <div class="toolbox">
+    <div class="toolbox-head">
+      <span class="t">在家把这三条曲线喝出来（会过期，正文不依赖本区块）</span>
+      <span class="date">截至 2026-08</span>
+    </div>
+    <div class="toolbox-body">
+      <p><b>分段接液</b>：手冲时准备三个小杯，每约 45 秒换一个接。第一段通常酸亮尖锐、第二段甜感最厚、第三段偏苦偏涩甚至发空。把三段并排尝一遍，比读十页文字更有用；之后再把三段混合，你会尝到最终那杯的来历。</p>
+      <p><b>器材</b>：任何能读到 0.1 g 的电子秤 + 计时器就够了。折射仪能把这件事量化（见 <a href="1-3-control-chart.html">1.3 章</a>），但不是必需——分段品尝本身就是感官上最直观的证据。</p>
+      <p><b>注意事项</b>：分段接液会打断正常的粉床状态，所以它测的是「顺序」，不是你平时那杯的准确复现。做完实验记得用常规参数再冲一杯作参照。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Quiz ============ -->
+<section id="quiz">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Quiz 自测</span></div>
+  <h2>章末自测</h2>
+  <div class="quiz">
+
+    <details>
+      <summary><span class="qtype">概念题</span>「泡久了更苦，是因为咖啡因泡出来更多。」这句话哪里不对？</summary>
+      <div class="answer">
+        <p>咖啡因确实带苦味，但它在杯中的苦味贡献有限，而且分子较小、溶出较早——它更像是全程都在场的背景，而不是后段才涌入的主角。</p>
+        <p>后半程真正把苦与涩推上来的，是绿原酸在烘焙中生成的降解产物（绿原酸内酯、苯基林丹等）和分子量更大的酚类聚合物与类黑精。它们分子大、扩散慢，所以在时间轴的后段才大量出场。把「苦」直接等同于「咖啡因」，会导致一个错误的对策——比如以为换低咖啡因的豆子就能解决过萃的苦涩。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">计算题</span>用交互里的模型：τ<sub>酸</sub> = 45 s。接触时间 45 秒时，酸类溶出了百分之多少？90 秒呢？两段之间的增量说明了什么？</summary>
+      <div class="answer">
+        <p>一阶饱和：f(t) = 1 − e<sup>−t/τ</sup>。t = 45 s 时 f = 1 − e<sup>−1</sup> ≈ <b>63%</b>；t = 90 s 时 f = 1 − e<sup>−2</sup> ≈ <b>86%</b>。</p>
+        <p>第一个 45 秒贡献了 63 个百分点，第二个 45 秒只贡献了 23 个百分点——<b>同样的时间，回报在急剧递减</b>。三类物质各自都遵循这条递减规律，但因为 τ 不同，递减发生的时刻不同：当酸已经进入平台期，苦才刚过起步段。「延长时间」的真实效果，取决于你此刻站在哪条曲线的哪一段。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">场景判断</span>一杯手冲喝起来「酸得发尖、后段是空的」。按本章的机制，先动哪个变量？为什么不是加长时间到 5 分钟？</summary>
+      <div class="answer">
+        <p>症状是曲线整体停在了左侧：酸出了、甜没跟上。先动<b>研磨度</b>——磨细同时缩短扩散路径并延长接触时间，把三条曲线一起向右推，中段的糖与美拉德产物才追得上来。</p>
+        <p>直接把时间拉到 5 分钟也能提高萃取率，但代价不同：那时酸和甜都已接近平台，增量主要落在还在爬升的苦涩曲线上，你会把「酸而空」换成「苦而涩」。<b>先改变时间轴的刻度（研磨度），再微调在轴上停留的位置（时间）</b>，顺序反了就容易走过头。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">思考题</span>如果某支豆子磨得很不均匀（细粉与粗粒并存），本章的三条曲线会发生什么变化？为什么「平均萃取率正常」的杯子仍可能又苦又薄？</summary>
+      <div class="answer">
+        <p>不均匀意味着杯子里其实是<b>两套曲线的叠加</b>：细粉那套时间常数很小，早早跑到平台期，苦涩曲线已经爬得很高；粗粒那套时间常数很大，酸和甜都还没出齐。</p>
+        <p>把两者混合，平均萃取率可以恰好落在 20%——但它是「过萃的一半」加上「萃取不足的另一半」的平均值，而不是一杯萃取恰当的咖啡。杯感于是同时具备两边的缺点：苦涩来自细粉，单薄与尖酸来自粗粒。</p>
+        <p>这解释了为什么均匀度值得投入：它决定了「平均萃取率」这个数字有多少含金量。<a href="1-4-espresso-pressure.html">1.4 章</a>会看到同一个陷阱在意式里的极端形式（通道效应），<a href="5-3-devices-as-frozen-parameters.html">5.3 章</a>会讨论器具选择时它的权重。</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- nav:auto -->
+<nav class="next">
+  <a href="0-3-where-myths-come-from.html">← 0.3 「玄学」的来源</a>
+  <a href="1-2-six-variables.html">1.2 六大冲煮变量 →</a>
+</nav>
+<!-- /nav:auto -->
+
+</div>
+
+<script src="../assets/theme.js"></script>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/lab-core.js"></script>
+<script src="../assets/labs/1-1-dissolution-order.js"></script>
+</body>
+</html>

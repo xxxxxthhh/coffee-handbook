@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1.4 压力下的萃取：意式浓缩 · 咖啡风味科学手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/handbook.css">
+</head>
+<body>
+<button class="theme-toggle" type="button" aria-label="切换深色/浅色模式" title="切换深色/浅色模式">
+  <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+</button>
+
+<div class="wrap">
+
+<header class="ch">
+  <div class="dotrow" aria-hidden="true">
+    <i class="b"></i><i class="b"></i><i></i><i class="s"></i><i></i><i class="a"></i><i></i><i class="b"></i><i></i><i class="s"></i>
+  </div>
+  <div class="kicker"><a href="../index.html">咖啡风味科学手册</a> · Part 1 · Extraction 萃取</div>
+  <h1>1.4 Extraction Under Pressure
+    <span class="zh">压力下的萃取：意式浓缩与通道效应</span>
+  </h1>
+  <div class="meta">
+    <span>难度 <b>★★★</b></span>
+    <span>阅读 + 玩 <b>~15 min</b></span>
+    <span>玄学祛魅指数 <b>极高</b></span>
+    <span>前置 <b><a href="1-3-control-chart.html">1.3 萃取率与浓度</a></b></span>
+  </div>
+</header>
+
+<!-- ============ 先猜一次 ============ -->
+<section id="guess">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Guess First 先猜一次</span></div>
+  <h2>凭直觉，别查</h2>
+  <p class="big">一杯 espresso 又尖酸、又带粗糙的苦。最可能的原因是？</p>
+  <div class="guess" id="guessBox">
+    <div class="opts">
+      <button data-g="over">整体萃取过头</button>
+      <button data-g="under">整体萃取不足</button>
+      <button data-g="both">同一杯里两者同时发生</button>
+    </div>
+    <div class="after">已记住你的选择。提示：如果一杯咖啡能同时具备两种相反缺陷，那说明「一杯咖啡只有一个萃取率」这个前提出了问题。</div>
+  </div>
+</section>
+
+<!-- ============ 核心概念 ============ -->
+<section id="concept">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Core Concept 核心概念</span></div>
+  <h2>25 秒做完 3 分钟的事，代价是什么</h2>
+  <p>espresso 用大约 9 bar 的压力，在 25–30 秒内把萃取率推到和手冲同一个区间（18–22%）。它靠三件事做到：研磨极细（扩散路径极短）、压力驱动（流速不再依赖重力）、粉水比极小（1:2 上下，浓度梯度始终很大）。<a href="1-3-control-chart.html">1.3 章</a>已经说明，它的高 TDS（8–12%）来自粉水比而不是萃取效率。</p>
+  <p>代价藏在流动里。水通过<span class="term" data-term="Puck" data-zh="粉饼" data-def="意式冲煮中被压紧在粉碗里的咖啡粉层。它是一个多孔介质，水的流动路径由它的密实程度与均匀程度决定。">粉饼</span>的方式遵循多孔介质流动的基本关系（<span class="term" data-term="Darcy's Law" data-zh="达西定律" data-def="描述流体通过多孔介质的定律：流量正比于渗透率与压差、反比于流体黏度与介质厚度。渗透率对颗粒尺寸高度敏感，近似正比于粒径的平方。">达西定律</span>）：</p>
+  <div class="formula">流量 Q ≈ 渗透率 k × 截面积 A × 压差 Δp ÷ (黏度 μ × 粉饼厚度 L)<br><br>其中渗透率 k 近似正比于颗粒尺寸的平方（Kozeny–Carman 近似）<br>→ 粉磨得越细，k 越小，同样压差下流速越慢<br>→ <b>而 k 在粉饼各处并不相同</b>：哪里松，哪里流得多</div>
+  <p>关键在最后一行。粉饼不是均质的：布粉不平、压粉倾斜、粉碗边缘有缝、结块没打散，都会让某一小块区域的渗透率明显高于其余部分。压力一上来，水优先从那里走——这就是<span class="term" data-term="Channeling" data-zh="通道效应" data-def="水在粉饼中沿局部低阻力路径集中流过的现象。结果是通道处过度萃取、其余部分萃取不足，而杯中的平均萃取率无法反映这种分化。">通道效应</span>。</p>
+  <p>通道的后果不是「萃取多了」或「萃取少了」，而是<b>同一杯里两者同时发生</b>：通道处的粉被大量新鲜水反复冲刷，早早越过甜感的平台进入苦涩区；其余粉饼分到的水少，酸还没出齐。它们在同一个杯子里相遇，于是你尝到<b>尖酸与粗糙的苦并存</b>——而折射仪测出的平均萃取率可能还落在「正常」范围里。</p>
+  <p data-diag="espresso 又尖又苦，或每杯流速忽快忽慢|粉饼均匀度（布粉、压粉、粉量与粉碗匹配）|先修粉饼：打散结块、布粉均匀、压平；粉饼修好之前不要调研磨或时间">这条机制改变了调参的优先级。当症状是「又酸又苦」或「同一组参数流速忽快忽慢」时，动研磨度和时间几乎都是徒劳——它们调的是平均值，而问题出在分布。<b>先修粉饼，再调参数。</b></p>
+</section>
+
+<!-- ============ 交互实验 ============ -->
+<section id="lab">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Interactive Lab 交互实验</span></div>
+  <h2>平均值是怎么骗人的</h2>
+  <p>模型把粉饼分成两块：一块「通道区」占粉重的 20%，其余 80% 是「其余区」。拖动不均匀度，看水的分配如何倾斜，以及两块的局部萃取率如何分道扬镳。默认停在轻微通道：29% 的水从 20% 的粉里过去，通道区 22.9%、其余区 18.9%，平均 19.7%。</p>
+
+  <div class="lab" data-print-note="（在线版可拖动不均匀度滑块；打印版展示默认场景：不均匀度 15%，通道区萃取率 22.9%、其余区 18.9%、平均 19.7%，分化 4.0 个百分点）">
+    <div class="lab-head">
+      <span class="t">Channeling · 通道效应</span>
+      <span class="presets">
+        <button data-p="u=0.05">布粉均匀</button>
+        <button data-p="u=0.15">轻微通道</button>
+        <button data-p="u=0.6">严重通道</button>
+      </span>
+    </div>
+    <div class="lab-body">
+      <div class="sliders">
+        <div class="sl">
+          <label>粉饼不均匀度（布粉、压粉、结块共同决定）<b id="vU">15%</b></label>
+          <input type="range" id="u" min="0" max="0.8" step="0.01" value="0.15">
+        </div>
+      </div>
+
+      <div class="chartbox">
+        <svg viewBox="0 0 640 235" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="通道效应：水流分配与两区局部萃取率">
+          <text x="112" y="38" text-anchor="end" class="axt">水流分配</text>
+          <rect id="flowC" x="120" y="18" width="139.2" height="26" fill="var(--sour)"   fill-opacity="0.8"/>
+          <rect id="flowR" x="259.2" y="18" width="340.8" height="26" fill="var(--accent)" fill-opacity="0.45"/>
+          <text x="124" y="60" class="rl">通道区（占粉重 20%）</text>
+          <text x="596" y="60" text-anchor="end" class="rl">其余区（占粉重 80%）</text>
+
+          <rect x="452.3" y="76" width="73.8" height="104" fill="var(--accent)" fill-opacity="0.14"/>
+          <text x="489" y="70" text-anchor="middle" class="rl">18–22% 参考带</text>
+
+          <text x="112" y="102" text-anchor="end" class="axt">通道区 EY</text>
+          <rect id="barC" x="120" y="84" width="422.71" height="30" rx="3" fill="var(--bitter)" fill-opacity="0.8"/>
+          <text x="112" y="152" text-anchor="end" class="axt">其余区 EY</text>
+          <rect id="barR" x="120" y="134" width="349.33" height="30" rx="3" fill="var(--sour)" fill-opacity="0.8"/>
+
+          <line id="avgMark" x1="484" y1="76" x2="484" y2="180" stroke="var(--ink)" stroke-width="2" stroke-dasharray="5 4"/>
+          <text x="484" y="194" text-anchor="middle" class="rl">平均萃取率</text>
+
+          <line x1="120" y1="205" x2="600" y2="205" stroke="var(--ink)" stroke-width="1.5"/>
+          <g class="ax">
+            <text x="120" y="223" text-anchor="middle">0</text>
+            <text x="212" y="223" text-anchor="middle">5</text>
+            <text x="305" y="223" text-anchor="middle">10</text>
+            <text x="397" y="223" text-anchor="middle">15</text>
+            <text x="489" y="223" text-anchor="middle">20</text>
+            <text x="581" y="223" text-anchor="middle">25</text>
+          </g>
+          <text x="620" y="223" text-anchor="end" class="rl">局部萃取率 (%)</text>
+        </svg>
+      </div>
+
+      <div class="readout">
+        <div class="tds">
+          <div class="n" id="avgOut">19.7%</div>
+          <div class="l">平均萃取率<br>（通道区 <span id="cOut">22.9%</span> · 其余区 <span id="rOut">18.9%</span>）<br>分化 <span id="spreadOut">4.0 个百分点</span> · <span id="flowOut">29%</span> 的水走通道</div>
+        </div>
+        <div class="diag">
+          <div class="zone" id="zoneOut">轻微通道</div>
+          <div class="adv" id="advOut">开始出现分化：一部分粉已经过萃，另一部分还没跟上。杯子里会同时出现尖酸和粗糙的苦，而平均值看起来仍然正常。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>把滑块推到 60%：平均萃取率掉到 16.6%，读数像「萃取不足」，可通道区已经跑到 25.6%——你会一边尝到过萃的苦涩，一边被数字建议「磨细一点、再萃久一点」。<b>按这个建议做，只会让通道更严重。</b>这是全书最典型的一次「平均值陷阱」：当分布被撕开，描述分布的那个数字就不再能指导行动。</p>
+  <p>模型里的 20% / 一个通道是刻意的简化，真实粉饼的不均匀是连续分布的；这里要传达的是<b>分化的方向与量级</b>，不是某台机器的读数预测。</p>
+</section>
+
+<!-- ============ 真实案例 ============ -->
+<section id="case">
+  <div class="sec-tag"><span class="cell" style="background:var(--sour)"></span><span class="lab">Case Study 真实案例</span></div>
+  <h2>反直觉的处方：磨粗一点、少放一点</h2>
+  <div class="case">
+    <div class="case-head"><span class="cell"></span>Cameron 等 · Matter · 2020</div>
+    <div class="case-body">
+      <p>一个由数学建模者、化学家与咖啡从业者组成的团队（Hendon 参与）系统研究了 espresso：先建立描述粉饼中溶解与流动的模型，再用大量实测萃取率检验。他们发现的最有名的一条结论与行业共识相反。</p>
+      <div class="stats">
+        <div class="stat"><div class="n g">磨得更粗</div><div class="l">在合适的粉量下反而得到更高的萃取率</div></div>
+        <div class="stat"><div class="n g">粉量下调</div><div class="l">较低的粉量使粉饼更容易被均匀润湿</div></div>
+        <div class="stat"><div class="n g">重现性 ↑</div><div class="l">杯与杯之间的萃取率波动明显收窄</div></div>
+      </div>
+      <p>机制正是本章的模型：研磨越细，粉饼渗透率越低、越容易在局部形成优先通道，实际萃取变得既不充分也不稳定。适度磨粗、减少粉量，让水能均匀穿过整个粉饼——虽然「理论上」颗粒更大、表面积更小，实际得到的萃取率反而更高，因为参与萃取的粉更多了。</p>
+      <p>这条结论的边界要说清楚：它成立于该研究使用的设备、粉碗与豆子，并不意味着任何时候磨粗都更好。可迁移的是方法论——<b>当均匀度成为瓶颈时，优化平均值的直觉会指向错误的方向</b>。同样的逻辑在手冲里表现为粉床塌陷与边缘绕流，在 <a href="5-1-percolation-vs-immersion.html">5.1 章</a>会再遇到一次。</p>
+      <div class="src">来源：Cameron et al. (2020), Systematically Improving Espresso: Insights from Mathematical Modeling and Experiment, Matter 2(3)。多孔介质流动的经典关系见 Darcy (1856) 与 Kozeny–Carman 近似；粉床渗透率的实验方法见 Corrochano et al. (2015), Journal of Food Engineering。本章交互为两区简化模型，非上述论文的拟合结果。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 工具层 ============ -->
+<section id="tools">
+  <div class="sec-tag"><span class="cell" style="background:var(--neutral)"></span><span class="lab">Tooling Sidebar 工具层</span></div>
+  <div class="toolbox">
+    <div class="toolbox-head">
+      <span class="t">修粉饼的几件工具（会过期，正文不依赖本区块）</span>
+      <span class="date">截至 2026-08</span>
+    </div>
+    <div class="toolbox-body">
+      <p><b>布粉针（WDT 类）</b>：用一束细针在粉碗里搅散结块。静电与研磨产生的团块是通道的常见起点，打散它们通常比换任何配件都有效。</p>
+      <p><b>压粉的平整度</b>：压力大小的影响远小于「压得平不平」——倾斜的粉饼会在薄的一侧形成低阻区。带定深或自找平结构的压粉器解决的是这个问题，不是「压得更实」。</p>
+      <p><b>粉碗与粉量匹配</b>：粉量与粉碗容量差得太多，粉饼要么被淋头压出凹陷，要么留下过大的顶部空间——两者都会破坏均匀润湿。粉碗上的标称容量是参考，实际匹配值随豆子密度与烘焙度浮动。</p>
+      <p><b>诊断顺序</b>：先看流速是否稳定与粉饼底部是否有明显冲刷坑，再谈研磨与时间。粉饼修好之前，其余参数的读数都不可靠。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Quiz ============ -->
+<section id="quiz">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Quiz 自测</span></div>
+  <h2>章末自测</h2>
+  <div class="quiz">
+
+    <details>
+      <summary><span class="qtype">计算题</span>用交互里的模型：不均匀度 60% 时，通过通道区的水占 56%。两区的局部粉水比各是多少？为什么平均萃取率反而降到 16.6%？</summary>
+      <div class="answer">
+        <p>局部粉水比 = 水量占比 ÷ 粉重占比。通道区：0.56 ÷ 0.20 = <b>2.8</b>（相对均匀情形的 2.8 倍水量）；其余区：0.44 ÷ 0.80 = <b>0.55</b>（只有一半多一点的水）。</p>
+        <p>代入 EY = 26 × (1 − e<sup>−1.466·r</sup>)：通道区 ≈ 25.6%，其余区 ≈ 14.4%。按粉重加权：0.2 × 25.6 + 0.8 × 14.4 ≈ <b>16.6%</b>。</p>
+        <p>平均值下降的原因是<b>饱和曲线是凹的</b>：通道区多得到的那份水，其边际收益已经很小（曲线接近平台），而其余区失去的那份水，损失的是曲线最陡峭的一段。把水从陡峭区调到平台区，总产出下降——这也是「均匀萃取效率更高」的数学根源。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">场景判断</span>你的 espresso 平均萃取率读数 17%，杯子却明显发苦发涩。折射仪建议「萃取不足，磨细一档」。你会怎么做？</summary>
+      <div class="answer">
+        <p>不磨细。17% 的平均值配上苦涩的口感，是通道效应的典型指纹：低平均 + 高局部。磨细会进一步降低粉饼渗透率，让通道更容易形成，把分化推得更开。</p>
+        <p>正确的顺序：先修分布——打散结块、布粉均匀、压平、检查粉量与粉碗匹配、观察粉饼底部有没有冲刷坑。等到流速稳定、同参数下萃取率波动收窄之后，再回来读那个平均值，那时它才值得信任。</p>
+        <p>一个便宜的验证：连续做三杯同参数的萃取，记录时间与出液量。<b>如果三杯之间波动很大，问题在分布而不在参数。</b></p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">概念题</span>espresso 的 TDS 是手冲的近十倍，可它常常「萃取不足」。用达西定律和粉水比解释这两件事为什么能同时成立。</summary>
+      <div class="answer">
+        <p>高 TDS 来自粉水比：1:2 的比例意味着同样的溶出量被溶在极少的水里（<a href="1-3-control-chart.html">1.3 章</a>：TDS ≈ EY ÷ 粉水比）。这与萃取是否充分无关。</p>
+        <p>而萃取率受制于接触时间：达西定律里，流量正比于渗透率与压差、反比于粉饼厚度与黏度。9 bar 的压差把流速推得很高，整个过程只有 25–30 秒——即便研磨极细缩短了扩散路径，慢的那批物质仍可能没来得及出来。于是出现「极浓但萃取不足」：<b>音量拧到最大，音色还停在偏酸的一侧。</b></p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">思考题</span>为什么说通道效应是 <a href="1-1-dissolution-order.html">1.1 章</a>「均值陷阱」的极端版本？在手冲里它以什么形式出现？</summary>
+      <div class="answer">
+        <p>1.1 章的陷阱是颗粒尺寸分布造成的：细粉与粗粒各自走在不同的曲线上，平均萃取率掩盖了两端。通道效应把这件事从「颗粒尺度」放大到「粉饼尺度」——不再是某些颗粒萃取过头，而是整片区域被反复冲刷，另一片几乎没被碰过。分化的幅度大了一个量级，杯感也更刺目。</p>
+        <p>手冲里的对应形式包括：粉床边缘绕流（水沿滤纸与粉床之间的缝隙下去）、粉床塌陷后形成的局部致密区、以及注水冲出的坑。症状同样是「又酸又苦」以及重现性差。对策也同源：让水与粉的接触在空间上尽量均匀——闷蒸充分、注水轻柔、避免冲刷边缘。</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- nav:auto -->
+<nav class="next">
+  <a href="1-3-control-chart.html">← 1.3 萃取率与浓度</a>
+  <a href="2-1-roast-chemistry.html">2.1 烘焙中的化学 →</a>
+</nav>
+<!-- /nav:auto -->
+
+</div>
+
+<script src="../assets/theme.js"></script>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/lab-core.js"></script>
+<script src="../assets/labs/1-4-espresso-pressure.js"></script>
+</body>
+</html>
