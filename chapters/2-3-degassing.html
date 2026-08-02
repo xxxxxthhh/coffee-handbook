@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2.3 养豆与排气 · 咖啡风味科学手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/handbook.css">
+</head>
+<body>
+<button class="theme-toggle" type="button" aria-label="切换深色/浅色模式" title="切换深色/浅色模式">
+  <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+</button>
+
+<div class="wrap">
+
+<header class="ch">
+  <div class="dotrow" aria-hidden="true">
+    <i class="a"></i><i></i><i class="b"></i><i></i><i class="s"></i><i></i><i class="a"></i><i class="a"></i><i></i><i class="b"></i>
+  </div>
+  <div class="kicker"><a href="../index.html">咖啡风味科学手册</a> · Part 2 · Roasting 烘焙</div>
+  <h1>2.3 Degassing and Rest
+    <span class="zh">养豆与排气：CO₂ 如何搅乱你的萃取</span>
+  </h1>
+  <div class="meta">
+    <span>难度 <b>★★☆</b></span>
+    <span>阅读 + 玩 <b>~12 min</b></span>
+    <span>玄学祛魅指数 <b>高</b></span>
+    <span>前置 <b><a href="2-1-roast-chemistry.html">2.1 烘焙中的化学</a></b></span>
+  </div>
+</header>
+
+<!-- ============ 先猜一次 ============ -->
+<section id="guess">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Guess First 先猜一次</span></div>
+  <h2>凭直觉，别查</h2>
+  <p class="big">刚烘好第二天的豆子，冲出来常常不太稳定。主要原因是？</p>
+  <div class="guess" id="guessBox">
+    <div class="opts">
+      <button data-g="hot">豆子还「没凉透」</button>
+      <button data-g="co2">豆子里的气体在往外跑</button>
+      <button data-g="rx">化学反应还在继续</button>
+    </div>
+    <div class="after">已记住你的选择。提示：闷蒸时鼓起的那个「馒头」，是这个问题的直接证据。</div>
+  </div>
+</section>
+
+<!-- ============ 核心概念 ============ -->
+<section id="concept">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Core Concept 核心概念</span></div>
+  <h2>豆子里关着一大堆二氧化碳</h2>
+  <p>烘焙过程中的热解反应会生成大量 CO₂，其中相当一部分被困在豆内的孔隙里。烘焙结束后，它们持续向外扩散——这就是<span class="term" data-term="Degassing" data-zh="排气" data-def="烘焙后咖啡豆中滞留的二氧化碳持续向外扩散的过程。排气速率随时间衰减，深烘与快烘通常滞留更多气体、排放更快。">排气</span>。研磨会把这个过程急剧加速：颗粒变小、扩散路径变短，大部分残余气体在磨完后的很短时间内跑掉。</p>
+  <p>CO₂ 干扰萃取的方式很直接：<b>它占据了本该属于水的位置</b>。</p>
+  <ul>
+    <li><b>滤泡冲煮</b>：注水时气体从粉粒中涌出，把粉床顶起（<span class="term" data-term="Bloom" data-zh="闷蒸" data-def="注入少量热水让咖啡粉排气并充分润湿的步骤。粉床膨胀的幅度是残余二氧化碳多少的直观指标。">闷蒸</span>时鼓起的「馒头」）。气泡让水绕开部分粉粒，接触不均、流速不稳——萃取率既偏低又难复现。</li>
+    <li><b>意式</b>：高压下气体的影响更微妙。它会改变粉饼内的流动阻力与流速，也让 crema 变得格外厚而蓬松；同一组参数下，很新的豆子往往流得更快、萃取率更低。</li>
+  </ul>
+  <p>另一头是相反方向的过程：<span class="term" data-term="Staling" data-zh="氧化衰败" data-def="咖啡在储存中因氧化与挥发导致香气流失、风味转向纸板与木质的过程。它与排气方向相反：排气需要时间，而氧化随时间加剧。">氧化衰败</span>。香气分子挥发、脂质氧化，风味逐渐转向纸板与木质。于是养豆变成一个<b>两难的取舍</b>：排气需要时间，而香气经不起时间。</p>
+  <p data-diag="闷蒸时粉床剧烈膨胀，流速不稳，杯感偏酸偏薄|豆子过新，残余 CO₂ 干扰浸润与接触|再养几天；急用时延长闷蒸时间并轻微搅拌，让气体先排出去">「窗口期」就是这两条曲线的交叠区间。它的位置随烘焙度（烘得越深，气体越多、排得越快）、包装（单向排气阀 vs 密封）与储存条件而变，所以本书不给固定天数——具体数字在工具层，并带日期戳。</p>
+</section>
+
+<!-- ============ 交互实验 ============ -->
+<section id="lab">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Interactive Lab 交互实验</span></div>
+  <h2>两条相反的曲线，中间夹出一个窗口</h2>
+  <p>下降快的是 CO₂ 残留（干扰萃取，越低越好），下降慢的是香气保留（越高越好）。两条阈值线夹出两个窗口——滤泡的窗口开得早，意式的开得晚。默认停在第 10 天：CO₂ 残留 33%、香气保留 67%，两种冲煮都在窗口内。</p>
+
+  <div class="lab" data-print-note="（在线版可拖动天数滑块；打印版展示默认场景：烘焙后第 10 天，CO₂ 残留 33%、香气保留 67%，两种冲煮都在窗口内）">
+    <div class="lab-head">
+      <span class="t">Degassing Window · 养豆窗口</span>
+      <span class="presets">
+        <button data-p="d=2">第 2 天：还在排气</button>
+        <button data-p="d=10">第 10 天：窗口内</button>
+        <button data-p="d=28">第 28 天：香气衰减</button>
+      </span>
+    </div>
+    <div class="lab-body">
+      <div class="sliders">
+        <div class="sl">
+          <label>烘焙后天数<b id="vDay">10 天</b></label>
+          <input type="range" id="d" min="0" max="40" step="1" value="10">
+        </div>
+      </div>
+
+      <div class="chartbox">
+        <svg viewBox="0 0 660 370" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CO2 残留与香气保留随天数的变化，以及两种冲煮的窗口">
+          <line x1="60" y1="300" x2="620" y2="300" stroke="var(--ink)" stroke-width="1.5"/>
+          <line x1="60" y1="50"  x2="60"  y2="300" stroke="var(--ink)" stroke-width="1.5"/>
+          <g class="ax">
+            <text x="60"  y="318" text-anchor="middle">0</text>
+            <text x="200" y="318" text-anchor="middle">10</text>
+            <text x="340" y="318" text-anchor="middle">20</text>
+            <text x="480" y="318" text-anchor="middle">30</text>
+            <text x="620" y="318" text-anchor="middle">40</text>
+            <text x="52" y="304" text-anchor="end">0</text>
+            <text x="52" y="241" text-anchor="end">25</text>
+            <text x="52" y="179" text-anchor="end">50</text>
+            <text x="52" y="116" text-anchor="end">75</text>
+            <text x="52" y="54"  text-anchor="end">100</text>
+          </g>
+          <text x="340" y="336" text-anchor="middle" class="axt">烘焙后天数</text>
+          <text x="18" y="175" text-anchor="middle" class="axt" transform="rotate(-90 18 175)">相对水平 (%)</text>
+
+          <polyline id="curveCo2" fill="none" stroke="var(--bitter)" stroke-width="2.5"
+            points="60.0,50.0 88.0,99.8 116.0,139.7 144.0,171.6 172.0,197.2 200.0,217.7 228.0,234.1 256.0,247.2 284.0,257.7 312.0,266.2 340.0,272.9 368.0,278.3 396.0,282.6 424.0,286.1 452.0,288.9 480.0,291.1 508.0,292.9 536.0,294.3 564.0,295.4 592.0,296.3 620.0,297.1"/>
+          <polyline id="curveAroma" fill="none" stroke="var(--accent)" stroke-width="2.5"
+            points="60.0,50.0 88.0,69.2 116.0,87.0 144.0,103.3 172.0,118.5 200.0,132.4 228.0,145.3 256.0,157.2 284.0,168.2 312.0,178.3 340.0,187.7 368.0,196.3 396.0,204.3 424.0,211.6 452.0,218.4 480.0,224.7 508.0,230.5 536.0,235.8 564.0,240.8 592.0,245.3 620.0,249.5"/>
+
+          <rect x="146.8" y="330" width="123.2" height="12" rx="6" fill="var(--accent)" fill-opacity="0.45"/>
+          <text x="276" y="341" class="rl">滤泡窗口</text>
+          <rect x="193" y="348" width="109.2" height="12" rx="6" fill="var(--sour)" fill-opacity="0.55"/>
+          <text x="308" y="359" class="rl">意式窗口（对残余 CO₂ 更敏感）</text>
+
+          <line id="dayMark" x1="200" y1="50" x2="200" y2="300" stroke="var(--ink)" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <circle id="dotC" cx="200" cy="217.7" r="7" fill="var(--bitter)" stroke="var(--card)" stroke-width="2"/>
+          <circle id="dotA" cx="200" cy="132.4" r="7" fill="var(--accent)" stroke="var(--card)" stroke-width="2"/>
+
+          <line x1="430" y1="86" x2="454" y2="86" stroke="var(--accent)" stroke-width="2.5"/>
+          <text x="460" y="90" class="rl">香气保留</text>
+          <line x1="430" y1="104" x2="454" y2="104" stroke="var(--bitter)" stroke-width="2.5"/>
+          <text x="460" y="108" class="rl">CO₂ 残留</text>
+        </svg>
+      </div>
+
+      <div class="readout">
+        <div class="tds">
+          <div class="n" id="cOut">33%</div>
+          <div class="l">CO₂ 残留<br>香气保留 <span id="aOut">67%</span></div>
+        </div>
+        <div class="diag">
+          <div class="zone" id="zoneOut">两种冲煮都在窗口内</div>
+          <div class="adv" id="advOut">CO₂ 已经退到低位，香气还没明显衰减。这是模型里最宽裕的一段，适合做参数对比实验：变量少，重现性好。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>模型里两个时间常数（CO₂ 约 9 天、香气约 25 天）是<b>示意值</b>，用来表达一件事：<b>排气比氧化快得多</b>，所以窗口存在。真实数值随烘焙度、研磨与否、包装与储存条件浮动——深烘豆气体更多也排得更快，磨成粉后几分钟内就丢掉大半。因此本书不写「第几天最好喝」，而给你判断依据：<b>看闷蒸的膨胀幅度和同参数下的重现性</b>。</p>
+</section>
+
+<!-- ============ 真实案例 ============ -->
+<section id="case">
+  <div class="sec-tag"><span class="cell" style="background:var(--sour)"></span><span class="lab">Case Study 真实案例</span></div>
+  <h2>把排气测出来：烘焙条件如何决定气体总量与速度</h2>
+  <div class="case">
+    <div class="case-head"><span class="cell"></span>Wang &amp; Lim · University of Guelph · 2014</div>
+    <div class="case-body">
+      <p>加拿大圭尔夫大学的两位食品科学研究者做了一组直接测量：把不同烘焙条件下的咖啡放进容器，持续记录释放出的 CO₂ 总量与速率，比较烘焙度、烘焙速度与研磨状态的影响。</p>
+      <div class="stats">
+        <div class="stat"><div class="n g">烘焙越深</div><div class="l">滞留的 CO₂ 总量越多</div></div>
+        <div class="stat"><div class="n g">快烘 vs 慢烘</div><div class="l">相同烘焙度下，路径不同，气体滞留与释放行为不同</div></div>
+        <div class="stat"><div class="n g">研磨后</div><div class="l">大部分残余气体在很短时间内释放</div></div>
+      </div>
+      <p>三条结论都能直接翻译成日常操作。<b>「烘焙越深、气越多」</b>意味着深烘豆通常需要更长的静置，尤其做意式时；<b>「路径影响释放行为」</b>再次呼应 <a href="2-1-roast-chemistry.html">2.1 章</a>——烘焙度这个标签装不下一条曲线的信息；<b>「研磨后迅速释放」</b>则解释了为什么现磨与预磨的差异不只是香气：预磨的粉早已排完气，冲起来「稳定」，代价是香气也一起跑掉了。</p>
+      <p>顺带说明一个边界：这类实验测的是气体，不是好喝程度。CO₂ 少了，萃取更稳定，但香气也在流失——<b>「稳定」和「好喝」在这条时间轴上并不同向</b>。这正是窗口需要两条曲线来定义的原因。</p>
+      <div class="src">来源：Wang &amp; Lim (2014), Effect of roasting conditions on carbon dioxide degassing behavior in coffee, Food Research International；同一课题组关于咖啡包装与储存中 CO₂ 行为的后续工作。本章交互中的时间常数与阈值为示意值，非上述研究的拟合参数。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 工具层 ============ -->
+<section id="tools">
+  <div class="sec-tag"><span class="cell" style="background:var(--neutral)"></span><span class="lab">Tooling Sidebar 工具层</span></div>
+  <div class="toolbox">
+    <div class="toolbox-head">
+      <span class="t">养豆与储存的实操（会过期，正文不依赖本区块）</span>
+      <span class="date">截至 2026-08</span>
+    </div>
+    <div class="toolbox-body">
+      <p><b>常见静置区间</b>：滤泡类冲煮常见的建议是烘焙后约 5–20 天，意式常见的是 7–30 天，深烘往后推、浅烘往前挪。这些区间来自行业经验的归纳而非统一标准，随豆子与器具浮动——用它们当起点，用杯子做判断。</p>
+      <p><b>单向排气阀</b>：包装上的那个小圆阀让 CO₂ 出去、不让空气进来，因此袋内可以边排气边隔氧。它的存在也说明：袋子鼓起来是正常现象，不是变质。</p>
+      <p><b>密封与分装</b>：开封后与空气接触是主要变量。分装成小份、用完一份再开下一份，比任何「保鲜技巧」都有效。长期储存可以冷冻分装（取出后先回温再开封，避免冷凝水），但每次反复冻融会抵消收益。</p>
+      <p><b>现磨</b>：研磨后气体与香气都会迅速流失，所以预磨咖啡的「稳定」是以香气为代价换来的。若条件有限，把研磨安排在冲煮前几分钟即可，不必追求「秒磨秒冲」。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Quiz ============ -->
+<section id="quiz">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Quiz 自测</span></div>
+  <h2>章末自测</h2>
+  <div class="quiz">
+
+    <details>
+      <summary><span class="qtype">概念题</span>为什么很新的豆子做意式时，往往流速偏快、萃取率偏低，crema 却特别厚？</summary>
+      <div class="answer">
+        <p>残余 CO₂ 在粉饼内涌出，一方面在粉粒表面形成气泡层，妨碍水与粉的接触；另一方面改变了粉饼内的流动状况，使实际有效阻力下降，同样压力下流得更快。接触既少又短，萃取率自然偏低。</p>
+        <p>厚 crema 则是同一批气体的另一面：大量 CO₂ 溶入/夹带进液体，出液后释放形成泡沫。所以<b>厚 crema 是新鲜度的指标，不是萃取质量的指标</b>——把它当成「萃取好」的证据，会掩盖萃取不足的问题。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">计算题</span>用交互里的模型（CO₂ 残留 = e<sup>−d/9</sup>）：第 9 天与第 18 天的残留各是多少？说明这条曲线为什么让「再等一周」在后期收效甚微。</summary>
+      <div class="answer">
+        <p>第 9 天：e<sup>−1</sup> ≈ <b>37%</b>；第 18 天：e<sup>−2</sup> ≈ <b>14%</b>。</p>
+        <p>第一个 9 天消掉了 63 个百分点，第二个 9 天只消掉 23 个百分点。指数衰减的性质是<b>等时间间隔消掉等比例</b>，所以每次下降的幅度也越来越小。当残留已经低到不再明显干扰萃取时，继续等待带来的稳定性收益很小，而香气那条曲线仍在稳步下滑——<b>后期的等待，代价大于收益</b>。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">场景判断</span>朋友送了一包昨天烘好的浅烘豆，你今晚就想喝。做哪些调整能让这杯尽量可控？</summary>
+      <div class="answer">
+        <p>目标是把气体的干扰降到最低：<b>延长闷蒸</b>（给气体更多时间跑出来）、闷蒸时<b>轻微搅拌</b>让粉充分润湿、必要时<b>稍微磨细一档</b>补偿因接触不良而损失的萃取率。意式则可以先接受偏快的流速，或把粉量略作调整后重新找参数。</p>
+        <p>同时降低期待的精度：这一杯的重现性本来就差，不适合用来做参数对比实验。<b>要做对比，等窗口期</b>——那时变量最少。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">思考题</span>「稳定」和「好喝」在这条时间轴上并不同向。这对「什么时候该做参数实验」有什么启示？</summary>
+      <div class="answer">
+        <p>启示是把两件事分开安排。<b>做实验时要变量最少</b>：选窗口期中段的豆子，此时排气基本完成、氧化尚不明显，同一组参数的重现性最好，你才有能力判断某个改动到底有没有效果。</p>
+        <p><b>喝的时候可以更宽</b>：偏早的豆子香气更冲，偏晚的豆子更柔和，只要接受重现性会差一些即可。混淆两者的典型错误是：拿刚烘好的豆子做研磨度对比实验，结果三次结果都不一样，最后归因给「玄学」——其实是 <a href="0-3-where-myths-come-from.html">0.3 章</a>说的：干扰项没被控制住。</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- nav:auto -->
+<nav class="next">
+  <a href="2-2-roast-level-flavor.html">← 2.2 烘焙度与风味走向</a>
+  <a href="3-1-minerals.html">3.1 矿物质的角色 →</a>
+</nav>
+<!-- /nav:auto -->
+
+</div>
+
+<script src="../assets/theme.js"></script>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/lab-core.js"></script>
+<script src="../assets/labs/2-3-degassing.js"></script>
+</body>
+</html>

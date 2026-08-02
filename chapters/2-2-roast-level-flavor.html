@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2.2 烘焙度与风味走向 · 咖啡风味科学手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/handbook.css">
+</head>
+<body>
+<button class="theme-toggle" type="button" aria-label="切换深色/浅色模式" title="切换深色/浅色模式">
+  <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+</button>
+
+<div class="wrap">
+
+<header class="ch">
+  <div class="dotrow" aria-hidden="true">
+    <i class="s"></i><i class="a"></i><i></i><i class="a"></i><i></i><i class="b"></i><i class="b"></i><i></i><i class="a"></i><i></i>
+  </div>
+  <div class="kicker"><a href="../index.html">咖啡风味科学手册</a> · Part 2 · Roasting 烘焙</div>
+  <h1>2.2 Roast Level and Flavor
+    <span class="zh">烘焙度与风味走向：用酸质换苦甜</span>
+  </h1>
+  <div class="meta">
+    <span>难度 <b>★★☆</b></span>
+    <span>阅读 + 玩 <b>~13 min</b></span>
+    <span>玄学祛魅指数 <b>高</b></span>
+    <span>前置 <b><a href="2-1-roast-chemistry.html">2.1 烘焙中的化学</a></b>、<b><a href="1-3-control-chart.html">1.3 控制图</a></b></span>
+  </div>
+</header>
+
+<!-- ============ 先猜一次 ============ -->
+<section id="guess">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Guess First 先猜一次</span></div>
+  <h2>凭直觉，别查</h2>
+  <p class="big">同一台磨、同一组参数，把浅烘豆换成深烘豆。这杯会怎么变？</p>
+  <div class="guess" id="guessBox">
+    <div class="opts">
+      <button data-g="same">差不多，只是风味不同</button>
+      <button data-g="under">更容易萃取不足</button>
+      <button data-g="over">更容易萃取过头</button>
+    </div>
+    <div class="after">已记住你的选择。提示：烘焙不只改变风味成分，还改变了豆子的物理结构——那会影响水把东西带走的难易。</div>
+  </div>
+</section>
+
+<!-- ============ 核心概念 ============ -->
+<section id="concept">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Core Concept 核心概念</span></div>
+  <h2>烘焙度做了两件事，只有一件被谈论</h2>
+  <p>大家熟悉第一件：<b>改变风味成分的配比</b>。烘得越深，酸类被降解得越多，美拉德与焦糖化产物越丰富，苦味物质持续积累——<a href="2-1-roast-chemistry.html">2.1 章</a>的三条走向说的就是这件事。</p>
+  <p>第二件很少被提，却直接决定你该怎么冲：<b>烘焙改变了豆子的物理结构</b>。随着烘焙加深，豆内水分蒸发、气体积累撑开细胞壁，孔隙率上升、结构变脆。后果是同样的研磨设定下，深烘豆的颗粒更容易碎（细粉更多），可溶物也更容易被水带走。</p>
+  <div class="formula">烘得更深 →<br>　① 酸质 ↓、苦味物质 ↑（成分配比）<br>　② 孔隙率 ↑、结构更脆 → 相同参数下萃取率 ↑（物理结构）<br>　③ 苦味阈值更早到达<br><br>合起来：<b>宜人的萃取率区间整体左移</b>——深烘需要更低的萃取率，浅烘需要更高的</div>
+  <p>这解释了一个常见的挫败：一个在浅烘豆上调好的配方，换到深烘豆上会显得苦而干。参数没变，但豆子在同样参数下走得更远，同时它的「苦味阈值」还提前了——两头一起挤压，落点就掉出了区间。反过来，用深烘的配方冲浅烘豆，得到的往往是酸而薄。</p>
+  <p data-diag="换了支豆子，同一组参数突然变苦变干|烘焙度不同导致宜人萃取率区间左移|深烘豆磨粗一档或缩短接触时间；浅烘豆反向调整，把落点推回该烘焙度的区间">于是本章的结论可以直接写成一条操作规则：<b>换豆子时，先问烘焙度，再决定往哪个方向调参数。</b>深烘 → 磨粗一档、缩短接触时间；浅烘 → 磨细一档、提高水温或延长时间。这不是玄学口诀，它是「区间会移动」这件事的直接推论。</p>
+  <h3>苦味的两种身份</h3>
+  <p>顺带澄清一个混淆：浅烘的苦和深烘的苦不是同一种物质。研究界对咖啡苦味成分的解析显示，中浅烘的苦更多来自绿原酸内酯，而随着烘焙加深，它们进一步转化为<span class="term" data-term="Phenylindanes" data-zh="苯基林丹" data-def="绿原酸在较深烘焙中进一步降解生成的一类化合物，带有持久而粗糙的苦味，被认为是深烘咖啡苦味的主要来源之一。">苯基林丹</span>类化合物，苦味更持久、更粗糙。所以「深烘的苦」和「过萃的苦」在杯中的质感不同——前者来自豆子，后者来自你的冲煮，需要分开诊断。</p>
+</section>
+
+<!-- ============ 交互实验 ============ -->
+<section id="lab">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Interactive Lab 交互实验</span></div>
+  <h2>宜人区间会跟着烘焙度移动</h2>
+  <p>纵轴是烘焙度（上浅下深），横轴是萃取率。倾斜的色带是该烘焙度下的宜人区间——它随烘焙加深向左滑。拖动两个滑块，看同一个萃取率如何在不同烘焙度上得到不同判定。默认：中浅烘、萃取率 20.0%，区间 18.4–22.0%，落在区内。</p>
+
+  <div class="lab" data-print-note="（在线版可拖动烘焙度与萃取率；打印版展示默认场景：中浅烘 40/100、萃取率 20.0%、宜人区间 18.4–22.0%，落在区内）">
+    <div class="lab-head">
+      <span class="t">Roast × Extraction · 烘焙度与萃取率</span>
+      <span class="presets">
+        <button data-p="r=10,ey=20">浅烘 · 20%</button>
+        <button data-p="r=40,ey=20">中浅 · 20%</button>
+        <button data-p="r=90,ey=20">深烘 · 20%</button>
+      </span>
+    </div>
+    <div class="lab-body">
+      <div class="sliders">
+        <div class="sl">
+          <label>烘焙度（0 = 极浅，100 = 极深）<b id="vRoast">40 / 100（中浅烘）</b></label>
+          <input type="range" id="r" min="0" max="100" step="1" value="40">
+        </div>
+        <div class="sl">
+          <label>萃取率 EY（由研磨度、水温、时间决定）<b id="vEy">20.0%</b></label>
+          <input type="range" id="ey" min="14" max="26" step="0.2" value="20">
+        </div>
+      </div>
+
+      <div class="chartbox">
+        <svg viewBox="0 0 640 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="烘焙度与萃取率的二维图：宜人区间随烘焙加深向左移动">
+          <polygon points="338.7,40 494.7,40 299.7,320 143.7,320" fill="var(--accent)" fill-opacity="0.18" stroke="var(--accent)" stroke-width="2"/>
+          <text x="416" y="32" text-anchor="middle" class="zl" fill="var(--accent)">宜人萃取率区间</text>
+          <text x="100" y="60" class="zl">↑ 浅烘</text>
+          <text x="100" y="312" class="zl">↓ 深烘</text>
+
+          <line x1="70" y1="320" x2="590" y2="320" stroke="var(--ink)" stroke-width="1.5"/>
+          <line x1="70" y1="40"  x2="70"  y2="320" stroke="var(--ink)" stroke-width="1.5"/>
+          <g class="ax">
+            <text x="70"  y="338" text-anchor="middle">14</text>
+            <text x="157" y="338" text-anchor="middle">16</text>
+            <text x="243" y="338" text-anchor="middle">18</text>
+            <text x="330" y="338" text-anchor="middle">20</text>
+            <text x="417" y="338" text-anchor="middle">22</text>
+            <text x="503" y="338" text-anchor="middle">24</text>
+            <text x="590" y="338" text-anchor="middle">26</text>
+            <text x="62" y="44"  text-anchor="end">0</text>
+            <text x="62" y="114" text-anchor="end">25</text>
+            <text x="62" y="184" text-anchor="end">50</text>
+            <text x="62" y="254" text-anchor="end">75</text>
+            <text x="62" y="324" text-anchor="end">100</text>
+          </g>
+          <text x="330" y="362" text-anchor="middle" class="axt">萃取率 EY (%)</text>
+          <text x="22" y="180" text-anchor="middle" class="axt" transform="rotate(-90 22 180)">烘焙度</text>
+
+          <circle id="rdot" cx="330" cy="152" r="9" fill="var(--accent)" stroke="var(--paper)" stroke-width="2.5"/>
+        </svg>
+      </div>
+
+      <div class="readout">
+        <div class="tds">
+          <div class="n" id="rangeOut">18.4–22.0%</div>
+          <div class="l">该烘焙度的宜人萃取率区间</div>
+        </div>
+        <div class="diag">
+          <div class="zone" id="zoneOut">中浅烘 · 落在宜人区</div>
+          <div class="adv" id="advOut">这个烘焙度的宜人区间大约是 18.4–22.0%，当前落点在区间内。换一支烘焙度不同的豆子时，这个区间会跟着移动。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>三个预设是同一个故事的三帧：<b>萃取率固定在 20%，只换豆子。</b>浅烘时它落在区间偏左，中浅时正中，深烘时已经越过右边界——同一组参数，判定从「还可以再推一点」变成「过头了」。这就是「换豆子要重新调参」的机制版本。</p>
+  <p>色带的斜率与宽度是示意值，用来表达「区间会移动」这个事实，不是可以照抄的标准。真实的位置还受处理法、豆子密度、器具与个人偏好影响——本书的立场和 <a href="1-3-control-chart.html">1.3 章</a>一致：图是坐标系，不是判卷标准。</p>
+</section>
+
+<!-- ============ 真实案例 ============ -->
+<section id="case">
+  <div class="sec-tag"><span class="cell" style="background:var(--sour)"></span><span class="lab">Case Study 真实案例</span></div>
+  <h2>为什么深烘更「好萃取」：从孔隙结构说起</h2>
+  <div class="case">
+    <div class="case-head"><span class="cell"></span>Schenker 等（孔隙结构）· Frank &amp; Hofmann 等（苦味成分）</div>
+    <div class="case-body">
+      <p>「深烘更容易萃取」在实践中是共识，但它的机制常被含糊带过。两条独立的研究线索合起来给出了答案。</p>
+      <div class="stats">
+        <div class="stat"><div class="n g">孔隙结构</div><div class="l">烘焙加深，豆内孔隙率上升、结构更脆，可溶物更易被带出</div></div>
+        <div class="stat"><div class="n g">苦味成分</div><div class="l">中浅烘以绿原酸内酯为主，深烘转向苯基林丹类</div></div>
+        <div class="stat"><div class="n g">合成效果</div><div class="l">同样参数下萃取率更高，且苦味阈值更早到达</div></div>
+      </div>
+      <p>第一条来自食品工程：用显微与物理方法追踪烘焙过程中豆子的孔隙演变，发现结构随烘焙进程显著变化，且升温路径不同、最终结构也不同。结构越疏松，水进入与溶质走出的阻力越小——这直接对应 <a href="1-1-dissolution-order.html">1.1 章</a>里那条「扩散是限速步骤」的结论。</p>
+      <p>第二条来自风味化学：对咖啡苦味成分的系统解析显示，苦味不是一种物质，而是一组随烘焙度演变的化合物。中浅烘时以绿原酸内酯为主，随烘焙加深，它们进一步转化，苦味的<b>质感</b>随之改变——从相对干净的苦转向持久而粗糙的苦。</p>
+      <p>两条合起来解释了本章的核心图像：深烘豆在同样参数下走得更远（结构），同时更早到达令人不适的苦（成分）。<b>区间左移不是经验规律，是这两条曲线的交点在移动。</b></p>
+      <div class="src">来源：Schenker et al. (2000), Pore Structure of Coffee Beans Affected by Roasting Conditions, Journal of Food Science；Frank, Hofmann 等关于咖啡苦味化合物（绿原酸内酯与苯基林丹）的系列研究，Journal of Agricultural and Food Chemistry / European Food Research and Technology（2006–2008）。本章交互中区间的斜率与宽度为示意值，非上述研究的量化结论。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Quiz ============ -->
+<section id="quiz">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Quiz 自测</span></div>
+  <h2>章末自测</h2>
+  <div class="quiz">
+
+    <details>
+      <summary><span class="qtype">概念题</span>「深烘豆要磨粗一点」——请用本章的两条机制解释这句话，并说明它在什么情况下不成立。</summary>
+      <div class="answer">
+        <p>机制一（结构）：深烘豆孔隙率高、结构脆，同样研磨设定下萃取更快，磨粗是为了把萃取率拉回区间。机制二（成分）：深烘的苦味物质更多、阈值更早，所以宜人区间本身也向低萃取率一侧移动，两者叠加。</p>
+        <p>不成立的情况：当症状是「苦但同时很薄、很空」时，多半不是萃取过头，而是均匀度问题（细粉过多，深烘豆更易产生细粉）或豆子已经氧化。此时磨粗会让薄的问题更严重。<b>先判断苦的类型：伴随厚度的苦是萃取过头，伴随空洞感的苦要查均匀度与新鲜度。</b></p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">计算题</span>用交互里的示意模型（区间中心 c = 22 − 0.045r，半宽 1.8）：烘焙度 20 与烘焙度 80 的宜人区间各是多少？一杯萃取率 19.5% 的咖啡在这两支豆子上分别是什么判定？</summary>
+      <div class="answer">
+        <p>r = 20：c = 22 − 0.9 = 21.1，区间 <b>19.3–22.9%</b>。r = 80：c = 22 − 3.6 = 18.4，区间 <b>16.6–20.2%</b>。</p>
+        <p>19.5% 在 r = 20 上刚进区间下缘（偏酸的一侧，还可以再推一点）；在 r = 80 上落在区间中部偏上，接近合适。<b>同一个数字，两种含义</b>——这就是为什么「萃取率 20% 是标准答案」这类说法需要补上「对哪支豆子」。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">场景判断</span>你有一支深烘豆，冲出来苦而干涩。你决定把萃取率从 20% 降到 17%。这样做能解决问题吗？还需要检查什么？</summary>
+      <div class="answer">
+        <p>方向对：按模型，深烘（r ≈ 90）的区间约为 16.1–19.8%，20% 确实越界，降到 17% 会回到区间内，苦感应当减轻。</p>
+        <p>但还要检查两件事。其一是<b>均匀度</b>：深烘豆脆，细粉比例高，「干涩」常常来自细粉过萃而非平均萃取率过高——这种情况下降低平均萃取率只能部分缓解，需要同时改善研磨与手法。其二是<b>苦的来源</b>：如果这支豆子本身烘得很深，苯基林丹类带来的粗糙苦味属于豆子的固有特征，冲煮层能减弱它，但改不掉它（<a href="0-1-four-layers.html">0.1 章</a>的责任链）。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">思考题</span>如果「宜人区间」会随烘焙度移动，那 <a href="1-3-control-chart.html">1.3 章</a>那张固定的金杯区图还有意义吗？</summary>
+      <div class="answer">
+        <p>有，但它的意义是<b>坐标系</b>而不是<b>及格线</b>。控制图的价值在于把「淡」与「酸」拆成两个正交的轴，让你能判断症状属于哪个方向——这一点不因豆子而改变。会改变的只是「舒服的落点在坐标系的哪个位置」。</p>
+        <p>把两章合起来读，更完整的说法是：<b>控制图给你方向，烘焙度告诉你目标区在哪</b>。再叠加 Part 3 的水质与 Part 4 的个人偏好，你会发现「最佳落点」本来就是一个随条件移动的目标——这也是本书反复强调「不写成永恒真理」的原因。</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- nav:auto -->
+<nav class="next">
+  <a href="2-1-roast-chemistry.html">← 2.1 烘焙中的化学</a>
+  <a href="2-3-degassing.html">2.3 养豆与排气 →</a>
+</nav>
+<!-- /nav:auto -->
+
+</div>
+
+<script src="../assets/theme.js"></script>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/lab-core.js"></script>
+<script src="../assets/labs/2-2-roast-level-flavor.js"></script>
+</body>
+</html>

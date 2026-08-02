@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2.1 烘焙中的化学 · 咖啡风味科学手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/handbook.css">
+</head>
+<body>
+<button class="theme-toggle" type="button" aria-label="切换深色/浅色模式" title="切换深色/浅色模式">
+  <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+</button>
+
+<div class="wrap">
+
+<header class="ch">
+  <div class="dotrow" aria-hidden="true">
+    <i class="s"></i><i></i><i class="a"></i><i class="a"></i><i class="b"></i><i></i><i class="b"></i><i></i><i class="a"></i><i></i>
+  </div>
+  <div class="kicker"><a href="../index.html">咖啡风味科学手册</a> · Part 2 · Roasting 烘焙</div>
+  <h1>2.1 The Chemistry of Roasting
+    <span class="zh">烘焙中的化学：风味是在火里被写好的</span>
+  </h1>
+  <div class="meta">
+    <span>难度 <b>★★☆</b></span>
+    <span>阅读 + 玩 <b>~14 min</b></span>
+    <span>玄学祛魅指数 <b>高</b></span>
+    <span>前置 <b><a href="0-1-four-layers.html">0.1 风味的四层来源</a></b></span>
+  </div>
+</header>
+
+<!-- ============ 先猜一次 ============ -->
+<section id="guess">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Guess First 先猜一次</span></div>
+  <h2>凭直觉，别查</h2>
+  <p class="big">一杯咖啡的「甜感」，主要来自什么？</p>
+  <div class="guess" id="guessBox">
+    <div class="opts">
+      <button data-g="sugar">豆子里残留的糖</button>
+      <button data-g="maillard">烘焙生成的反应产物</button>
+      <button data-g="caramel">焦糖化产生的焦糖</button>
+    </div>
+    <div class="after">已记住你的选择。提示：生豆里的蔗糖在烘焙结束时已所剩无几——那甜感是谁留下的？</div>
+  </div>
+</section>
+
+<!-- ============ 核心概念 ============ -->
+<section id="concept">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Core Concept 核心概念</span></div>
+  <h2>一场限时的化学反应，产物就是风味</h2>
+  <p>生豆几乎不能喝：它含有蔗糖、蛋白质与游离氨基酸、绿原酸类、脂质与多糖，但香气分子寥寥无几。烘焙做的事，是在几百秒内把这些<b>前体</b>转化成上千种挥发性化合物。三条主线：</p>
+  <ul>
+    <li><b><span class="term" data-term="Maillard Reaction" data-zh="美拉德反应" data-def="还原糖与氨基酸（或蛋白质）之间的一系列非酶褐变反应，生成大量香气分子与褐色高分子（类黑精）。咖啡烘焙中风味生成的主线。">美拉德反应</span></b>：还原糖与氨基酸之间的一系列反应，产出坚果、烤面包、焦糖类香气，以及贡献颜色与醇厚度的类黑精。它是风味生成的主力，在中等温度就大量进行。</li>
+    <li><b><span class="term" data-term="Caramelization" data-zh="焦糖化" data-def="糖类在高温下自身发生的脱水、降解与聚合反应，需要比美拉德反应更高的温度，产出焦糖类香气并伴随苦味物质的积累。">焦糖化</span></b>：糖自身在更高温度下的降解与聚合。它比美拉德反应要求的温度更高，也更快地把糖「用掉」。</li>
+    <li><b>绿原酸的降解</b>：生豆中含量可观的绿原酸在烘焙中大量分解，产物包括带苦味的内酯与酚类——<a href="1-1-dissolution-order.html">1.1 章</a>提到的后段苦味主角，正是在这一步被造出来的。</li>
+  </ul>
+  <p>所以开头那个问题的答案是<b>反应产物</b>：生豆里的蔗糖在烘焙结束时已经消耗大半，你尝到的「甜」主要是美拉德与焦糖化产物给出的综合印象，还叠加了香气对甜感的增强。这也解释了一个常见困惑——为什么「浅烘更甜」和「深烘更甜」的说法都有人支持：它们说的是同一条曲线的不同位置。</p>
+  <h3>一爆：物理事件，不是化学事件</h3>
+  <p><span class="term" data-term="First Crack" data-zh="一爆" data-def="烘焙中豆内水蒸气与二氧化碳积累到一定压力后，细胞结构破裂发出的爆裂声。它标志着豆子进入可饮用的发展阶段，并伴随吸热到放热的转折。">一爆</span>的本质是压力释放：豆内水分汽化、美拉德反应产生的 CO₂ 不断积累，最终撑破细胞结构，发出爆裂声，豆子体积明显膨胀。它之所以重要，是因为它给了整条曲线一个<b>可听见的刻度</b>——在此之前豆子还不适合饮用，在此之后每一秒都在改写酸苦配比。</p>
+  <p>由此定义了烘焙师最常用的一个量：<span class="term" data-term="Development Time Ratio" data-zh="发展度" data-def="一爆之后的时间占整个烘焙时长的比例（DTR）。常被用作发展是否充分的参考指标，但它只是时间比例，不能单独描述一条曲线。">发展度</span>（DTR）= 一爆后的时长 ÷ 总烘焙时长。它是个有用的参考，但要小心把它当成质量指标：<b>同一个发展度可以由完全不同的升温路径达成</b>，而路径不同，风味也不同——这正是本章案例要说的事。</p>
+</section>
+
+<!-- ============ 交互实验 ============ -->
+<section id="lab">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Interactive Lab 交互实验</span></div>
+  <h2>把下豆点拖过一爆，看风味走向</h2>
+  <p>曲线是一条示意的豆温升温路径，一爆在约 289 秒、二爆在约 567 秒。拖动下豆时间，看发展度与三条风味走向如何变化。默认停在 380 秒：豆温 209 °C、发展度 23.9%，落在「浅中烘：酸甜平衡」。</p>
+
+  <div class="lab" data-print-note="（在线版可拖动下豆时间；打印版展示默认场景：380 s，豆温 209 °C，发展度 23.9%，酸 70 / 甜 89 / 苦 9，浅中烘）">
+    <div class="lab-head">
+      <span class="t">Roast Curve · 烘焙曲线与下豆点</span>
+      <span class="presets">
+        <button data-p="drop=320">极浅：酸质主导</button>
+        <button data-p="drop=380">浅中：酸甜平衡</button>
+        <button data-p="drop=560">深烘：苦甜主导</button>
+      </span>
+    </div>
+    <div class="lab-body">
+      <div class="sliders">
+        <div class="sl">
+          <label>下豆时间（曲线上的终点）<b id="vDrop">380 s（豆温 209 °C）</b></label>
+          <input type="range" id="drop" min="240" max="660" step="5" value="380">
+        </div>
+      </div>
+
+      <div class="chartbox">
+        <svg viewBox="0 0 660 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="烘焙升温曲线与下豆点，标注一爆与二爆">
+          <line x1="60" y1="300" x2="620" y2="300" stroke="var(--ink)" stroke-width="1.5"/>
+          <line x1="60" y1="50"  x2="60"  y2="300" stroke="var(--ink)" stroke-width="1.5"/>
+          <g class="ax">
+            <text x="60"  y="318" text-anchor="middle">0</text>
+            <text x="162" y="318" text-anchor="middle">2</text>
+            <text x="264" y="318" text-anchor="middle">4</text>
+            <text x="366" y="318" text-anchor="middle">6</text>
+            <text x="467" y="318" text-anchor="middle">8</text>
+            <text x="569" y="318" text-anchor="middle">10</text>
+            <text x="52" y="304" text-anchor="end">80</text>
+            <text x="52" y="273" text-anchor="end">100</text>
+            <text x="52" y="210" text-anchor="end">140</text>
+            <text x="52" y="148" text-anchor="end">180</text>
+            <text x="52" y="86"  text-anchor="end">220</text>
+          </g>
+          <text x="340" y="336" text-anchor="middle" class="axt">烘焙时间（分钟）</text>
+          <text x="16" y="175" text-anchor="middle" class="axt" transform="rotate(-90 16 175)">豆温 (°C)</text>
+
+          <line x1="305.2" y1="50" x2="305.2" y2="300" stroke="var(--sour)" stroke-width="1.5" stroke-dasharray="6 4" opacity=".8"/>
+          <text x="310" y="64" class="rl">一爆 ≈ 196 °C</text>
+          <line x1="541.1" y1="50" x2="541.1" y2="300" stroke="var(--bitter)" stroke-width="1.5" stroke-dasharray="6 4" opacity=".8"/>
+          <text x="536" y="64" text-anchor="end" class="rl">二爆 ≈ 224 °C</text>
+
+          <polyline id="roastCurve" fill="none" stroke="var(--accent)" stroke-width="2.5"
+            points="60.0,284.4 77.0,264.7 93.9,246.7 110.9,230.3 127.9,215.3 144.8,201.6 161.8,189.1 178.8,177.7 195.8,167.3 212.7,157.8 229.7,149.1 246.7,141.2 263.6,133.9 280.6,127.3 297.6,121.3 314.5,115.8 331.5,110.7 348.5,106.1 365.5,101.9 382.4,98.1 399.4,94.6 416.4,91.4 433.3,88.5 450.3,85.8 467.3,83.4 484.2,81.2 501.2,79.1 518.2,77.3 535.2,75.6 552.1,74.0 569.1,72.6 586.1,71.3 603.0,70.2 620.0,69.1"/>
+
+          <line id="dropMark" x1="382.4" y1="50" x2="382.4" y2="300" stroke="var(--ink)" stroke-width="1.5"/>
+          <circle id="dropDot" cx="382.4" cy="98.1" r="8" fill="var(--accent)" stroke="var(--card)" stroke-width="2.5"/>
+        </svg>
+      </div>
+
+      <div class="readout">
+        <div class="tds">
+          <div class="n" id="dtrOut">23.9%</div>
+          <div class="l">发展度 DTR<br>酸 <span id="aOut">70</span> · 甜 <span id="sOut">89</span> · 苦 <span id="bOut">9</span></div>
+        </div>
+        <div class="diag">
+          <div class="zone" id="zoneOut">浅中烘：酸甜平衡</div>
+          <div class="adv" id="advOut">美拉德产物已经积累，酸质仍在，甜感接近峰值——多数精品豆的常见落点。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>三条走向的形状值得记住：<b>酸从一爆开始单调下降，甜是一个中间隆起的包，苦在深烘段加速上升。</b>「烘焙度」之所以是个取舍而不是个进度条，就是因为甜感的峰值落在中间——往两边走都会失去一些东西，而失去的是不同的东西。</p>
+  <p>这条曲线是<b>单一升温路径</b>的示意：真实烘焙里，同一个下豆温度可以由快慢不同的路径抵达，风味并不相同（见下面的案例）。所以「几分几秒下豆」这类参数在换一台机器后就不再可比——可比的是机制：发展是否充分、糖与氨基酸被消耗到哪一步、绿原酸降解了多少。</p>
+</section>
+
+<!-- ============ 真实案例 ============ -->
+<section id="case">
+  <div class="sec-tag"><span class="cell" style="background:var(--sour)"></span><span class="lab">Case Study 真实案例</span></div>
+  <h2>同样的烘焙度，不同的路径，不同的杯子</h2>
+  <div class="case">
+    <div class="case-head"><span class="cell"></span>Baggenstoss 等 · Nestlé 研究中心 &amp; ETH · 2008</div>
+    <div class="case-body">
+      <p>一组食品化学研究者做了一件对「参数崇拜」很不友好的实验：把同一批豆子用<b>不同的时间—温度组合</b>烘到<b>相同的烘焙度</b>（以颜色与失重率衡量），然后测量各自的香气化合物组成。</p>
+      <div class="stats">
+        <div class="stat"><div class="n g">相同烘焙度</div><div class="l">颜色与失重率被配平到同一水平</div></div>
+        <div class="stat"><div class="n g">不同路径</div><div class="l">快烘与慢烘等多组时间—温度条件</div></div>
+        <div class="stat"><div class="n g">香气差异显著</div><div class="l">多类关键香气化合物的生成量随路径明显不同</div></div>
+      </div>
+      <p>结论很直接：<b>烘焙度不是一个数，而是一条路径的终点。</b>颜色相同的两支豆子，可以在香气组成上相差很远——因为不同的反应有不同的活化能与时间尺度，升温快慢改变的是各条反应通道的相对进度。</p>
+      <p>对读者的实际意义有两条。其一，包装上的「中烘 / 深烘」只是一个粗糙的坐标，不足以预测杯中风味——这也是为什么本书把烘焙度当作「搬动最佳萃取率区间的变量」（<a href="2-2-roast-level-flavor.html">2.2 章</a>），而不是当作风味的完整描述。其二，对着别人的烘焙曲线抄参数意义有限：机器的传热方式不同，同样的时间—温度记录对应的豆内进程并不相同。</p>
+      <div class="src">来源：Baggenstoss, Poisson, Kaegi, Perren &amp; Escher (2008), Coffee Roasting and Aroma Formation: Application of Different Time–Temperature Conditions, Journal of Agricultural and Food Chemistry 56；豆子孔隙结构随烘焙条件的变化见 Schenker et al. (2000), Pore Structure of Coffee Beans Affected by Roasting Conditions, Journal of Food Science。本章交互曲线为示意模型，非上述研究的实测曲线。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 工具层 ============ -->
+<section id="tools">
+  <div class="sec-tag"><span class="cell" style="background:var(--neutral)"></span><span class="lab">Tooling Sidebar 工具层</span></div>
+  <div class="toolbox">
+    <div class="toolbox-head">
+      <span class="t">怎么读别人的烘焙记录（会过期，正文不依赖本区块）</span>
+      <span class="date">截至 2026-08</span>
+    </div>
+    <div class="toolbox-body">
+      <p><b>豆温探针</b>：曲线上的「豆温」取决于探针位置、粗细与响应速度。不同机器之间的温度读数不可直接比较，可比的是形状——升温速率的走势与一爆之后的变化。</p>
+      <p><b>色度值</b>：以近红外反射测得的烘焙度指标（如 Agtron 色号系列），数值越低通常越深。它测的是颜色，配平了颜色的两支豆子仍可能风味迥异——正如本章案例所示。</p>
+      <p><b>失重率</b>：烘焙前后的重量差，反映水分蒸发与干物质损失，常与烘焙度一起报告。与色度值配合能缩小描述的模糊度，但仍无法替代路径信息。</p>
+      <p><b>给读者的现实结论</b>：作为购买者，你能拿到的最有用信息往往不是曲线，而是烘焙日期（见 <a href="2-3-degassing.html">2.3 章</a>）与一段诚实的风味描述。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Quiz ============ -->
+<section id="quiz">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Quiz 自测</span></div>
+  <h2>章末自测</h2>
+  <div class="quiz">
+
+    <details>
+      <summary><span class="qtype">概念题</span>为什么说「一爆是物理事件」？它和美拉德反应的关系是什么？</summary>
+      <div class="answer">
+        <p>一爆是豆内压力超过细胞结构强度后的<b>破裂</b>——水蒸气与反应生成的 CO₂ 积累到一定程度，结构撑不住了，于是发出声响、体积膨胀。这个过程本身是力学的，不是某个特定反应的标志。</p>
+        <p>它和化学的联系在于：CO₂ 主要由美拉德反应等热解过程产生，所以一爆的发生时间间接反映了反应进行的程度。但两者并不等同——同样在一爆，快烘与慢烘的豆子内部走到的反应进度并不一样。这也是为什么发展度（DTR）需要和整条曲线一起看，而不能单独当成质量分数。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">计算题</span>某次烘焙：一爆在 8:00，下豆在 10:30。发展度是多少？如果另一炉一爆在 9:00、下豆在 11:15，哪一炉的发展度更高？</summary>
+      <div class="answer">
+        <p>第一炉：总时长 630 s，一爆后 150 s，DTR = 150 ÷ 630 ≈ <b>23.8%</b>。第二炉：总时长 675 s，一爆后 135 s，DTR = 135 ÷ 675 = <b>20.0%</b>。第一炉更高。</p>
+        <p>但要注意这个比较的局限：两炉的一爆时间点不同，说明前段升温节奏不同，所以它们的差别不止「发展度差 3.8 个百分点」这么简单。DTR 是同一台机器、同一套流程内做纵向比较时的参考量；跨机器横向比较时，它的信息量会迅速衰减。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">场景判断</span>一支豆子闻起来很香，冲出来却尖酸、带明显的谷物或青草气息。调整冲煮参数能解决吗？</summary>
+      <div class="answer">
+        <p data-diag="尖酸并带谷物、青草或生青气息|烘焙发展不足（上游层），而非冲煮参数|先用另一支豆子验证手法；若参照豆正常，问题在豆子本身，调参数收效有限">大概率不能。谷物与青草气息通常指向<b>发展不足</b>——豆子在一爆后停留的时间过短，转化没有走完。这是烘焙层写定的问题，冲煮层只能决定溶出多少，变不出没生成的物质（<a href="0-1-four-layers.html">0.1 章</a>的责任链）。</p>
+        <p>可以做的鉴别：提高萃取率（磨细一档或延长时间）看看。如果只是萃取不足，风味会向甜感与厚度移动；如果是发展不足，提高萃取率往往只是把青草味和苦涩一起放大。同时用一支你熟悉的豆子做参照，确认不是手法问题。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">思考题</span>交互里的甜感曲线是一个「中间隆起的包」。这个形状对选豆和调参各意味着什么？</summary>
+      <div class="answer">
+        <p>对选豆：意味着「更浅」或「更深」都不是单调的改善。往浅走，酸质与花果香保留得多，但甜感与醇厚度要靠更高的萃取率去兑现；往深走，焦糖与苦甜主导，产地特征让位于烘焙特征。选择取决于你想要的风味结构，而不存在一个通用的最优点。</p>
+        <p>对调参：意味着<b>烘焙度会改变你该瞄准的萃取率</b>。浅烘的甜感需要更充分的萃取才出得来，深烘则更容易在较低的萃取率上就抵达苦味阈值。这正是 <a href="2-2-roast-level-flavor.html">2.2 章</a>要处理的问题——把烘焙度翻译成控制图上的位移。</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- nav:auto -->
+<nav class="next">
+  <a href="1-4-espresso-pressure.html">← 1.4 压力下的萃取：意式浓缩</a>
+  <a href="2-2-roast-level-flavor.html">2.2 烘焙度与风味走向 →</a>
+</nav>
+<!-- /nav:auto -->
+
+</div>
+
+<script src="../assets/theme.js"></script>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/lab-core.js"></script>
+<script src="../assets/labs/2-1-roast-chemistry.js"></script>
+</body>
+</html>
