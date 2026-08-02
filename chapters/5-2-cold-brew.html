@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5.2 冷萃与时间换温度 · 咖啡风味科学手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/handbook.css">
+</head>
+<body>
+<button class="theme-toggle" type="button" aria-label="切换深色/浅色模式" title="切换深色/浅色模式">
+  <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+</button>
+
+<div class="wrap">
+
+<header class="ch">
+  <div class="dotrow" aria-hidden="true">
+    <i></i><i class="s"></i><i class="a"></i><i></i><i class="a"></i><i></i><i></i><i class="b"></i><i class="a"></i><i></i>
+  </div>
+  <div class="kicker"><a href="../index.html">咖啡风味科学手册</a> · Part 5 · Brew Methods 冲煮方法学</div>
+  <h1>5.2 Cold Brew
+    <span class="zh">冷萃与时间换温度：低温买到的是选择性</span>
+  </h1>
+  <div class="meta">
+    <span>难度 <b>★★★</b></span>
+    <span>阅读 + 玩 <b>~14 min</b></span>
+    <span>玄学祛魅指数 <b>高</b></span>
+    <span>前置 <b><a href="5-1-percolation-vs-immersion.html">5.1 渗滤 vs 浸泡</a></b></span>
+  </div>
+</header>
+
+<!-- ============ 先猜一次 ============ -->
+<section id="guess">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Guess First 先猜一次</span></div>
+  <h2>凭直觉，别查</h2>
+  <p class="big">冷萃喝起来更顺、酸味更柔和。主要原因是？</p>
+  <div class="guess" id="guessBox">
+    <div class="opts">
+      <button data-g="less">低温让酸溶出得少</button>
+      <button data-g="select">低温改变了各类物质的溶出比例</button>
+      <button data-g="perc">酸在长时间里分解掉了</button>
+    </div>
+    <div class="after">已记住你的选择。提示：温度对不同物质的「减速幅度」并不一样——这才是关键。</div>
+  </div>
+</section>
+
+<!-- ============ 核心概念 ============ -->
+<section id="concept">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Core Concept 核心概念</span></div>
+  <h2>降温不是等比例减速</h2>
+  <p>如果低温只是让一切变慢，那冷萃与热萃的区别就只是「花的时间不同」，用更长的时间总能补回来，风味应该趋同。事实并非如此，原因藏在一条基础的化学关系里。</p>
+  <div class="formula">Arrhenius 关系：k = A · e<sup>−Ea/RT</sup><br><br>k：速率常数　Ea：活化能　R：气体常数　T：绝对温度<br><br>关键性质：<b>Ea 越大的过程，速率对温度越敏感</b><br>→ 降温时，高 Ea 的过程被拖得更慢</div>
+  <p>咖啡里不同类别的物质，其溶出与相关降解过程的活化能并不相同。总体而言，<b>小分子的酸与糖类对温度相对不敏感</b>，而<b>与苦涩相关的大分子及其降解产物对温度更敏感</b>。于是降温时，两类物质并不是一起等比例慢下来——后者慢得更多。</p>
+  <p>这就是冷萃「顺口」的机制：<b>不是酸被去掉了，而是苦涩没跟上来。</b>在长时间的低温浸泡里，风味物质有足够时间溶出大半，而苦涩物质还停留在很低的完成度上。杯子里的酸甜比例因此被抬高，苦与涩的比例被压低。</p>
+  <p data-diag="冷萃偏薄、缺乏厚度|低温下总萃取速率低，时间或粉量不足|延长浸泡时间或提高粉量（降低粉水比）；磨细一档也有效，但要同时缩短时间避免涩感">要付出的代价同样清楚。<b>总速率大幅下降</b>：室温下风味物质的相对溶出速率只有 93 °C 时的百分之几，所以需要十几个小时；冷藏温度下更慢，通常要接近一天。而且低温也拖慢了那些贡献<b>厚度与复杂度</b>的物质——冷萃常被形容为「干净但略平」，这是同一个机制的另一面。</p>
+</section>
+
+<!-- ============ 交互实验 ============ -->
+<section id="lab">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Interactive Lab 交互实验</span></div>
+  <h2>两条速率曲线，看它们在低温端分开</h2>
+  <p>纵轴是相对速率（对数刻度，以 93 °C 为 1）。两条曲线在高温端接近，往低温走则越拉越开——这就是「选择性」的来源。默认停在室温 20 °C、16 小时：风味物质溶出 99%，苦涩物质仅 25%。</p>
+
+  <div class="lab" data-print-note="（在线版可拖动温度与时间；打印版展示默认场景：20 °C / 16 h，风味溶出 99%、苦涩溶出 25%，苦风比 0.25）">
+    <div class="lab-head">
+      <span class="t">Arrhenius Selectivity · 温度与选择性</span>
+      <span class="presets">
+        <button data-p="temp=93,t=4">热萃 93 °C / 4 min</button>
+        <button data-p="temp=20,t=960">室温冷萃 20 °C / 16 h</button>
+        <button data-p="temp=4,t=1200">冷藏冷萃 4 °C / 20 h</button>
+      </span>
+    </div>
+    <div class="lab-body">
+      <div class="sliders">
+        <div class="sl">
+          <label>萃取温度<b id="vTemp">20 °C</b></label>
+          <input type="range" id="temp" min="0" max="95" step="1" value="20">
+        </div>
+        <div class="sl">
+          <label>浸泡时间<b id="vTime">16 h（960 min）</b></label>
+          <input type="range" id="t" min="2" max="1440" step="2" value="960">
+        </div>
+      </div>
+
+      <div class="chartbox">
+        <svg viewBox="0 0 640 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="风味物质与苦涩物质的相对萃取速率随温度变化（对数纵轴）">
+          <line x1="70" y1="300" x2="610" y2="300" stroke="var(--ink)" stroke-width="1.5"/>
+          <line x1="70" y1="40"  x2="70"  y2="300" stroke="var(--ink)" stroke-width="1.5"/>
+          <g class="ax">
+            <text x="70"  y="318" text-anchor="middle">0</text>
+            <text x="178" y="318" text-anchor="middle">20</text>
+            <text x="286" y="318" text-anchor="middle">40</text>
+            <text x="394" y="318" text-anchor="middle">60</text>
+            <text x="502" y="318" text-anchor="middle">80</text>
+            <text x="610" y="318" text-anchor="middle">100</text>
+            <text x="62" y="73"  text-anchor="end">1</text>
+            <text x="62" y="131" text-anchor="end">0.1</text>
+            <text x="62" y="188" text-anchor="end">0.01</text>
+            <text x="62" y="246" text-anchor="end">10⁻³</text>
+            <text x="62" y="304" text-anchor="end">10⁻⁴</text>
+          </g>
+          <text x="340" y="340" text-anchor="middle" class="axt">萃取温度 (°C)</text>
+          <text x="18" y="170" text-anchor="middle" class="axt" transform="rotate(-90 18 170)">相对速率（93 °C = 1）</text>
+
+          <polyline id="curveF" fill="none" stroke="var(--accent)" stroke-width="2.5"
+            points="70.0,209.2 97.0,199.3 124.0,189.7 151.0,180.5 178.0,171.5 205.0,162.9 232.0,154.5 259.0,146.5 286.0,138.6 313.0,131.1 340.0,123.7 367.0,116.6 394.0,109.7 421.0,103.0 448.0,96.5 475.0,90.2 502.0,84.1 529.0,78.1 556.0,72.3 583.0,66.6 610.0,61.2"/>
+          <polyline id="curveB" fill="none" stroke="var(--bitter)" stroke-width="2.5"
+            points="70.0,279.4 97.0,264.5 124.0,250.1 151.0,236.2 178.0,222.8 205.0,209.9 232.0,197.4 259.0,185.2 286.0,173.5 313.0,162.2 340.0,151.2 367.0,140.5 394.0,130.1 421.0,120.1 448.0,110.3 475.0,100.9 502.0,91.6 529.0,82.7 556.0,74.0 583.0,65.5 610.0,57.3"/>
+
+          <line id="tMark" x1="178" y1="40" x2="178" y2="300" stroke="var(--ink)" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <circle id="dotF" cx="178" cy="171.5" r="7" fill="var(--accent)" stroke="var(--card)" stroke-width="2"/>
+          <circle id="dotB" cx="178" cy="222.8" r="7" fill="var(--bitter)" stroke="var(--card)" stroke-width="2"/>
+
+          <line x1="380" y1="52" x2="404" y2="52" stroke="var(--accent)" stroke-width="2.5"/>
+          <text x="410" y="56" class="rl">风味物质（Ea ≈ 50 kJ/mol）</text>
+          <line x1="380" y1="70" x2="404" y2="70" stroke="var(--bitter)" stroke-width="2.5"/>
+          <text x="410" y="74" class="rl">苦涩物质（Ea ≈ 75 kJ/mol）</text>
+        </svg>
+      </div>
+
+      <div class="readout">
+        <div class="tds">
+          <div class="n" id="ratioOut">0.25</div>
+          <div class="l">苦涩 / 风味 溶出比<br>风味 <span id="ffOut">99%</span> · 苦涩 <span id="fbOut">25%</span><br>相对速率 <span id="kfOut">0.017</span> / <span id="kbOut">2.2e-3</span></div>
+        </div>
+        <div class="diag">
+          <div class="zone" id="zoneOut">室温冷萃：选择性开始显现</div>
+          <div class="adv" id="advOut">风味物质仍能在十几个小时内溶出大半，苦涩物质却远远落后——这就是冷萃「顺口」的机制来源，不是因为酸被去掉了。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>三个预设是三种取舍。<b>热萃</b>（93 °C / 4 min）：风味 67%、苦涩 43%，比值 0.64——快，但两类物质一起来，所以必须靠精准的时间控制停在合适位置。<b>室温冷萃</b>：比值降到 0.25，干净得多，代价是 16 小时。<b>冷藏冷萃</b>（4 °C / 20 h）：比值 0.07，最干净，但风味只溶出 82%，容易偏薄。</p>
+  <p>顺带回答一个常见问题：<b>「冰滴」和「冷萃」不是一回事。</b>冰滴是低温下的渗滤（水缓慢滴过粉床，见 <a href="5-1-percolation-vs-immersion.html">5.1 章</a>），冷萃通常是低温下的浸泡。两者共享本章的温度机制，但受不同模型的约束——冰滴的萃取率上限不受粉水比锁定，而冷萃受。</p>
+  <p>模型里的活化能是<b>示意值</b>，用来表达「两类物质对温度的敏感度不同」这个量级差异；真实体系里每一种化合物都有自己的参数，且溶解度本身也随温度变化。要点是方向：<b>降温放大差异，升温压缩差异。</b></p>
+</section>
+
+<!-- ============ 真实案例 ============ -->
+<section id="case">
+  <div class="sec-tag"><span class="cell" style="background:var(--sour)"></span><span class="lab">Case Study 真实案例</span></div>
+  <h2>冷萃真的「更不酸」吗：一次直接测量</h2>
+  <div class="case">
+    <div class="case-head"><span class="cell"></span>Rao &amp; Fuller · Scientific Reports · 2018</div>
+    <div class="case-body">
+      <p>「冷萃更不酸」是流传最广的说法之一。两位化学研究者做了直接测量：用同一批豆子、多个烘焙度，分别制备冷萃与热萃样品，比较它们的 <b>pH</b> 与<b>可滴定酸度</b>。</p>
+      <div class="stats">
+        <div class="stat"><div class="n g">pH 接近</div><div class="l">两种方式得到的 pH 差别很小</div></div>
+        <div class="stat"><div class="n g">可滴定酸度</div><div class="l">在部分条件下冷萃较低，且随烘焙度变化</div></div>
+        <div class="stat"><div class="n g">结论要分层</div><div class="l">「酸度」有多个含义，测的不是同一件事</div></div>
+      </div>
+      <p>这项工作的价值在于把「酸」这个词拆开。<b>pH</b> 衡量的是氢离子浓度（强度）；<b>可滴定酸度</b>衡量的是可被中和的酸总量（容量）；而你在杯子里感受到的酸，是这两者叠加香气、甜感与温度之后的<b>感知结果</b>（<a href="4-3-sensory-bias.html">4.3 章</a>）。三者可以不同向。</p>
+      <p>所以更准确的说法不是「冷萃更不酸」，而是：<b>冷萃改变了酸与其他成分的比例关系，也改变了你感知到的酸的形态。</b>本章的选择性模型解释的正是这个比例变化；而单看 pH，两者可能几乎一样。</p>
+      <p>边界：该研究覆盖的豆子、烘焙度与制备条件有限，且不同研究之间的结论并不完全一致——冷萃的化学组成对时间、粉水比、研磨度都很敏感。这也是本书不给「冷萃标准配方」的原因。</p>
+      <div class="src">来源：Rao &amp; Fuller (2018), Acidity and Antioxidant Activity of Cold Brew Coffee, Scientific Reports 8（本书只引用其酸度相关的化学测量部分）；Arrhenius 关系为标准化学动力学内容。本章交互中的活化能与特征时间为示意值，非上述研究的实测参数。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 工具层 ============ -->
+<section id="tools">
+  <div class="sec-tag"><span class="cell" style="background:var(--neutral)"></span><span class="lab">Tooling Sidebar 工具层</span></div>
+  <div class="toolbox">
+    <div class="toolbox-head">
+      <span class="t">冷萃的实操参数（会过期，正文不依赖本区块）</span>
+      <span class="date">截至 2026-08</span>
+    </div>
+    <div class="toolbox-body">
+      <p><b>常见起点</b>：直饮浓度常用 1:12–1:16、室温 12–18 小时或冷藏 18–24 小时；做浓缩液则用 1:5–1:8，饮用时再稀释。研磨通常比手冲略粗——时间足够长，磨太细只会增加细粉带来的浑浊与涩感。</p>
+      <p><b>过滤</b>：滤袋、滤纸或细网各有取舍。滤纸最干净但流速慢；细网保留更多油脂与细粉，body 更足、也更容易浑浊。二次过滤（先粗后细）通常比一次搞定更省事。</p>
+      <p><b>容器与卫生</b>：长时间常温浸泡对容器清洁度的要求比热萃高，因为没有高温这一步。用干净密封的容器，完成后及时过滤并冷藏——把粉长期泡在里面，风味会继续向苦涩偏移。</p>
+      <p><b>保存</b>：过滤后的冷萃液冷藏保存，风味会随时间变化（香气流失、酸质钝化），建议在数日内喝完。具体时长取决于卫生条件与温度，本书不给固定天数。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Quiz ============ -->
+<section id="quiz">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Quiz 自测</span></div>
+  <h2>章末自测</h2>
+  <div class="quiz">
+
+    <details>
+      <summary><span class="qtype">概念题</span>「冷萃更顺口是因为低温萃取出的酸更少」——按本章的机制，这句话哪里需要修正？</summary>
+      <div class="answer">
+        <p>需要修正的是因果。低温确实让一切变慢，但冷萃的浸泡时间通常长达十几到二十几小时，足够让酸类物质溶出大半——所以杯中的酸未必少。</p>
+        <p>真正变化的是<b>比例</b>：苦涩类物质对温度更敏感（活化能更高），降温时它们被拖得更慢，在长时间浸泡后仍停留在较低的溶出完成度。于是酸甜的相对权重上升、苦涩的权重下降，整体口感变「顺」。</p>
+        <p>本章案例也支持这个修正：直接测量显示冷萃与热萃的 pH 相当接近——若酸真的少了很多，pH 应当有明显差异。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">计算题</span>用交互里的模型：室温 20 °C 时风味物质的相对速率约 0.017、苦涩物质约 0.0022。两者的比值是多少？在 93 °C 时这个比值是 1（按定义）。这说明了什么？</summary>
+      <div class="answer">
+        <p>比值 = 0.017 ÷ 0.0022 ≈ <b>7.7</b>。也就是说，在室温下，风味物质的溶出速率是苦涩物质的约 8 倍；而在 93 °C 时，两者按定义都被归一化为 1（即速率相当）。</p>
+        <p>这说明<b>温度是一个「选择性旋钮」</b>，而不只是「速度旋钮」。降温不仅让整体变慢，还改写了两类物质的相对进度——这正是冷萃能用时间换来不同风味结构的原因，也解释了为什么单纯延长热萃时间无法复制冷萃的口感（那样只会让两类物质一起走到更远）。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">场景判断</span>你做的冷萃「干净但很薄，没什么厚度」。有哪些调整方向？各自的代价是什么？</summary>
+      <div class="answer">
+        <p><b>提高粉量（降低粉水比）</b>：直接提升浓度。这是最稳妥的一步，代价是用豆量增加。注意冷萃属于浸泡模型（<a href="5-1-percolation-vs-immersion.html">5.1 章</a>），加粉的同时也压低了萃取率上限，所以幅度不宜过大。</p>
+        <p><b>延长时间</b>：让风味物质走得更远。代价是苦涩曲线也在缓慢爬升，超过某个点后会开始积累涩感。</p>
+        <p><b>提高温度（如从冷藏移到室温）</b>：速率提升明显，时间可以缩短。代价是选择性下降——干净度换成了厚度。</p>
+        <p><b>磨细一档</b>：提高传质效率。代价是细粉增多，浑浊与涩感风险上升，且需要更好的过滤。</p>
+        <p>四条路径各自在「厚度、干净度、时间、用豆量」之间取舍——<b>没有免费的厚度</b>，这也是全书反复出现的结构。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">思考题</span>本章的机制能否推广到「用低温慢速做手冲」？会遇到什么问题？</summary>
+      <div class="answer">
+        <p>机制本身可以推广：温度降低，选择性上升。冰滴就是这条路线的实践——低温下的渗滤，用几个小时换取干净的风味。</p>
+        <p>但手冲会遇到一个结构性问题：<b>它的接触时间由流动决定，而不是由你随意设定</b>。要在低温下达到足够的萃取，需要极长的接触时间，这在重力驱动的滤杯里意味着极慢的滴速——于是需要专门的滴滤装置，而且粉床长时间浸润后容易塌陷、通道化（<a href="1-4-espresso-pressure.html">1.4 章</a>）。</p>
+        <p>换句话说，<b>低温需要长时间，而长时间需要一个不依赖流速的模型</b>——这就是为什么冷萃以浸泡为主流，冰滴属于需要专门器具的小众路线。器具的选择再一次是由约束条件决定的，而不是由偏好决定的（<a href="5-3-devices-as-frozen-parameters.html">5.3 章</a>）。</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- nav:auto -->
+<nav class="next">
+  <a href="5-1-percolation-vs-immersion.html">← 5.1 渗滤 vs 浸泡</a>
+  <a href="5-3-devices-as-frozen-parameters.html">5.3 器具是参数的固化 →</a>
+</nav>
+<!-- /nav:auto -->
+
+</div>
+
+<script src="../assets/theme.js"></script>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/lab-core.js"></script>
+<script src="../assets/labs/5-2-cold-brew.js"></script>
+</body>
+</html>

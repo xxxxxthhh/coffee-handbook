@@ -4,5 +4,11 @@
     "file": "chapters/1-3-control-chart.html",
     "phrase": "完全无",
     "why": "出现在「先猜一次」的选项文案「完全无关的两码事」里——这是供读者选的直觉选项之一，不是本书的断言。"
+  },
+  {
+    "rule": "wording/absolute",
+    "file": "chapters/5-2-cold-brew.html",
+    "phrase": "绝对",
+    "why": "出现在 Arrhenius 公式的符号说明「T：绝对温度」中，是热力学温标的标准术语，不是绝对化断言。"
   }
 ]
