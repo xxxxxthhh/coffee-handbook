@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1.3 萃取率与浓度 · 咖啡风味科学手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/handbook.css">
+</head>
+<body>
+<button class="theme-toggle" type="button" aria-label="切换深色/浅色模式" title="切换深色/浅色模式">
+  <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+</button>
+
+<div class="wrap">
+
+<header class="ch">
+  <div class="dotrow" aria-hidden="true">
+    <i class="s"></i><i></i><i class="a"></i><i class="a"></i><i></i><i class="b"></i><i></i><i class="a"></i><i></i><i class="s"></i>
+  </div>
+  <div class="kicker"><a href="../index.html">咖啡风味科学手册</a> · Part 1 · Extraction 萃取</div>
+  <h1>1.3 Strength vs Extraction
+    <span class="zh">萃取率与浓度：一张图管住所有冲煮变量</span>
+  </h1>
+  <div class="meta">
+    <span>难度 <b>★★☆</b></span>
+    <span>阅读 + 玩 <b>~16 min</b></span>
+    <span>玄学祛魅指数 <b>极高</b></span>
+    <span>前置 <b><a href="1-1-dissolution-order.html">1.1 溶解的顺序</a></b></span>
+  </div>
+</header>
+
+<!-- ============ 先猜一次 ============ -->
+<section id="guess">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Guess First 先猜一次</span></div>
+  <h2>凭直觉，别查</h2>
+  <p class="big">「这杯咖啡好浓」和「这杯咖啡萃取得很充分」——是同一件事吗？</p>
+  <div class="guess" id="guessBox">
+    <div class="opts">
+      <button data-g="same">是，浓就是萃取多</button>
+      <button data-g="rel">相关，但不是一回事</button>
+      <button data-g="no">完全无关的两码事</button>
+    </div>
+    <div class="after">已记住你的选择。提示：espresso 比手冲浓 8 倍——但它未必萃取得更充分。往下看。</div>
+  </div>
+</section>
+
+<!-- ============ 核心概念 ============ -->
+<section id="concept">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Core Concept 核心概念</span></div>
+  <h2>两个被日常语言揉成一团的量</h2>
+  <p>冲煮的一切争论，几乎都源于两个概念被「浓不浓」一个词裹在一起：</p>
+  <p><span class="term" data-term="Extraction Yield, EY" data-zh="萃取率" data-def="咖啡粉中的可溶物质被溶进杯中的质量百分比。决定风味的「性格」——萃取不足偏酸单薄，过萃苦涩。">Extraction Yield, EY</span>（萃取率）问的是<b>咖啡粉</b>：粉里的可溶物质，有百分之多少被溶进了杯子。它决定风味的<b>性格</b>——回忆 <a href="1-1-dissolution-order.html">1.1 章</a>的溶解顺序：酸类跑得快、甜感居中、苦涩物质殿后，所以萃取不足偏酸偏单薄，过萃则苦涩抬头。</p>
+  <p><span class="term" data-term="TDS" data-zh="总溶解固体（浓度）" data-def="Total Dissolved Solids，杯中液体里咖啡物质所占的质量百分比。决定风味的「音量」——淡还是浓。">TDS</span>（Total Dissolved Solids，浓度）问的是<b>杯中液体</b>：这杯液体里有百分之多少是咖啡物质。它决定风味的<b>音量</b>——淡还是浓。</p>
+  <div class="formula">EY 萃取率 = 溶出的咖啡物质 ÷ 粉重<br>TDS 浓度 = 溶出的咖啡物质 ÷ 液重<br><br>两者被<span class="term" data-term="Brew Ratio" data-zh="粉水比" data-def="咖啡粉重量与注水重量之比（如 1:16.5）。是控制浓度的主旋钮，本身不改变萃取率。">brew ratio</span>（粉水比）联在一起，近似地：<b>TDS ≈ EY ÷ 粉水比</b><br>例：1:16.5 冲煮、萃取率 20% → TDS ≈ 20% ÷ 16.5 ≈ 1.2%<br><span style="opacity:.75">（简化式，忽略咖啡粉吸水；严格计算见工具层）</span></div>
+  <p>现在可以回答开头的问题了：<b>相关，但不是一回事。</b>espresso 的 TDS 高达 8–12%，是手冲（1.2–1.45%）的近十倍——但那主要是 1:2 的极端粉水比带来的，它的萃取率和手冲在同一个区间（18–22%），而且因为时间极短，反而经常<b>萃取不足</b>：极浓，同时发酸。「浓」是粉水比的功劳，「萃取充分」是研磨、水温、时间的功劳——<b>音量旋钮和音色旋钮，是两个旋钮。</b></p>
+</section>
+
+<!-- ============ 交互实验 ============ -->
+<section id="lab">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Interactive Lab 交互实验</span></div>
+  <h2>冲煮控制图：拧动两个旋钮</h2>
+  <p>下面这张图叫<span class="term" data-term="Brewing Control Chart" data-zh="冲煮控制图" data-def="以萃取率为横轴、浓度为纵轴的二维图，粉水比是图上的斜线。每一杯咖啡都是图上的一个落点，用于定位症状而非打分。">brewing control chart</span>（冲煮控制图）：横轴是萃取率（音色），纵轴是浓度（音量），对角虚线是粉水比。你的每一杯咖啡都是图上的一个点。拖动滑块，看你的落点掉进哪个格子——以及诊断建议怎么变。</p>
+
+  <div class="lab" data-print-note="（交互实验的在线版本可拖动参数；打印版展示默认场景：粉水比 1:16.5、萃取率 20%，落点在金杯区，TDS 1.21%）">
+    <div class="lab-head">
+      <span class="t">Brewing Control Chart · 冲煮控制图</span>
+      <span class="presets">
+        <button data-p="ratio=16.5,ey=20">金杯</button>
+        <button data-p="ratio=17,ey=16">又淡又酸</button>
+        <button data-p="ratio=13,ey=23">又浓又苦</button>
+      </span>
+    </div>
+    <div class="lab-body">
+      <div class="sliders">
+        <div class="sl">
+          <label>粉水比 brew ratio（音量旋钮）<b id="vRatio">1 : 16.5</b></label>
+          <input type="range" id="ratio" min="12" max="20" step="0.5" value="16.5">
+        </div>
+        <div class="sl">
+          <label>萃取率 EY（音色旋钮：由研磨度、水温、时间共同决定）<b id="vEy">20.0%</b></label>
+          <input type="range" id="ey" min="14" max="26" step="0.2" value="20">
+        </div>
+      </div>
+
+      <div class="chartbox">
+        <svg viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="冲煮控制图：横轴萃取率，纵轴浓度">
+          <!-- zone tints -->
+          <rect x="70" y="30" width="180" height="340" fill="var(--sour)" opacity="0.10"/>
+          <rect x="430" y="30" width="180" height="340" fill="var(--bitter)" opacity="0.14"/>
+          <!-- ideal box: TDS 1.15–1.45, EY 18–22 -->
+          <rect x="250" y="149" width="180" height="102" fill="var(--accent)" opacity="0.16" stroke="var(--accent)" stroke-width="2" rx="4"/>
+          <text x="340" y="141" text-anchor="middle" class="zl" fill="var(--accent)">金杯区 Golden Cup</text>
+          <!-- zone labels -->
+          <text x="160" y="54" text-anchor="middle" class="zl">萃取不足 · 偏酸</text>
+          <text x="520" y="54" text-anchor="middle" class="zl">过萃 · 偏苦涩</text>
+          <!-- ratio guide lines: TDS = EY/r -->
+          <line x1="70" y1="245.3" x2="412" y2="30" stroke="var(--ink-soft)" stroke-width="1" stroke-dasharray="5 5" opacity=".55"/>
+          <text x="394" y="46" class="rl">1:12</text>
+          <line x1="70" y1="344.5" x2="610" y2="89.5" stroke="var(--ink-soft)" stroke-width="1" stroke-dasharray="5 5" opacity=".55"/>
+          <text x="562" y="86" class="rl">1:16</text>
+          <line x1="160" y1="370" x2="610" y2="200" stroke="var(--ink-soft)" stroke-width="1" stroke-dasharray="5 5" opacity=".55"/>
+          <text x="562" y="194" class="rl">1:20</text>
+          <!-- axes -->
+          <line x1="70" y1="370" x2="610" y2="370" stroke="var(--ink)" stroke-width="1.5"/>
+          <line x1="70" y1="30" x2="70" y2="370" stroke="var(--ink)" stroke-width="1.5"/>
+          <g class="ax">
+            <text x="70" y="388" text-anchor="middle">14</text>
+            <text x="160" y="388" text-anchor="middle">16</text>
+            <text x="250" y="388" text-anchor="middle">18</text>
+            <text x="340" y="388" text-anchor="middle">20</text>
+            <text x="430" y="388" text-anchor="middle">22</text>
+            <text x="520" y="388" text-anchor="middle">24</text>
+            <text x="610" y="388" text-anchor="middle">26</text>
+            <text x="60" y="374" text-anchor="end">0.8</text>
+            <text x="60" y="306" text-anchor="end">1.0</text>
+            <text x="60" y="238" text-anchor="end">1.2</text>
+            <text x="60" y="170" text-anchor="end">1.4</text>
+            <text x="60" y="102" text-anchor="end">1.6</text>
+            <text x="60" y="34" text-anchor="end">1.8</text>
+          </g>
+          <text x="340" y="410" text-anchor="middle" class="axt">萃取率 EY (%)</text>
+          <text x="22" y="200" text-anchor="middle" class="axt" transform="rotate(-90 22 200)">浓度 TDS (%)</text>
+          <!-- dot: 默认 EY 20 / 1:16.5 → TDS 1.2121 → cx 340, cy 229.9 -->
+          <circle id="dot" cx="340" cy="229.9" r="9" fill="var(--accent)" stroke="var(--paper)" stroke-width="2.5"/>
+        </svg>
+      </div>
+
+      <div class="readout">
+        <div class="tds">
+          <div class="n" id="tdsOut">1.21%</div>
+          <div class="l">这杯的浓度 TDS<br>（由 EY ÷ 粉水比得出）</div>
+        </div>
+        <div class="diag">
+          <div class="zone" id="zoneOut">金杯区</div>
+          <div class="adv" id="advOut">音量和音色都在甜蜜点。记下这组参数——以及你用的豆子和水。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p data-diag="又淡又酸|萃取率（研磨度/水温/时间）|磨细一档：落点同时右移、上移，一个动作修两个症状；别先加粉">玩两分钟你会发现全书最有用的一个直觉：<b>「淡」和「酸」是两个方向的问题，但「磨细」能同时救两个</b>——它把落点同时往右（萃取率升）和往上（浓度随之升）推。而「多加粉」只把点往上推：你会得到一杯<b>浓但依然发酸</b>的咖啡。诊断先于调参：先问落点在哪个格子，再决定动哪个旋钮。</p>
+</section>
+
+<!-- ============ 真实案例 ============ -->
+<section id="case">
+  <div class="sec-tag"><span class="cell" style="background:var(--sour)"></span><span class="lab">Case Study 真实案例</span></div>
+  <h2>金杯区是怎么画出来的</h2>
+  <div class="case">
+    <div class="case-head"><span class="cell"></span>Lockhart 与 Coffee Brewing Institute · 1950s</div>
+    <div class="case-body">
+      <p>这个框不是物理定律，而是一场大规模感官实验的产物。1950 年代，MIT 的 E. E. Lockhart 与美国咖啡冲煮研究所 (Coffee Brewing Institute) 对美国消费者做了系统性的偏好调查：同一批咖啡以不同浓度和萃取率呈现，统计人们最喜欢哪个区间。</p>
+      <div class="stats">
+        <div class="stat"><div class="n g">1.15–1.35%</div><div class="l">当年归纳的偏好 TDS 区间</div></div>
+        <div class="stat"><div class="n g">17.5–21.5%</div><div class="l">对应的萃取率区间</div></div>
+        <div class="stat"><div class="n g">70+ 年</div><div class="l">至今仍是 SCA 金杯认证的基准框架（数值略有修订）</div></div>
+      </div>
+      <p>两层启示。第一，「理想区」的本质是<b>偏好的统计聚合</b>——所以当你的落点在金杯区外但你喝着开心，错的不是你，是把统计均值当成个人真理的读法。第二，近年 UC Davis 咖啡中心的系列感官研究（Batali 等）进一步拆解发现：许多风味属性各自随 TDS 与 EY 独立变化，而消费者偏好也呈现分群——控制图应该被当作<b>坐标系</b>使用，而不是<b>判卷标准</b>。本书采用的正是这个立场：图是用来定位和诊断的，不是用来打分的。</p>
+      <div class="src">来源：Lockhart, The Soluble Solids in Beverage Coffee as an Index to Cup Quality (Coffee Brewing Institute, 1950s)；SCA Golden Cup Standard；UC Davis Coffee Center 感官系列论文（Batali et al., 2020 前后）。区间数字为历史文献归纳，现行标准以 SCA 官网为准；图与交互为本书原创。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 工具层 ============ -->
+<section id="tools">
+  <div class="sec-tag"><span class="cell" style="background:var(--neutral)"></span><span class="lab">Tooling Sidebar 工具层</span></div>
+  <div class="toolbox">
+    <div class="toolbox-head">
+      <span class="t">在家测量落点（会过期，正文不依赖本区块）</span>
+      <span class="date">截至 2026-08</span>
+    </div>
+    <div class="toolbox-body">
+      <p><b>咖啡折射仪</b>：数字折射仪（VST、DiFluid 等）直接测 TDS；EY 由 TDS × 液重 ÷ 粉重反推。入门级设备已足够诊断落点象限。</p>
+      <p><b>严格公式</b>：本章正文用的 TDS ≈ EY ÷ 粉水比是忽略粉吸水的简化。实际液重 ≈ 注水量 − 粉重 × 约 2（每克粉滞留约 2 克水），精确计算时用实际液重。</p>
+      <p><b>磨豆机</b>：研磨均匀度决定「平均萃取率」的含金量——细粉过萃、粗粒不足会同时发生，平均值好看而杯感涩。这也是升级磨豆机比升级其他器具优先级高的原因（<a href="5-3-devices-as-frozen-parameters.html">5.3 章</a>展开）。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Quiz ============ -->
+<section id="quiz">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Quiz 自测</span></div>
+  <h2>章末自测</h2>
+  <div class="quiz">
+
+    <details>
+      <summary><span class="qtype">计算题</span>20 g 粉、330 g 水（约 1:16.5），折射仪测得 TDS 1.25%。萃取率大约是多少？落在金杯区吗？</summary>
+      <div class="answer">
+        <p>简化算法：EY ≈ TDS × 粉水比 = 1.25% × 16.5 ≈ <b>20.6%</b>。严格一点：实际液重 ≈ 330 − 20×2 = 290 g，EY = 1.25% × 290 ÷ 20 ≈ <b>18.1%</b>。两种算法都落在 18–22% 的金杯萃取率区间内，TDS 1.25% 也在理想浓度带里——这杯的落点在金杯区。</p>
+        <p>顺带体会简化式的误差方向：忽略粉吸水会<b>高估</b>萃取率约 1–2 个百分点，靠近区间边缘时要用严格式。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">概念题</span>espresso 的 TDS 是手冲的近十倍。有人据此说「意式萃取效率最高」。这句话错在哪？</summary>
+      <div class="answer">
+        <p>它把音量当成了音色。espresso 的高 TDS 几乎全部来自 1:2 的极端粉水比（分母小），而它的萃取率与手冲同区间（18–22%），甚至因为接触时间只有 25–30 秒，常常滑向萃取不足。</p>
+        <p>用公式看最清楚：TDS ≈ EY ÷ 粉水比。粉水比从 16.5 变到 2，TDS 放大约 8 倍——EY 根本不需要变。<b>凡是比较不同粉水比的冲煮，比 TDS 都没有意义，要比就比 EY。</b></p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">场景判断</span>一杯手冲又淡又酸。只允许你改动一个变量，改哪个？为什么不是「多加点粉」？</summary>
+      <div class="answer">
+        <p><b>磨细。</b>「淡」是浓度问题（落点偏下），「酸」是萃取率问题（落点偏左）——磨细提高萃取率，浓度经由 TDS ≈ EY ÷ 粉水比 同步上升，落点向右上方移动，一个动作同时修两个症状。</p>
+        <p data-diag="浓但发酸|萃取率（接触时间/研磨度）|保持粉水比不动，只磨细或延长接触时间，把落点向右推">「多加粉」提高的是粉水比，落点只向上移：你会得到一杯浓了、但依然发酸的咖啡——症状从「淡而酸」变成「浓而酸」，音色问题原封不动。这就是本章的方法论：<b>先在图上定位症状属于哪个轴，再选择推动那个轴的变量。</b></p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">思考题</span>既然磨细能提高萃取率，为什么不能一路磨到最细？描述至少两个会翻车的机制。</summary>
+      <div class="answer">
+        <p>机制一：<b>不均匀萃取。</b>研磨越细，细粉 (fines) 占比越高——细粉迅速过萃贡献苦涩，同时粗粒仍萃取不足，平均萃取率看着理想，杯感却又苦又涩又单薄。平均值掩盖了分布（这个「均值陷阱」会在概率手册的辛普森悖论章里遇到亲戚）。</p>
+        <p>机制二：<b>流体阻塞。</b>过细的粉床阻力剧增，渗滤变慢甚至堵塞，接触时间失控拉长，把整杯推向过萃；在意式里则表现为通道效应——水从局部裂缝夺路而逃，裂缝处过萃、其余粉饼萃取不足（<a href="1-4-espresso-pressure.html">1.4 章</a>展开）。</p>
+        <p>所以「磨细」的正确用法是小步逼近：每次一档，配合落点观察，而不是朝一个方向猛冲。</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- nav:auto -->
+<nav class="next">
+  <a href="1-2-six-variables.html">← 1.2 六大冲煮变量</a>
+  <a href="1-4-espresso-pressure.html">1.4 压力下的萃取：意式浓缩 →</a>
+</nav>
+<!-- /nav:auto -->
+
+</div>
+
+<script src="../assets/theme.js"></script>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/lab-core.js"></script>
+<script src="../assets/labs/1-3-control-chart.js"></script>
+</body>
+</html>
