@@ -1,0 +1,8 @@
+[
+  {
+    "rule": "wording/absolute",
+    "file": "chapters/1-3-control-chart.html",
+    "phrase": "完全无",
+    "why": "出现在「先猜一次」的选项文案「完全无关的两码事」里——这是供读者选的直觉选项之一，不是本书的断言。"
+  }
+]

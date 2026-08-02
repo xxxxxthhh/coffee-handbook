@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- 本文件由 tools/build.mjs 生成，请勿手改 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>咖啡风味科学手册 · Coffee & Flavor Science Handbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/handbook.css">
+</head>
+<body>
+<button class="theme-toggle" type="button" aria-label="切换深色/浅色模式" title="切换深色/浅色模式">
+  <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+</button>
+
+<div class="wrap">
+<header class="book">
+  <div class="dotrow" aria-hidden="true">
+    <i class="s"></i><i></i><i class="a"></i><i class="a"></i><i></i><i class="b"></i><i></i><i class="a"></i><i></i><i class="s"></i>
+  </div>
+  <div class="kicker">Handbook Series · 通识线 第二本</div>
+  <h1>Coffee & Flavor Science Handbook<span class="zh">咖啡风味科学手册</span></h1>
+  <p class="lede">把「玄学参数」还原成可解释的物理化学机制——每章一个可交互实验，拖动变量看风味往哪边走。</p>
+  <div class="meta">
+    <span>共 <b>18</b> 章</span>
+    <span>Part <b>6</b> 个</span>
+    <span>附录 <b>3</b> 篇</span>
+    <span>每章 <b>1</b> 个原生 JS 交互</span>
+  </div>
+</header>
+
+<section>
+  <div class="sec-tag"><span class="cell"></span><span class="lab">How to Read 怎么读</span></div>
+  <p>每章按同一顺序展开：<b>先猜一次</b>（凭直觉选，不判对错）→ <b>核心概念</b>（机制推导）→ <b>交互实验</b>（拖动变量看风味走向）→ <b>真实案例</b>（来源可查）→ <b>章末自测</b>（答案默认折叠）。部分章节另有<b>工具层</b>侧栏，装会过期的器具与数值——正文的结论不依赖它。</p>
+  <p>数值区间（金杯区间、水质区间、温度区间）在本书里一律是<b>参考坐标系</b>而非判卷标准：正文给方向和机制，具体数字进工具层并标注来源与日期。</p>
+</section>
+
+    <section class="part">
+      <div class="part-head">
+        <span class="pn">Part 0 · Prologue</span>
+        <h2>导读</h2>
+        <span class="pd">一杯咖啡的风味由哪几层决定</span>
+      </div>
+      <ul class="toc">
+      <li><a href="chapters/0-1-four-layers.html">
+        <span class="num">0.1</span>
+        <span class="tt">风味的四层来源<span class="td">品种与产地 → 处理法 → 烘焙 → 冲煮：每一层锁死什么、留给下游什么</span></span>
+        <span class="lab-flag">交互</span>
+      </a></li>
+      <li><a href="chapters/0-2-how-to-read.html">
+        <span class="num">0.2</span>
+        <span class="tt">这本书怎么读：先猜、再玩、后懂<span class="td">通识线五要素为什么是这个顺序</span></span>
+        <span class="lab-flag">交互</span>
+      </a></li>
+      <li><a href="chapters/0-3-where-myths-come-from.html">
+        <span class="num">0.3</span>
+        <span class="tt">「玄学」的来源<span class="td">变量耦合 + 感官偏差：本书要拆开的两团乱麻</span></span>
+        <span class="lab-flag">交互</span>
+      </a></li>
+      </ul>
+    </section>
+    <section class="part">
+      <div class="part-head">
+        <span class="pn">Part 1 · Extraction</span>
+        <h2>萃取</h2>
+        <span class="pd">全书的物理心脏：溶解发生了什么</span>
+      </div>
+      <ul class="toc">
+      <li><a href="chapters/1-1-dissolution-order.html">
+        <span class="num">1.1</span>
+        <span class="tt">溶解的顺序<span class="td">酸、糖、苦味物质溶出速率不同——萃取不足偏酸、过萃偏苦的机制源头</span></span>
+        <span class="lab-flag">交互</span>
+      </a></li>
+      <li><a href="chapters/1-2-six-variables.html">
+        <span class="num">1.2</span>
+        <span class="tt">六大冲煮变量<span class="td">研磨度、水温、时间、粉水比、搅动、水质：每个旋钮把萃取率推向哪边</span></span>
+        <span class="lab-flag">交互</span>
+      </a></li>
+      <li><a href="chapters/1-3-control-chart.html">
+        <span class="num">1.3</span>
+        <span class="tt">萃取率与浓度<span class="td">冲煮控制图：一张图管住所有变量，九宫格诊断</span></span>
+        <span class="lab-flag">交互</span>
+      </a></li>
+      <li><a href="chapters/1-4-espresso-pressure.html">
+        <span class="num">1.4</span>
+        <span class="tt">压力下的萃取：意式浓缩<span class="td">为什么极浓却常常萃取不足：通道效应与均匀度</span></span>
+        <span class="lab-flag">交互</span>
+      </a></li>
+      </ul>
+    </section>
+    <section class="part">
+      <div class="part-head">
+        <span class="pn">Part 2 · Roasting</span>
+        <h2>烘焙</h2>
+        <span class="pd">风味是在火里被写好的</span>
+      </div>
+      <ul class="toc">
+      <li><a href="chapters/2-1-roast-chemistry.html">
+        <span class="num">2.1</span>
+        <span class="tt">烘焙中的化学<span class="td">美拉德反应与焦糖化、一爆二爆的物理、发展度</span></span>
+        <span class="lab-flag">交互</span>
+      </a></li>
+      <li><a href="chapters/2-2-roast-level-flavor.html">
+        <span class="num">2.2</span>
+        <span class="tt">烘焙度与风味走向<span class="td">用酸质换苦甜，以及烘焙度如何搬动最佳萃取率区间</span></span>
+        <span class="lab-flag">交互</span>
+      </a></li>
+      <li><a href="chapters/2-3-degassing.html">
+        <span class="num">2.3</span>
+        <span class="tt">养豆与排气<span class="td">CO₂ 排气如何搅乱萃取稳定性，不同冲煮法的赏味窗口</span></span>
+        <span class="lab-flag">交互</span>
+      </a></li>
+      </ul>
+    </section>
+    <section class="part">
+      <div class="part-head">
+        <span class="pn">Part 3 · Water</span>
+        <h2>水</h2>
+        <span class="pd">被低估最狠的变量</span>
+      </div>
+      <ul class="toc">
+      <li><a href="chapters/3-1-minerals.html">
+        <span class="num">3.1</span>
+        <span class="tt">矿物质的角色<span class="td">硬度是萃取的「手」，碱度是酸质的「缓冲垫」</span></span>
+        <span class="lab-flag">交互</span>
+      </a></li>
+      <li><a href="chapters/3-2-water-recipes.html">
+        <span class="num">3.2</span>
+        <span class="tt">配水实践<span class="td">从纯净水自配冲煮水：母液、稀释与可复算的浓度</span></span>
+        <span class="lab-flag">交互</span>
+      </a></li>
+      </ul>
+    </section>
+    <section class="part">
+      <div class="part-head">
+        <span class="pn">Part 4 · Sensory</span>
+        <h2>感官</h2>
+        <span class="pd">校准你的舌头这台仪器</span>
+      </div>
+      <ul class="toc">
+      <li><a href="chapters/4-1-flavor-wheel.html">
+        <span class="num">4.1</span>
+        <span class="tt">风味轮与描述词校准<span class="td">描述词是坐标系不是玄学：如何建立自己的参照样本</span></span>
+        <span class="lab-flag">交互</span>
+      </a></li>
+      <li><a href="chapters/4-2-cupping.html">
+        <span class="num">4.2</span>
+        <span class="tt">杯测方法<span class="td">标准化流程为什么长那样：一个控制变量的感官实验设计</span></span>
+        <span class="lab-flag">交互</span>
+      </a></li>
+      <li><a href="chapters/4-3-sensory-bias.html">
+        <span class="num">4.3</span>
+        <span class="tt">味觉这台仪器的系统误差<span class="td">温度、期望、顺序：三种可预测的偏移</span></span>
+        <span class="lab-flag">交互</span>
+      </a></li>
+      </ul>
+    </section>
+    <section class="part">
+      <div class="part-head">
+        <span class="pn">Part 5 · Brew Methods</span>
+        <h2>冲煮方法学</h2>
+        <span class="pd">不同器具其实是不同的萃取模型</span>
+      </div>
+      <ul class="toc">
+      <li><a href="chapters/5-1-percolation-vs-immersion.html">
+        <span class="num">5.1</span>
+        <span class="tt">渗滤 vs 浸泡<span class="td">两种萃取模型的数学差异与风味后果</span></span>
+        <span class="lab-flag">交互</span>
+      </a></li>
+      <li><a href="chapters/5-2-cold-brew.html">
+        <span class="num">5.2</span>
+        <span class="tt">冷萃与时间换温度<span class="td">低温长时的选择性萃取：温度换来的不只是速度</span></span>
+        <span class="lab-flag">交互</span>
+      </a></li>
+      <li><a href="chapters/5-3-devices-as-frozen-parameters.html">
+        <span class="num">5.3</span>
+        <span class="tt">器具是参数的固化<span class="td">每种器具本质上是把哪些变量锁死、把哪些交给你</span></span>
+        <span class="lab-flag">交互</span>
+      </a></li>
+      </ul>
+    </section>
+
+    <section class="part">
+      <div class="part-head">
+        <span class="pn">Appendix</span>
+        <h2>附录</h2>
+        <span class="pd">速查页，由各章标记程序聚合</span>
+      </div>
+      <ul class="toc">
+      <li><a href="glossary.html">
+        <span class="num">A</span>
+        <span class="tt">术语表<span class="td">Glossary</span></span>
+      </a></li>
+      <li><a href="diagnosis.html">
+        <span class="num">B</span>
+        <span class="tt">冲煮诊断卡<span class="td">Brewing Diagnosis Card</span></span>
+      </a></li>
+      <li><a href="tooling.html">
+        <span class="num">C</span>
+        <span class="tt">器具与仪器速查<span class="td">Tooling Quick Reference</span></span>
+      </a></li>
+      </ul>
+    </section>
+</div>
+
+<script src="assets/theme.js"></script>
+<script src="assets/quiz.js"></script>
+</body>
+</html>

@@ -54,17 +54,29 @@ coffee-handbook/
 ├── QUALITY.md            # 系列质量协议，构建全程执行
 ├── README.md
 ├── SKELETON.md
-├── index.html            # 全书目录页
-├── glossary.html         # 附录 A 术语表
-├── diagnosis.html        # 附录 B 冲煮诊断卡（可打印）
+├── index.html            # 全书目录页        ← 生成物
+├── glossary.html         # 附录 A 术语表      ← 生成物
+├── diagnosis.html        # 附录 B 冲煮诊断卡（可打印） ← 生成物
+├── tooling.html          # 附录 C 器具与仪器速查 ← 生成物
 ├── chapters/             # 章节页，命名如 1-3-control-chart.html（part-章-slug）
 ├── assets/
 │   ├── handbook.css      # 共享样式（浅/深两套 CSS 变量 + 全部组件）
 │   ├── quiz.js           # quiz 折叠 + guess-first 组件
 │   ├── theme.js          # dark mode 切换
+│   ├── lab-core.js       # 交互实验运行时：滑块读值、预设按钮、打印前复位默认参数
 │   └── labs/             # 各章交互实验的独立 JS（按章节命名）
+├── tools/                # 构建与门禁（不发布）
+│   ├── manifest.mjs      # 全书唯一真值源：Part/章节顺序与标题
+│   ├── build.mjs         # 生成目录页、附录 A/B/C、章节导航链
+│   ├── check.mjs         # 程序化门禁，每条规则有稳定 rule id
+│   ├── mutate.mjs        # 对门禁本身的 mutation test
+│   └── wording-allowlist.json  # 措辞/红线例外及其理由
 └── reference/            # 审定样章存档，构建时不发布
 ```
+
+生成物（index.html / glossary.html / diagnosis.html / tooling.html / 各章 `<!-- nav:auto -->` 区块）**禁止手改**：
+改 `tools/manifest.mjs` 或章节里的 `data-term` / `data-diag` / `.toolbox` 标记，然后 `node tools/build.mjs`。
+每次提交前跑 `node tools/check.mjs`；改动门禁后跑 `node tools/mutate.mjs`。
 
 注意：创建目录时逐个 `mkdir -p`，不要依赖 brace expansion（系列仓库曾因此产生过名为 `{chapters,assets,data}` 的字面文件夹）。
 
