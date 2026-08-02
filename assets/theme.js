@@ -10,4 +10,17 @@
   btn.addEventListener('click', function(){
     document.documentElement.setAttribute('data-theme', effective() === 'dark' ? 'light' : 'dark');
   });
+
+  /* 打印强制浅色：CSS 的 @media print 已覆盖各种组合，这里再钉一次，
+     避免依赖选择器特异性的细节（系统深色 + 未手动切换是最容易漏的情形）。 */
+  var saved = null;
+  window.addEventListener('beforeprint', function(){
+    saved = document.documentElement.getAttribute('data-theme');
+    document.documentElement.setAttribute('data-theme', 'light');
+  });
+  window.addEventListener('afterprint', function(){
+    if(saved === null) document.documentElement.removeAttribute('data-theme');
+    else document.documentElement.setAttribute('data-theme', saved);
+    saved = null;
+  });
 })();

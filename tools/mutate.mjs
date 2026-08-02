@@ -108,6 +108,9 @@ const MUTATIONS = [
   { name: 'chapters/ 里多出未登记的文件', rule: 'count/manifest-vs-files',
     apply: (tmp) => fs.writeFileSync(path.join(tmp, 'chapters', '9-9-stray.html'), '<html></html>') },
 
+  { name: '打印样式退回只写 html 选择器', rule: 'print/force-light',
+    apply: edit('assets/handbook.css', 'html,\n  html[data-theme],\n  html:not([data-theme="light"]){', 'html{') },
+
   { name: '交互模块文件丢失', rule: 'lab/module',
     apply: (tmp) => fs.unlinkSync(path.join(tmp, 'assets', 'labs', '1-3-control-chart.js')) }
 ];

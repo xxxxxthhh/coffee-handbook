@@ -223,7 +223,8 @@ header.book{padding:72px 0 36px;border-bottom:2px solid var(--ink)}
 
 table{border-collapse:collapse;width:100%;font-size:14.5px;margin:18px 0}
 .tablebox{overflow-x:auto;margin:18px 0}
-.tablebox table{margin:0}
+/* 窄屏时表格在自己的容器内横向滚动，而不是被挤成每行一两个字 */
+.tablebox table{margin:0;min-width:560px}
 th,td{border-bottom:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
 th{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);font-weight:500}
 td .sym{font-family:var(--disp);font-weight:700}
@@ -236,7 +237,13 @@ td .sym{font-family:var(--disp);font-weight:700}
 
 /* ---------- 打印导出 ---------- */
 @media print{
-  html, html[data-theme="dark"]{
+  /* 三个选择器缺一不可：系统深色（无 data-theme）时，深色规则用的是
+     html:not([data-theme="light"])（0,1,1），只写 html（0,0,1）会被它压过去，
+     打印出来仍是深色底。这里用同等特异性 + 位置靠后来覆盖。
+     theme.js 另有 beforeprint 强制切到浅色，双保险。 */
+  html,
+  html[data-theme],
+  html:not([data-theme="light"]){
     --paper:#fff;--ink:#2C211A;--ink-soft:#75655A;--accent:#B06A28;--accent-soft:#F1E2CE;
     --sour:#D9A621;--sour-soft:#F6ECCB;--bitter:#6B4226;--bitter-soft:#E4D5C7;--neutral:#D8CDBF;
     --line:#E4DACB;--card:#fff;--code-bg:#F0E8DB;--answer-bg:#FCF9F3;--head-bg:#2C211A;--head-fg:#fff;

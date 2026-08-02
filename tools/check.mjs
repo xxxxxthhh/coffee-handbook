@@ -206,6 +206,24 @@ export function runChecks(root){
     });
   }
 
+  /* ---------- 3i-bis. 打印强制浅色（CLAUDE.md 硬性要求） ---------- */
+  const cssFile = path.join(root, 'assets', 'handbook.css');
+  if(fs.existsSync(cssFile)){
+    const css = fs.readFileSync(cssFile, 'utf8');
+    const printBlock = (css.match(/@media print\{[\s\S]*$/) || [''])[0];
+    ['html,', 'html[data-theme],', 'html:not([data-theme="light"])'].forEach(sel => {
+      if(!printBlock.includes(sel))
+        add('print/force-light', 'assets/handbook.css',
+            `@media print 缺少选择器 ${sel}——系统深色模式下打印会仍为深色底`);
+    });
+  }
+  const themeFile = path.join(root, 'assets', 'theme.js');
+  if(fs.existsSync(themeFile)){
+    const js = fs.readFileSync(themeFile, 'utf8');
+    if(!/beforeprint/.test(js) || !/data-theme'?"?,\s*'light'/.test(js))
+      add('print/force-light', 'assets/theme.js', 'theme.js 未在 beforeprint 时强制切换为浅色');
+  }
+
   /* ---------- 3j. 交互模块里的可见文案同样受红线约束 ---------- */
   const labDir = path.join(root, 'assets', 'labs');
   if(fs.existsSync(labDir)){
