@@ -1,6 +1,8 @@
 # 咖啡风味科学手册 · Coffee & Flavor Science Handbook
 
 面向咖啡爱好者的双语交互式 HTML 电子书。手册系列「通识线」第二本。
+
+**在线阅读：<https://xxxxxthhh.github.io/coffee-handbook/>**（`gh-pages` 分支部署，内容由 `node tools/publish.mjs` 生成的 `dist/` 提供）
 核心卖点：把「玄学参数」还原成可解释的机制——每章一个可交互实验，拖动变量看风味往哪边走。
 
 ## 仓库导航（给 Claude Code）
