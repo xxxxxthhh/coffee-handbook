@@ -25,7 +25,7 @@
     var cx  = 70 + (p.ey - 14) * 45;
     var cy  = Math.max(30, Math.min(370, 30 + (1.8 - tds) * 340));
     var ez  = p.ey < 18 ? 0 : p.ey <= 22 ? 1 : 2;
-    var tz  = tds < 1.15 ? 0 : tds <= 1.45 ? 1 : 2;
+    var tz  = tds < 1.15 ? 0 : tds <= 1.35 ? 1 : 2;   // SCA 北美金杯区 TDS 1.15–1.35%
     var z   = ZONES['' + ez + tz];
     return {
       cx: cx, cy: cy,
