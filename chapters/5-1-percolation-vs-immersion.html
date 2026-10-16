@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5.1 渗滤 vs 浸泡 · 咖啡风味科学手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/handbook.css">
+</head>
+<body>
+<button class="theme-toggle" type="button" aria-label="切换深色/浅色模式" title="切换深色/浅色模式">
+  <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+</button>
+
+<div class="wrap">
+
+<header class="ch">
+  <div class="dotrow" aria-hidden="true">
+    <i class="a"></i><i class="a"></i><i></i><i class="s"></i><i></i><i class="a"></i><i class="b"></i><i></i><i class="a"></i><i></i>
+  </div>
+  <div class="kicker"><a href="../index.html">咖啡风味科学手册</a> · Part 5 · Brew Methods 冲煮方法学</div>
+  <h1>5.1 Percolation vs Immersion
+    <span class="zh">渗滤 vs 浸泡：两种萃取模型的数学差异</span>
+  </h1>
+  <div class="meta">
+    <span>难度 <b>★★★</b></span>
+    <span>阅读 + 玩 <b>~15 min</b></span>
+    <span>玄学祛魅指数 <b>极高</b></span>
+    <span>前置 <b><a href="1-1-dissolution-order.html">1.1 溶解的顺序</a></b></span>
+  </div>
+</header>
+
+<!-- ============ 先猜一次 ============ -->
+<section id="guess">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Guess First 先猜一次</span></div>
+  <h2>凭直觉，别查</h2>
+  <p class="big">同样的粉、同样的水量、同样的时间。手冲（渗滤）和法压（浸泡），哪个萃取率更高？</p>
+  <div class="guess" id="guessBox">
+    <div class="opts">
+      <button data-g="perc">手冲更高</button>
+      <button data-g="imm">法压更高</button>
+      <button data-g="same">几乎一样</button>
+    </div>
+    <div class="after">已记住你的选择。提示：法压里的水从头到尾是同一批，手冲的水一直在被换新的。</div>
+  </div>
+</section>
+
+<!-- ============ 核心概念 ============ -->
+<section id="concept">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Core Concept 核心概念</span></div>
+  <h2>一个受平衡限制，一个受时间限制</h2>
+  <p>市面上的冲煮器具五花八门，但从萃取的角度只有两种基本模型，区别在于<b>水是不是一直在被替换</b>。</p>
+  <h3>浸泡：水会「吃饱」</h3>
+  <p><span class="term" data-term="Immersion" data-zh="浸泡式萃取" data-def="咖啡粉与固定量的水始终接触、水不被替换的萃取方式（如法压、聪明杯的浸泡阶段）。随着溶质浓度上升，浓度梯度下降，萃取趋近平衡上限。">浸泡式萃取</span>里，水和粉从头到尾在一起。随着咖啡物质溶进水中，水里的浓度上升，而<b>浓度梯度正是推动溶质离开粉粒的驱动力</b>——梯度变小，萃取变慢，最终逼近一个平衡状态。</p>
+  <p>关键推论：<b>浸泡的萃取率有一个由粉水比决定的天花板。</b>水越多（粉水比越大），能容纳的溶质越多、平衡时的萃取率越高。再等下去也越不过这个上限——法压泡二十分钟并不会把咖啡泡到 26%，只会把慢的那批苦涩物质补齐。</p>
+  <h3>渗滤：水一直是新的</h3>
+  <p><span class="term" data-term="Percolation" data-zh="渗滤式萃取" data-def="新鲜水持续流过粉床、萃取液不断离开的方式（如手冲、意式）。浓度梯度被持续维持，萃取率上限更高，但对流速与接触时间高度敏感。">渗滤式萃取</span>里，新鲜水不断进入、萃取液不断离开。粉粒周围的水始终「不饱」，浓度梯度被维持在高位，所以萃取可以持续进行。</p>
+  <p>代价是<b>它没有自然的刹车</b>。浸泡的曲线会自己趋平，渗滤的曲线在接触时间内一直在爬——过萃的责任完全落在你身上（研磨度与注水节奏决定接触时间）。这就是为什么手冲的技术上限和翻车下限都比法压高。</p>
+  <div class="formula">浸泡：EY(t) = EY<sub>上限</sub>(r) × (1 − e<sup>−k t</sup>)，其中 EY<sub>上限</sub> 随粉水比 r 上升<br>渗滤：EY(t) = EY<sub>max</sub> × (1 − e<sup>−k′ t</sup>)，上限基本不受 r 束缚<br><br>→ <b>浸泡想提高萃取率，加水比延长时间有效</b><br>→ <b>渗滤想提高萃取率，延长接触时间（磨细/放慢）就够</b></div>
+  <p data-diag="法压泡很久依然偏薄偏酸|浸泡的平衡上限被粉水比锁住|提高粉水比（多加水而不是多加粉）或磨细一档；单纯延长浸泡时间收益有限">这条差异直接改写了调参策略。<b>同一个症状，在两种器具上要动不同的旋钮</b>：法压偏薄时，延长时间收效甚微，提高粉水比才抬得动天花板；手冲偏薄时，延长接触时间与磨细都直接有效。把在一种器具上学到的口诀搬到另一种上，常常就是这么失灵的。</p>
+</section>
+
+<!-- ============ 交互实验 ============ -->
+<section id="lab">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Interactive Lab 交互实验</span></div>
+  <h2>两条曲线，看它们在哪里分家</h2>
+  <p>同一组参数下的两种模型。拖动时间看两个落点，拖动粉水比看<b>浸泡曲线的天花板</b>如何移动（渗滤曲线基本不动）。默认 1:15、3 分钟：浸泡 16.2%、渗滤 20.2%，差 4.0 个百分点。</p>
+
+  <div class="lab" data-print-note="（在线版可拖动时间与粉水比；打印版展示默认场景：1:15、3 分钟，浸泡 16.2%、渗滤 20.2%，浸泡上限 20.0%）">
+    <div class="lab-head">
+      <span class="t">Two Models · 渗滤与浸泡</span>
+      <span class="presets">
+        <button data-p="r=15,t=3">手冲常用：1:15 / 3 min</button>
+        <button data-p="r=15,t=4.5">法压常用：1:15 / 4.5 min</button>
+        <button data-p="r=18,t=3">抬高天花板：1:18</button>
+      </span>
+    </div>
+    <div class="lab-body">
+      <div class="sliders">
+        <div class="sl">
+          <label>接触时间<b id="vTime">3.0 min</b></label>
+          <input type="range" id="t" min="0.25" max="8" step="0.25" value="3">
+        </div>
+        <div class="sl">
+          <label>粉水比（只影响浸泡的天花板）<b id="vRatio">1 : 15</b></label>
+          <input type="range" id="r" min="10" max="20" step="1" value="15">
+        </div>
+      </div>
+
+      <div class="chartbox">
+        <svg viewBox="0 0 640 370" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="渗滤与浸泡的萃取率随时间变化曲线对比">
+          <rect x="70" y="120" width="540" height="80" fill="var(--accent)" opacity="0.10"/>
+          <text x="600" y="136" text-anchor="end" class="rl">18–22% 参考带</text>
+
+          <line x1="70" y1="320" x2="610" y2="320" stroke="var(--ink)" stroke-width="1.5"/>
+          <line x1="70" y1="40"  x2="70"  y2="320" stroke="var(--ink)" stroke-width="1.5"/>
+          <g class="ax">
+            <text x="70"  y="338" text-anchor="middle">0</text>
+            <text x="205" y="338" text-anchor="middle">2</text>
+            <text x="340" y="338" text-anchor="middle">4</text>
+            <text x="475" y="338" text-anchor="middle">6</text>
+            <text x="610" y="338" text-anchor="middle">8</text>
+            <text x="62" y="324" text-anchor="end">0</text>
+            <text x="62" y="274" text-anchor="end">5</text>
+            <text x="62" y="224" text-anchor="end">10</text>
+            <text x="62" y="174" text-anchor="end">15</text>
+            <text x="62" y="124" text-anchor="end">20</text>
+            <text x="62" y="74"  text-anchor="end">25</text>
+          </g>
+          <text x="340" y="362" text-anchor="middle" class="axt">接触时间（分钟）</text>
+          <text x="20" y="180" text-anchor="middle" class="axt" transform="rotate(-90 20 180)">萃取率 EY (%)</text>
+
+          <polyline id="curvePe" fill="none" stroke="var(--accent)" stroke-width="2.5"
+            points="70.0,320.0 86.9,289.4 103.8,262.5 120.6,238.7 137.5,217.7 154.4,199.2 171.3,182.8 188.1,168.4 205.0,155.6 221.9,144.4 238.8,134.5 255.6,125.7 272.5,118.0 289.4,111.2 306.3,105.2 323.1,99.9 340.0,95.2 356.9,91.1 373.8,87.4 390.6,84.2 407.5,81.3 424.4,78.8 441.3,76.6 458.1,74.7 475.0,72.9 491.9,71.4 508.8,70.1 525.6,68.9 542.5,67.9 559.4,66.9 576.3,66.1 593.1,65.4 610.0,64.8"/>
+          <polyline id="curveIm" fill="none" stroke="var(--sour)" stroke-width="2.5"
+            points="70.0,320.0 86.9,294.3 103.8,271.9 120.6,252.4 137.5,235.4 154.4,220.6 171.3,207.6 188.1,196.4 205.0,186.6 221.9,178.0 238.8,170.6 255.6,164.1 272.5,158.4 289.4,153.5 306.3,149.2 323.1,145.4 340.0,142.2 356.9,139.3 373.8,136.8 390.6,134.7 407.5,132.8 424.4,131.1 441.3,129.7 458.1,128.5 475.0,127.4 491.9,126.4 508.8,125.6 525.6,124.9 542.5,124.3 559.4,123.7 576.3,123.2 593.1,122.8 610.0,122.5"/>
+
+          <line id="tmark" x1="272.5" y1="40" x2="272.5" y2="320" stroke="var(--ink)" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <circle id="dotPe" cx="272.5" cy="118.0" r="7" fill="var(--accent)" stroke="var(--card)" stroke-width="2"/>
+          <circle id="dotIm" cx="272.5" cy="158.4" r="7" fill="var(--sour)"   stroke="var(--card)" stroke-width="2"/>
+
+          <line x1="430" y1="52" x2="454" y2="52" stroke="var(--accent)" stroke-width="2.5"/>
+          <text x="460" y="56" class="rl">渗滤（手冲、意式）</text>
+          <line x1="430" y1="70" x2="454" y2="70" stroke="var(--sour)" stroke-width="2.5"/>
+          <text x="460" y="74" class="rl">浸泡（法压、聪明杯）</text>
+        </svg>
+      </div>
+
+      <div class="readout">
+        <div class="tds">
+          <div class="n" id="gapOut">4.0 个百分点</div>
+          <div class="l">两者差距<br>渗滤 <span id="peOut">20.2%</span> · 浸泡 <span id="imOut">16.2%</span><br>浸泡的天花板 <span id="capOut">20.0%</span></div>
+        </div>
+        <div class="diag">
+          <div class="zone">同参数下的两种模型</div>
+          <div class="adv" id="noteOut">差距拉开了。浸泡已经逼近它的平衡上限 20.0%，再等下去收益很小；渗滤仍在爬升，因为新鲜水一直在维持浓度梯度。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>两个值得记住的观察。第一，<b>前 90 秒两条曲线几乎重合</b>——短时间内两种模型都受制于传质速度，器具的差别还没显现。第二，<b>把粉水比从 1:15 拉到 1:18，浸泡的天花板从 20.0% 抬到 21.0%，而渗滤曲线纹丝不动</b>：粉水比对两种模型的意义完全不同。</p>
+  <p>模型是两类系统的行为示意，常数经过标定使默认场景落在常见的手冲区间，但它不预测你那一杯的读数。可迁移的是<b>形状</b>：一条会趋平，一条不会。</p>
+</section>
+
+<!-- ============ 真实案例 ============ -->
+<section id="case">
+  <div class="sec-tag"><span class="cell" style="background:var(--sour)"></span><span class="lab">Case Study 真实案例</span></div>
+  <h2>把两种模型写成方程的人</h2>
+  <div class="case">
+    <div class="case-head"><span class="cell"></span>Moroney, Lee, O'Brien, Suijver &amp; Marra · 2015–2016</div>
+    <div class="case-body">
+      <p><a href="1-1-dissolution-order.html">1.1 章</a>提过这组应用数学家的工作：他们把咖啡萃取写成偏微分方程组。同一套框架下，他们分别处理了两类系统——<b>充分混合的浸泡系统</b>与<b>水持续流过粉床的渗滤系统</b>。</p>
+      <div class="stats">
+        <div class="stat"><div class="n g">浸泡</div><div class="l">系统趋于平衡，最终状态由总量关系决定</div></div>
+        <div class="stat"><div class="n g">渗滤</div><div class="l">浓度梯度被流动维持，行为由流速与床层结构主导</div></div>
+        <div class="stat"><div class="n g">共同点</div><div class="l">两者的早期阶段都由颗粒表面的快速溶出主导</div></div>
+      </div>
+      <p>把两类系统放在同一框架下的价值，是让「器具之争」变成一个可回答的问题：<b>你的器具属于哪一类，就受哪一类的约束。</b>浸泡系统的调参空间在总量关系上（粉水比、粉量），渗滤系统的调参空间在流动上（研磨度、注水节奏、粉床形状）。</p>
+      <p>这也解释了一类混合器具的存在意义：先浸泡、再过滤的设计（如带阀门的浸泡式滤杯）把浸泡的<b>稳定性</b>与滤纸的<b>清澈度</b>组合起来，代价是放弃了渗滤那条持续爬升的曲线——它的萃取率上限仍由粉水比决定。<b>没有免费的组合，只有取舍的组合</b>（<a href="5-3-devices-as-frozen-parameters.html">5.3 章</a>会把这句话展开成一张表）。</p>
+      <div class="src">来源：Moroney, Lee, O'Brien, Suijver &amp; Marra (2015), Modelling of coffee extraction during brewing using multiscale methods, Chemical Engineering Science；同组 (2016), Coffee extraction kinetics in a well mixed system, Journal of Mathematics in Industry。本章交互中的两条曲线为示意模型，常数经标定使默认场景落在常见手冲区间，非上述论文的拟合参数。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Quiz ============ -->
+<section id="quiz">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Quiz 自测</span></div>
+  <h2>章末自测</h2>
+  <div class="quiz">
+
+    <details>
+      <summary><span class="qtype">计算题</span>用交互里的模型（浸泡上限 = 28 × r/(r+6)）：1:12 与 1:18 的浸泡天花板各是多少？这解释了法压的哪条常见建议？</summary>
+      <div class="answer">
+        <p>r = 12：28 × 12/18 = <b>18.7%</b>。r = 18：28 × 18/24 = <b>21.0%</b>。</p>
+        <p>它解释了「法压别用太小的粉水比」这条建议：1:12 的浸泡无论泡多久都摸不到 19%，杯子容易停在偏酸偏薄的一侧；而 1:18 把天花板抬到 21%，才有余量走到平衡区间。</p>
+        <p>注意这与手冲的直觉相反——手冲加水主要是<b>稀释</b>（降低浓度），浸泡加水却<b>抬高了萃取率上限</b>。同一个动作在两种模型里含义不同，这正是本章要区分的东西。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">概念题</span>为什么说渗滤「没有自然的刹车」？这对新手意味着什么？</summary>
+      <div class="answer">
+        <p>因为新鲜水持续替换，粉粒周围的浓度梯度不会自己衰减到零，萃取率在整个接触时间内一直在爬。浸泡的曲线会自己趋平——泡过头的惩罚有限；渗滤的曲线不会——流速一慢、粉一细，落点就一路向右滑进过萃区。</p>
+        <p>对新手的意义是：<b>浸泡类器具的容错更大</b>，适合先用来建立稳定基准（同时也更容易复现，适合做对比实验）；渗滤类器具的上限更高，但要求你主动控制接触时间。这不是「哪个更好」，而是「你现在需要容错还是需要上限」。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">场景判断</span>你的法压咖啡「泡了 8 分钟还是很薄」。按本章的模型，问题在哪？给出两个可行的调整与一个不该做的调整。</summary>
+      <div class="answer">
+        <p>问题在天花板，不在时间。8 分钟时浸泡曲线早已趋平——继续等待增加的主要是慢的那批苦涩物质（<a href="1-1-dissolution-order.html">1.1 章</a>的第三条曲线），而甜与厚度并不会跟上来。</p>
+        <p><b>可行一：提高粉水比</b>（多加水），把平衡上限抬起来。<b>可行二：磨细一档</b>，让曲线在有限时间内更快接近上限，同时提高传质效率。</p>
+        <p><b>不该做：继续延长浸泡时间。</b>它带来的边际收益很小，而苦涩物质仍在稳步溶出——你会从「薄」走到「薄且苦」，这是最差的组合。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">思考题</span>「先浸泡、再过滤」的混合器具，继承了两种模型的哪些性质？它没能继承什么？</summary>
+      <div class="answer">
+        <p>继承了浸泡的<b>可控性与重现性</b>：时间由你决定、与流速无关，每次的接触条件几乎一致；也继承了滤纸带来的<b>清澈度</b>——细粉与部分油脂被留住，杯感干净、尾韵不易发涩。</p>
+        <p>没能继承渗滤那条<b>持续爬升的曲线</b>：因为浸泡阶段的水不被替换，萃取率上限仍由粉水比决定。所以它在「用较小粉水比做出很高萃取率」这件事上，做不到手冲能做的。</p>
+        <p>这正是本书对器具的一贯立场：器具不创造性能，它<b>选择约束</b>。你挑的是「哪些变量交给器具、哪些留给自己」——<a href="5-3-devices-as-frozen-parameters.html">5.3 章</a>会把这个选择整理成一张对照表。</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- nav:auto -->
+<nav class="next">
+  <a href="4-3-sensory-bias.html">← 4.3 味觉这台仪器的系统误差</a>
+  <a href="5-2-cold-brew.html">5.2 冷萃与时间换温度 →</a>
+</nav>
+<!-- /nav:auto -->
+
+</div>
+
+<script src="../assets/theme.js"></script>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/lab-core.js"></script>
+<script src="../assets/labs/5-1-percolation-vs-immersion.js"></script>
+</body>
+</html>

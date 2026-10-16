@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1.2 六大冲煮变量 · 咖啡风味科学手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/handbook.css">
+</head>
+<body>
+<button class="theme-toggle" type="button" aria-label="切换深色/浅色模式" title="切换深色/浅色模式">
+  <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+</button>
+
+<div class="wrap">
+
+<header class="ch">
+  <div class="dotrow" aria-hidden="true">
+    <i class="a"></i><i class="s"></i><i></i><i class="a"></i><i class="a"></i><i></i><i class="b"></i><i></i><i class="s"></i><i></i>
+  </div>
+  <div class="kicker"><a href="../index.html">咖啡风味科学手册</a> · Part 1 · Extraction 萃取</div>
+  <h1>1.2 Six Brewing Variables
+    <span class="zh">六大冲煮变量：每个旋钮把萃取率推向哪边</span>
+  </h1>
+  <div class="meta">
+    <span>难度 <b>★★☆</b></span>
+    <span>阅读 + 玩 <b>~13 min</b></span>
+    <span>玄学祛魅指数 <b>高</b></span>
+    <span>前置 <b><a href="1-1-dissolution-order.html">1.1 溶解的顺序</a></b></span>
+  </div>
+</header>
+
+<!-- ============ 先猜一次 ============ -->
+<section id="guess">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Guess First 先猜一次</span></div>
+  <h2>凭直觉，别查</h2>
+  <p class="big">六个冲煮变量里，哪一个对萃取率的杠杆最大？</p>
+  <div class="guess" id="guessBox">
+    <div class="opts">
+      <button data-g="grind">研磨度</button>
+      <button data-g="temp">水温</button>
+      <button data-g="time">时间</button>
+      <button data-g="ratio">粉水比</button>
+    </div>
+    <div class="after">已记住你的选择。提示：有一个变量同时改写了三条机制，另外几个各自只改一条。</div>
+  </div>
+</section>
+
+<!-- ============ 核心概念 ============ -->
+<section id="concept">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Core Concept 核心概念</span></div>
+  <h2>六个旋钮，两种作用方式</h2>
+  <p>日常讨论里，冲煮变量常常被排成一张平铺的清单，好像它们地位相当。机制上并非如此——按 <a href="1-1-dissolution-order.html">1.1 章</a>的传质图像，一个变量能做的事只有三类：<b>改变接触面积、改变扩散路径长度、改变速率常数</b>（外加一个改变浓度梯度的）。谁能同时动多条，谁的杠杆就大。</p>
+  <div class="formula">萃取速率 ≈ 传质系数 × 接触面积 × 浓度梯度<br><br>研磨度 → 同时改写「接触面积」与「扩散路径」，并间接改写接触时间<br>水温 → 主要改写速率常数<br>搅动 → 主要改写传质系数（边界层厚度）<br>时间 → 不改速率，只决定你停在曲线的哪一点<br>粉水比 → 主要改写浓度（分母），对梯度有二阶影响<br>水质 → 改写溶质与溶剂之间的相互作用（Part 3）</div>
+  <p>由此得到一条实用的排序：<b>研磨度 &gt; 时间 ≈ 搅动 &gt; 水温</b>（就影响萃取率而言），而粉水比不在这条序列上——它主要管浓度。这个排序解释了两件事：为什么升级磨豆机比升级壶更值；以及为什么「水温差两度」的说法在做过控制的实验里往往站不住（本章案例）。</p>
+  <h3>一个必须先说清的区分</h3>
+  <p>「把萃取率推高」和「让咖啡更好喝」不是同一件事。六个旋钮里，有的在推高萃取率的同时会让萃取变得<b>更不均匀</b>——磨细与过度搅动都是如此。均匀度不会出现在萃取率这个平均数里，却会以「涩」和「浑浊」的形式出现在杯子里（<a href="1-4-espresso-pressure.html">1.4 章</a>）。所以每张卡片的背面都写了副作用：调参时，方向和代价要一起看。</p>
+</section>
+
+<!-- ============ 交互实验 ============ -->
+<section id="lab">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Interactive Lab 交互实验</span></div>
+  <h2>六张速查卡：点开看背面</h2>
+  <p>正面是方向，背面是机制与副作用。点击任意卡片翻面；上方三个预设按症状高亮该优先动的旋钮，并给出一段处方。</p>
+
+  <div class="lab" data-print-note="（在线版可翻转卡片并按症状高亮；打印版展示默认场景：六张卡片的机制与副作用全文如下）">
+    <div class="lab-head">
+      <span class="t">Variable Cards · 变量速查卡</span>
+      <span class="presets">
+        <button data-p="focus=sour">这杯太酸</button>
+        <button data-p="focus=bitter">这杯太苦</button>
+        <button data-p="focus=weak">这杯太淡</button>
+      </span>
+    </div>
+    <div class="lab-body">
+      <div class="cards">
+        <div class="card" data-hit="sour">
+          <div class="cn">研磨度</div>
+          <div class="cd">磨细 → 萃取率 ↑↑<br>杠杆最大</div>
+          <div class="cb" id="cb-grind">机制：磨细同时放大比表面积、缩短颗粒内扩散路径、抬高粉床阻力（接触时间被动拉长）——三条路都推高萃取率，所以杠杆最大。副作用：细粉占比上升，过萃与不足同时发生，杯感发涩；过细还会堵塞粉床。</div>
+        </div>
+        <div class="card" data-hit="sour">
+          <div class="cn">水温</div>
+          <div class="cd">升高 → 萃取率 ↑<br>被高估的旋钮</div>
+          <div class="cb" id="cb-temp">机制：温度提高反应与扩散的速率常数，单位时间溶出更多。副作用：在配平萃取率之后，它的直接感官效应比常识小得多（见 0.3 章案例）——温度的多数功劳其实是通过萃取率兑现的。</div>
+        </div>
+        <div class="card" data-hit="bitter">
+          <div class="cn">接触时间</div>
+          <div class="cd">延长 → 萃取率 ↑<br>回报递减</div>
+          <div class="cb" id="cb-time">机制：沿溶出曲线向右移动，让慢的那批物质跟上来。副作用：回报递减且成分偏斜——酸与甜早已进入平台，后段的增量以苦涩为主。</div>
+        </div>
+        <div class="card" data-hit="weak">
+          <div class="cn">粉水比</div>
+          <div class="cd">多加水 → 浓度 ↓<br>管音量，不管音色</div>
+          <div class="cb" id="cb-ratio">机制：改变水量主要改变浓度（TDS 的分母）；同时更多新鲜水维持了更大的浓度梯度，对萃取率有二阶的提升。副作用：最容易和「萃取充分」混为一谈——它调的是音量，不是音色。</div>
+        </div>
+        <div class="card" data-hit="bitter">
+          <div class="cn">搅动</div>
+          <div class="cd">增加 → 萃取率 ↑<br>双刃：也可能制造不均</div>
+          <div class="cb" id="cb-agit">机制：搅动减薄颗粒表面的边界层，提高传质系数，让溶出更快也更均匀。副作用：过度搅动会让细粉迁移、粉床板结甚至塌陷，流速失控，反而制造不均匀萃取。</div>
+        </div>
+        <div class="card" data-hit="weak">
+          <div class="cn">水质</div>
+          <div class="cd">硬度 ↑ → 杯子更厚（机制有争议，见 3.1）<br>碱度 ↑ → 酸感 ↓</div>
+          <div class="cb" id="cb-water">机制：钙镁离子常被认为会结合风味分子、提升萃取，但这一机制有争议（见 3.1 章案例）；碳酸氢根缓冲酸度，改变你尝到的酸的强度。副作用：碱度过高会让杯子平板、发钝；硬度过高在设备上结垢。详见 Part 3。</div>
+        </div>
+      </div>
+      <div class="tds" id="focusOut" style="display:none;text-align:left;margin-top:14px"></div>
+    </div>
+  </div>
+
+  <p data-diag="同一组参数，每次冲出来都不一样（重现性差）|有未被固定的变量在漂：水源、豆龄、注水节奏|先把水与豆龄钉死（3.2 / 2.3），再固定注水节奏与粉床整理；重现性稳定之前不要调参">把六张卡片读一遍会发现：<b>大部分「口诀冲突」其实是副作用冲突。</b>「淡了就磨细」与「细了会涩」并不矛盾——前者说的是平均萃取率，后者说的是均匀度。它们指向同一条建议：<b>小步调整，一次一个旋钮，并且看着落点走</b>（<a href="1-3-control-chart.html">1.3 章</a>给你那张图）。</p>
+</section>
+
+<!-- ============ 真实案例 ============ -->
+<section id="case">
+  <div class="sec-tag"><span class="cell" style="background:var(--sour)"></span><span class="lab">Case Study 真实案例</span></div>
+  <h2>被高估的旋钮与被低估的旋钮</h2>
+  <div class="case">
+    <div class="case-head"><span class="cell"></span>UC Davis Coffee Center · 2018–2020 系列研究</div>
+    <div class="case-body">
+      <p>加州大学戴维斯分校咖啡中心用描述性感官小组逐个考察冲煮变量。其中的水温研究做到了更进一步：把浓度与萃取率配平，看变量的<b>直接效应</b>还剩多少；滤篮几何研究则是在相同冲煮参数下直接比较，没有配平。两个结果对本章特别有用，也正好示范了「配平」与「不配平」能回答的问题有什么不同。</p>
+      <div class="stats">
+        <div class="stat"><div class="n g">水温</div><div class="l">在配平 TDS 与 EY 后，87 °C 与 93 °C 的感官差异远小于常见说法</div></div>
+        <div class="stat"><div class="n g">滤篮几何</div><div class="l">相同参数下，锥形与平底滤篮冲出可辨的不同杯子；锥形的 TDS 也显著更高</div></div>
+        <div class="stat"><div class="n g">方法论</div><div class="l">先配平落点，再谈变量本身——否则测到的是耦合的总和</div></div>
+      </div>
+      <p>两个结论要分开读：<b>水温</b>只改写速率常数，它的效果几乎全部经由萃取率兑现，落点一配平就所剩不多——这是配平实验直接支持的。<b>滤篮几何</b>则同时改写了浓度和流动：作者推测 TDS 差异是可辨差异的重要驱动因素之一，配平之后还剩多少，他们明确留作待解问题。本书的推测是，几何还会改写萃取的<b>均匀性</b>，而均匀性不体现在平均萃取率里——但这一步目前是假设，不是这项研究的结论。</p>
+      <p>这给了一条判断新说法的通用问法：<b>这个变量是通过萃取率起作用，还是通过均匀度起作用？</b>前者可以用落点管理，后者需要改善粉床与手法。把两类混在一起，就会得到互相矛盾的口诀。</p>
+      <div class="src">来源：Batali, Ristenpart &amp; Guinard (2020), Brew temperature, at fixed strength and extraction, has little impact on the sensory profile of drip brew coffee, Scientific Reports；Frost, Ristenpart &amp; Guinard (2019), Effect of basket geometry on the sensory quality and consumer acceptance of drip brewed coffee, Journal of Food Science 84(8)。两项研究均使用特定豆源与滤泡设备，结论迁移到其他器具需谨慎。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Quiz ============ -->
+<section id="quiz">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Quiz 自测</span></div>
+  <h2>章末自测</h2>
+  <div class="quiz">
+
+    <details>
+      <summary><span class="qtype">概念题</span>为什么说研磨度的杠杆比水温大？请用「面积、路径、速率常数」这三个词回答。</summary>
+      <div class="answer">
+        <p>水温只作用在<b>速率常数</b>上：温度升高，同样的面积与路径下溶出更快。研磨度同时作用在<b>接触面积</b>（变细 → 面积增大）与<b>扩散路径长度</b>（颗粒变小 → 溶质走出来的距离变短）上，而且因为粉床阻力上升，还会间接拉长接触时间。</p>
+        <p>三条通道叠加，效果自然比单条大。这也解释了实践中的观察：磨豆机的一档常常抵得上好几度水温。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">场景判断</span>朋友说「我把水温从 92 °C 降到 88 °C，酸味明显强了，所以水温是关键变量」。这个推理漏掉了什么？怎么改进这个实验？</summary>
+      <div class="answer">
+        <p>漏掉的是：降温的同时萃取率也掉了下去。他观察到的「更酸」，主要是萃取率下降的表现（<a href="1-1-dissolution-order.html">1.1 章</a>：曲线停在左侧），而不是水温的直接感官效应。这正是 <a href="0-3-where-myths-come-from.html">0.3 章</a>说的变量耦合。</p>
+        <p>改进：两个水温各自调整研磨度或时间，把两杯的萃取率与浓度配平到同一落点，再盲评。这时如果差异消失，说明水温的作用是「通过萃取率」；如果仍有差异，那才是水温的直接效应。本章案例正是这么做的。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">计算题</span>你把粉水比从 1:16 改成 1:14（粉不变、少加水），萃取率保持 20% 不变。浓度大约变成多少？这杯会更「萃取充分」吗？</summary>
+      <div class="answer">
+        <p>用 <a href="1-3-control-chart.html">1.3 章</a>的近似式：TDS ≈ EY ÷ 粉水比。原来 20% ÷ 16 = <b>1.25%</b>，现在 20% ÷ 14 ≈ <b>1.43%</b>——浓度上升约 14%。</p>
+        <p>但萃取率仍是 20%：<b>音量变大了，音色没变</b>。所以它不会更「萃取充分」，只会更浓。如果原本的问题是「酸而薄」，这样改只能解决薄，酸原封不动——这也是速查卡把粉水比单独归为「管音量」的原因。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">思考题</span>搅动被列为「双刃」。描述一个搅动帮忙的场景和一个搅动帮倒忙的场景，并说明机制上的区别。</summary>
+      <div class="answer">
+        <p><b>帮忙</b>：注水初期的闷蒸搅拌，让干粉充分润湿、CO₂ 排出、避免局部干斑。此时搅动减薄边界层、提高传质系数，并让粉床各处的接触条件趋于一致——它同时提高了萃取率和均匀度。</p>
+        <p><b>帮倒忙</b>：后段的猛烈搅拌或反复扰动。粉床被搅塌，细粉迁移到底部形成致密层，流速骤降，局部接触时间失控；同时上层可能出现通道。此时萃取率也许还在上升，但分布被撕开了——杯子变涩、变浑浊。</p>
+        <p>机制上的区别在于：搅动作用在<b>边界层</b>时是好事，作用在<b>粉床结构</b>上时是坏事。所以「搅还是不搅」这个问题没有统一答案，取决于此刻你影响的是哪一个。</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- nav:auto -->
+<nav class="next">
+  <a href="1-1-dissolution-order.html">← 1.1 溶解的顺序</a>
+  <a href="1-3-control-chart.html">1.3 萃取率与浓度 →</a>
+</nav>
+<!-- /nav:auto -->
+
+</div>
+
+<script src="../assets/theme.js"></script>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/lab-core.js"></script>
+<script src="../assets/labs/1-2-six-variables.js"></script>
+</body>
+</html>

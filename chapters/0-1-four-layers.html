@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>0.1 风味的四层来源 · 咖啡风味科学手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/handbook.css">
+</head>
+<body>
+<button class="theme-toggle" type="button" aria-label="切换深色/浅色模式" title="切换深色/浅色模式">
+  <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+</button>
+
+<div class="wrap">
+
+<header class="ch">
+  <div class="dotrow" aria-hidden="true">
+    <i class="a"></i><i></i><i class="s"></i><i></i><i class="b"></i><i></i><i class="a"></i><i></i><i></i><i class="a"></i>
+  </div>
+  <div class="kicker"><a href="../index.html">咖啡风味科学手册</a> · Part 0 · Prologue 导读</div>
+  <h1>0.1 Four Layers of Flavor
+    <span class="zh">风味的四层来源：谁决定了天花板，谁决定了这一杯</span>
+  </h1>
+  <div class="meta">
+    <span>难度 <b>★☆☆</b></span>
+    <span>阅读 + 玩 <b>~10 min</b></span>
+    <span>玄学祛魅指数 <b>中</b></span>
+    <span>前置 <b>无</b></span>
+  </div>
+</header>
+
+<!-- ============ 先猜一次 ============ -->
+<section id="guess">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Guess First 先猜一次</span></div>
+  <h2>凭直觉，别查</h2>
+  <p class="big">一杯咖啡喝出明显的「莓果味」。这件事主要是在哪一层被决定的？</p>
+  <div class="guess" id="guessBox">
+    <div class="opts">
+      <button data-g="variety">品种与产地</button>
+      <button data-g="process">处理法</button>
+      <button data-g="roast">烘焙</button>
+      <button data-g="brew">冲煮</button>
+    </div>
+    <div class="after">已记住你的选择。提示：这个问题有两个答案——「谁写进去的」和「谁能把它毁掉」不是同一层。</div>
+  </div>
+</section>
+
+<!-- ============ 核心概念 ============ -->
+<section id="concept">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Core Concept 核心概念</span></div>
+  <h2>四层责任链：上游写天花板，下游写这一杯</h2>
+  <p>一杯咖啡的风味经过四道手：<b>品种与产地 → 处理法 → 烘焙 → 冲煮</b>。它们不是四个并列的「影响因素」，而是一条有方向的链子：<b>上游决定有什么，下游决定能取出多少</b>。</p>
+  <p>这条链子的关键性质是不可逆。<span class="term" data-term="Green Coffee" data-zh="生豆" data-def="未经烘焙的咖啡种子。风味前体（糖、氨基酸、有机酸、绿原酸等）此时已经确定，烘焙与冲煮只能转化或取出它们。">生豆</span>里没有的物质，烘焙变不出来；烘焙没生成的香气分子，冲煮溶不出来。反过来，每一层都能<b>毁掉</b>上游交付的东西——烘过头会把细腻的花果香压成焦糖与烟熏，过萃会把一支干净的豆子泡出涩感。所以「换个滤杯能不能救回这支豆子」这类问题，答案取决于你想救的是哪一层的问题。</p>
+  <h3>本书站在链子的哪一段</h3>
+  <p>前两层——品种与<span class="term" data-term="Processing" data-zh="处理法" data-def="咖啡果实脱除果肉与干燥的方式（日晒、水洗、蜜处理等）。发酵与干燥路径决定了生豆中酸的种类与酯类香气的底子。">处理法</span>——属于农业与遗传学，读者通常改不动，本书只把它们当作<b>定位坐标</b>，不展开。真正每天在你手上变化的是后两层：烘焙（你选豆时就在选它）和冲煮（你每天都在动它）。本书把冲煮放在第一部分，正是因为它是变化最频繁、也最被「玄学化」的一层。</p>
+  <p data-diag="怎么冲都出不来该有的花果香|豆子本身与烘焙度（上游层）|先用一支已知有该风味的参照豆验证器具与手法；确认不是冲煮层的问题再调参数">这也给了一条实用的排查纪律：<b>先确认天花板，再调参数。</b>如果一支豆子怎么冲都出不来花果香，先用一支你确信有这类风味的豆子验证一遍手法——如果参照豆冲得出来，问题在上游，调参数是在浪费时间。</p>
+</section>
+
+<!-- ============ 交互实验 ============ -->
+<section id="lab">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Interactive Lab 交互实验</span></div>
+  <h2>点开每一层，看它锁死了什么</h2>
+  <p>点击链条上的任意一层，右侧显示这层决定什么、锁死什么、留给下游什么。上方三个预设直接回答三个常见问题。</p>
+
+  <div class="lab" data-print-note="（在线版可点击四层与三个问题预设；打印版展示默认场景：选中「① 品种与产地」层）">
+    <div class="lab-head">
+      <span class="t">Responsibility Chain · 风味责任链</span>
+      <span class="presets">
+        <button data-p="question=berry,layer=variety">莓果味从哪来</button>
+        <button data-p="question=caramel,layer=roast">焦糖苦甜从哪来</button>
+        <button data-p="question=twocups,layer=brew">同豆两杯为何不同</button>
+      </span>
+    </div>
+    <div class="lab-body">
+      <div class="chartbox">
+        <svg viewBox="0 0 640 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="风味四层责任链：品种与产地、处理法、烘焙、冲煮">
+          <rect id="l0" x="16"  y="38" width="140" height="64" rx="8" fill="var(--accent)" fill-opacity="0.9"  stroke="var(--accent)" stroke-width="1.5"/>
+          <rect id="l1" x="172" y="38" width="140" height="64" rx="8" fill="var(--accent)" fill-opacity="0.12" stroke="var(--accent)" stroke-width="1.5"/>
+          <rect id="l2" x="328" y="38" width="140" height="64" rx="8" fill="var(--accent)" fill-opacity="0.12" stroke="var(--accent)" stroke-width="1.5"/>
+          <rect id="l3" x="484" y="38" width="140" height="64" rx="8" fill="var(--accent)" fill-opacity="0.12" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="86"  y="76" text-anchor="middle" class="zl">① 品种与产地</text>
+          <text x="242" y="76" text-anchor="middle" class="zl">② 处理法</text>
+          <text x="398" y="76" text-anchor="middle" class="zl">③ 烘焙</text>
+          <text x="554" y="76" text-anchor="middle" class="zl">④ 冲煮</text>
+          <polygon points="158,66 168,70 158,74" fill="var(--ink-soft)"/>
+          <polygon points="314,66 324,70 314,74" fill="var(--ink-soft)"/>
+          <polygon points="470,66 480,70 470,74" fill="var(--ink-soft)"/>
+          <text x="16"  y="126" class="rl">上游：决定「有什么」</text>
+          <text x="624" y="126" text-anchor="end" class="rl">下游：决定「取出多少」</text>
+        </svg>
+      </div>
+
+      <div class="picker">
+        <button data-layer="variety">品种与产地</button>
+        <button data-layer="process">处理法</button>
+        <button data-layer="roast">烘焙</button>
+        <button data-layer="brew">冲煮</button>
+      </div>
+
+      <div class="diag">
+        <div class="zone" id="layerName">① 品种与产地</div>
+        <div class="adv"><b>决定：</b><span id="layerDecides">生豆里「有没有」某一类风味前体：芳香物前体、糖与有机酸的构成、豆体密度。</span></div>
+        <div class="adv"><b>锁死：</b><span id="layerLocks">这一杯的风味天花板。下游三层都在这套素材里操作。</span></div>
+        <div class="adv"><b>留给下游：</b><span id="layerLeaves">素材本身——后三层能保留多少、糟蹋多少。</span></div>
+        <div class="adv"><b>本书位置：</b><span id="layerWhere">本书不展开（属于农业与遗传学），只作为定位使用。</span></div>
+      </div>
+      <div class="tds" id="chainOut" style="display:none;text-align:left"></div>
+    </div>
+  </div>
+
+  <p>玩过一轮后，本章的结论就只剩一句话：<b>责任在哪一层，就去哪一层解决。</b>后面所有章节都在给你工具，判断「这个症状属于哪一层、哪个变量」。</p>
+</section>
+
+<!-- ============ 真实案例 ============ -->
+<section id="case">
+  <div class="sec-tag"><span class="cell" style="background:var(--sour)"></span><span class="lab">Case Study 真实案例</span></div>
+  <h2>当第一层被换掉：Geisha 与 2004 年的那场拍卖</h2>
+  <div class="case">
+    <div class="case-head"><span class="cell"></span>Best of Panama · 2004</div>
+    <div class="case-body">
+      <p>2004 年的巴拿马 Best of Panama 竞赛与拍卖上，翡翠庄园 (Hacienda La Esmeralda) 送出一支当时业内并不看好的老品种 Geisha。它在杯测桌上呈现出评审此前很少在咖啡里遇到的茉莉与柑橘香气，最终以远超当时纪录的价格成交，并在此后二十年里被反复刷新的拍卖纪录不断放大。</p>
+      <div class="stats">
+        <div class="stat"><div class="n g">2004</div><div class="l">Geisha 首次在 Best of Panama 夺冠的年份</div></div>
+        <div class="stat"><div class="n g">品种层</div><div class="l">被换掉的是链条最上游的一层，不是冲煮技巧</div></div>
+        <div class="stat"><div class="n g">20 年</div><div class="l">此后 Geisha 在各国竞标中持续刷新价格纪录</div></div>
+      </div>
+      <p>这件事之所以适合当本书的开场，是因为它是一次<b>干净的单层实验</b>：处理法、烘焙、冲煮都在同一届比赛的常规范围内，被换掉的只有第一层。结果不是「好一点」，而是出现了此前那批豆子根本不具备的香气类别——天花板被抬高了。</p>
+      <p>反过来读同样成立，而且对日常更有用：既然天花板由上游写定，那么当你的杯子里出现「本来就不该有的」味道——涩、木质、焦苦、纸味——责任大概率在下游三层，尤其在你每天都会动的那一层。<b>这本书处理的就是下游。</b></p>
+      <div class="src">来源：Best of Panama 竞赛与拍卖公开结果（2004 年及此后各届）；Geisha 品种谱系见 World Coffee Research 品种目录。年份与名次为公开赛事记录，成交价格历年差异较大，具体数字以各届官方结果为准。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Quiz ============ -->
+<section id="quiz">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Quiz 自测</span></div>
+  <h2>章末自测</h2>
+  <div class="quiz">
+
+    <details>
+      <summary><span class="qtype">概念题</span>「这支豆子冲不出花香，换个滤杯试试。」这句话在四层责任链里错在哪？（以及它什么时候是对的）</summary>
+      <div class="answer">
+        <p>它把上游问题交给了下游解决。花香类物质的前体在①②层写定、在③烘焙层被保留或被盖掉——如果这支豆子本来就没有，或者烘焙已经把它压掉了，④冲煮层能做的只是「溶出比例」，变不出不存在的分子。</p>
+        <p>它什么时候是对的：当参照豆能在你手上冲出花香，说明手法与器具没问题，而这支豆子仍然出不来——此时问题在上游，换滤杯依然无效；但如果<b>参照豆在你手上也冲不出来</b>，那责任确实回到了④层，换器具与调参数才有意义。<b>先验证天花板，再动参数</b>，顺序反了会浪费很多豆子。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">场景判断</span>两个人用同一支豆、同一台磨、同一壶水，冲出的两杯明显不同。差异最可能产生在哪一层？还有哪个「隐藏的第五层」？</summary>
+      <div class="answer">
+        <p>①②③层的输入相同，差异只能来自④冲煮层：注水方式、时间、搅动、粉床状态都在这一层，而且它们大多不被记录，所以看起来像玄学。</p>
+        <p>隐藏的一层是<b>感官</b>——两个人的读数本身就不同，而且都带系统性偏移（温度、期望、顺序）。本书 Part 4 专门校准这台仪器：在你确信「两杯不同」之前，先确认不是「两个读数不同」。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">思考题</span>按时间顺序，这本书本该从种植讲起。为什么反而把冲煮放在 Part 1？</summary>
+      <div class="answer">
+        <p>因为本书的目标不是完整讲述咖啡产业，而是把你手上<b>可动的变量</b>还原成机制。冲煮层的变量每天都在变、反馈最快（几分钟一杯）、也最容易被「口诀」污染——它的每分钟学习效率最高。</p>
+        <p>另一个理由是依赖关系：理解了萃取，再回头看烘焙度与水质，会发现它们的作用都可以翻译成「把萃取推向哪边」（Part 2 与 Part 3 正是这么讲的）。先建立萃取这套坐标系，后面的章节才有地方落脚。</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- nav:auto -->
+<nav class="next">
+  <a href="../index.html">← 全书目录</a>
+  <a href="0-2-how-to-read.html">0.2 这本书怎么读：先猜、再玩、后懂 →</a>
+</nav>
+<!-- /nav:auto -->
+
+</div>
+
+<script src="../assets/theme.js"></script>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/lab-core.js"></script>
+<script src="../assets/labs/0-1-four-layers.js"></script>
+</body>
+</html>

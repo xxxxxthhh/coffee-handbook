@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- 本文件由 tools/build.mjs 生成，请勿手改 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附录 B · 冲煮诊断卡 · 咖啡风味科学手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/handbook.css">
+</head>
+<body>
+<button class="theme-toggle" type="button" aria-label="切换深色/浅色模式" title="切换深色/浅色模式">
+  <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+</button>
+
+<div class="wrap">
+<header class="book">
+  <div class="kicker"><a href="index.html">← 咖啡风味科学手册</a></div>
+  <h1>Appendix B · Diagnosis Card<span class="zh">附录 B · 冲煮诊断卡</span></h1>
+  <p class="lede">共 18 条，全部由各章正文的 <code>data-diag</code> 标记聚合——改章节即改此页。建议打印后贴在磨豆机旁。</p>
+</header>
+
+<section>
+  <p>用法：<b>先定位症状，再决定动哪个旋钮</b>。一次只动一个变量，动完记录落点（见 <a href="chapters/1-3-control-chart.html">1.3 冲煮控制图</a>）。表里的「调整方向」是方向不是配方——具体档位随豆子、器具、水质浮动。</p>
+  <div class="tablebox">
+    <table>
+      <thead><tr><th>症状</th><th>最可能的变量</th><th>调整方向</th><th>章节</th></tr></thead>
+      <tbody>
+      <tr>
+        <td><span class="sym">怎么冲都出不来该有的花果香</span></td>
+        <td>豆子本身与烘焙度（上游层）</td>
+        <td>先用一支已知有该风味的参照豆验证器具与手法；确认不是冲煮层的问题再调参数</td>
+        <td><a href="chapters/0-1-four-layers.html">0.1</a></td>
+      </tr>
+      <tr>
+        <td><span class="sym">同一个改动，这次有效、下次无效</span></td>
+        <td>变量耦合：一个旋钮同时改了多个下游量，效果随场景变号</td>
+        <td>回到基准参数，一次只动一个旋钮；先分辨这个改动走的是萃取率还是均匀度</td>
+        <td><a href="chapters/0-3-where-myths-come-from.html">0.3</a></td>
+      </tr>
+      <tr>
+        <td><span class="sym">入口只有酸，甜感与厚度都不足</span></td>
+        <td>萃取率偏低（接触时间/研磨度/水温）</td>
+        <td>把落点向右推：磨细一档或延长接触时间，让中段的糖与美拉德产物跟上来</td>
+        <td><a href="chapters/1-1-dissolution-order.html">1.1</a></td>
+      </tr>
+      <tr>
+        <td><span class="sym">同一组参数，每次冲出来都不一样（重现性差）</span></td>
+        <td>有未被固定的变量在漂：水源、豆龄、注水节奏</td>
+        <td>先把水与豆龄钉死（3.2 / 2.3），再固定注水节奏与粉床整理；重现性稳定之前不要调参</td>
+        <td><a href="chapters/1-2-six-variables.html">1.2</a></td>
+      </tr>
+      <tr>
+        <td><span class="sym">又淡又酸</span></td>
+        <td>萃取率（研磨度/水温/时间）</td>
+        <td>磨细一档：落点同时右移、上移，一个动作修两个症状；别先加粉</td>
+        <td><a href="chapters/1-3-control-chart.html">1.3</a></td>
+      </tr>
+      <tr>
+        <td><span class="sym">浓但发酸</span></td>
+        <td>萃取率（接触时间/研磨度）</td>
+        <td>保持粉水比不动，只磨细或延长接触时间，把落点向右推</td>
+        <td><a href="chapters/1-3-control-chart.html">1.3</a></td>
+      </tr>
+      <tr>
+        <td><span class="sym">espresso 又尖又苦，或每杯流速忽快忽慢</span></td>
+        <td>粉饼均匀度（布粉、压粉、粉量与粉碗匹配）</td>
+        <td>先修粉饼：打散结块、布粉均匀、压平；粉饼修好之前不要调研磨或时间</td>
+        <td><a href="chapters/1-4-espresso-pressure.html">1.4</a></td>
+      </tr>
+      <tr>
+        <td><span class="sym">尖酸并带谷物、青草或生青气息</span></td>
+        <td>烘焙发展不足（上游层），而非冲煮参数</td>
+        <td>先用另一支豆子验证手法；若参照豆正常，问题在豆子本身，调参数收效有限</td>
+        <td><a href="chapters/2-1-roast-chemistry.html">2.1</a></td>
+      </tr>
+      <tr>
+        <td><span class="sym">换了支豆子，同一组参数突然变苦变干</span></td>
+        <td>烘焙度不同导致宜人萃取率区间左移</td>
+        <td>深烘豆磨粗一档或缩短接触时间；浅烘豆反向调整，把落点推回该烘焙度的区间</td>
+        <td><a href="chapters/2-2-roast-level-flavor.html">2.2</a></td>
+      </tr>
+      <tr>
+        <td><span class="sym">闷蒸时粉床剧烈膨胀，流速不稳，杯感偏酸偏薄</span></td>
+        <td>豆子过新，残余 CO₂ 干扰浸润与接触</td>
+        <td>再养几天；急用时延长闷蒸时间并轻微搅拌，让气体先排出去</td>
+        <td><a href="chapters/2-3-degassing.html">2.3</a></td>
+      </tr>
+      <tr>
+        <td><span class="sym">杯子发钝、发平，酸感被抹掉，甚至有粉笔般的干感</span></td>
+        <td>水的碱度过高</td>
+        <td>换用碱度更低的水源，或用低碱度水稀释；不要靠磨细来「找回明亮度」</td>
+        <td><a href="chapters/3-1-minerals.html">3.1</a></td>
+      </tr>
+      <tr>
+        <td><span class="sym">自配水后杯子发闷、酸被抹平</span></td>
+        <td>碱度母液加多了</td>
+        <td>减少碳酸氢钠母液的用量，硬度母液保持不变——两个轴分别调，别整体稀释</td>
+        <td><a href="chapters/3-2-water-recipes.html">3.2</a></td>
+      </tr>
+      <tr>
+        <td><span class="sym">说不出杯子哪里不对，只能说「不好喝」</span></td>
+        <td>缺少可定位的描述词（感官坐标系）</td>
+        <td>从风味轮最内层开始：先判断是酸/苦/涩/薄中的哪一类，再往外收窄一层</td>
+        <td><a href="chapters/4-1-flavor-wheel.html">4.1</a></td>
+      </tr>
+      <tr>
+        <td><span class="sym">两支豆子对比不出结论，每次结果都不一样</span></td>
+        <td>比较时没有控制变量（时间跨度、期望、单杯偶然）</td>
+        <td>用杯测式对照：同粉水比同研磨、同时冲、每样至少两杯、编号盲评，再下结论</td>
+        <td><a href="chapters/4-2-cupping.html">4.2</a></td>
+      </tr>
+      <tr>
+        <td><span class="sym">同一杯咖啡前后评价不一致，或换个顺序结论就变了</span></td>
+        <td>感官仪器的系统偏移（温度、期望、顺序）</td>
+        <td>固定评价温度、编号盲评、轮换顺序；重要判断在同一温度段做两次</td>
+        <td><a href="chapters/4-3-sensory-bias.html">4.3</a></td>
+      </tr>
+      <tr>
+        <td><span class="sym">法压泡很久依然偏薄偏酸</span></td>
+        <td>浸泡的平衡上限被粉水比锁住</td>
+        <td>提高粉水比（多加水而不是多加粉）或磨细一档；单纯延长浸泡时间收益有限</td>
+        <td><a href="chapters/5-1-percolation-vs-immersion.html">5.1</a></td>
+      </tr>
+      <tr>
+        <td><span class="sym">冷萃偏薄、缺乏厚度</span></td>
+        <td>低温下总萃取速率低，时间或粉量不足</td>
+        <td>延长浸泡时间或提高粉量（降低粉水比）；磨细一档也有效，但要同时缩短时间避免涩感</td>
+        <td><a href="chapters/5-2-cold-brew.html">5.2</a></td>
+      </tr>
+      <tr>
+        <td><span class="sym">换了器具后同一支豆子完全变了样</span></td>
+        <td>器具锁死/释放的变量不同，原参数不再适用</td>
+        <td>按器具类型重新定位：浸泡类先调粉水比，渗滤类先调研磨度与接触时间</td>
+        <td><a href="chapters/5-3-devices-as-frozen-parameters.html">5.3</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+</div>
+
+<script src="assets/theme.js"></script>
+<script src="assets/quiz.js"></script>
+</body>
+</html>

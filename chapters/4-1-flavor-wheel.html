@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4.1 风味轮与描述词校准 · 咖啡风味科学手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/handbook.css">
+</head>
+<body>
+<button class="theme-toggle" type="button" aria-label="切换深色/浅色模式" title="切换深色/浅色模式">
+  <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+</button>
+
+<div class="wrap">
+
+<header class="ch">
+  <div class="dotrow" aria-hidden="true">
+    <i class="s"></i><i class="a"></i><i></i><i class="a"></i><i></i><i class="s"></i><i></i><i class="b"></i><i></i><i class="a"></i>
+  </div>
+  <div class="kicker"><a href="../index.html">咖啡风味科学手册</a> · Part 4 · Sensory 感官</div>
+  <h1>4.1 The Flavor Wheel
+    <span class="zh">风味轮与描述词校准：描述词是坐标系，不是玄学</span>
+  </h1>
+  <div class="meta">
+    <span>难度 <b>★☆☆</b></span>
+    <span>阅读 + 玩 <b>~12 min</b></span>
+    <span>玄学祛魅指数 <b>高</b></span>
+    <span>前置 <b>无</b></span>
+  </div>
+</header>
+
+<!-- ============ 先猜一次 ============ -->
+<section id="guess">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Guess First 先猜一次</span></div>
+  <h2>凭直觉，别查</h2>
+  <p class="big">咖啡包装上写着「蓝莓、茉莉、红糖」。这些词是？</p>
+  <div class="guess" id="guessBox">
+    <div class="opts">
+      <button data-g="marketing">主要是营销修辞</button>
+      <button data-g="subjective">个人主观感受</button>
+      <button data-g="lexicon">有参照样本的术语</button>
+    </div>
+    <div class="after">已记住你的选择。提示：有一批研究者真的把这些词逐个配上了可购买的实物样本与强度刻度。</div>
+  </div>
+</section>
+
+<!-- ============ 核心概念 ============ -->
+<section id="concept">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Core Concept 核心概念</span></div>
+  <h2>描述词的作用是让两个人指着同一个东西</h2>
+  <p>「这杯有蓝莓味」听起来像文学修辞，实际上它试图完成一件很朴素的事：<b>让你和我在讨论同一种感受</b>。风味描述词是一套坐标系——如果没有它，两个人只能交换「好喝 / 不好喝」，而这两个词无法定位问题，也无法指导下一步调整。</p>
+  <p>让坐标系可用的关键是<span class="term" data-term="Sensory Lexicon" data-zh="感官词汇表" data-def="把每个风味描述词与具体的参照样本和强度刻度绑定的词表。它让描述词从个人比喻变成可训练、可对齐的共同语言。">感官词汇表</span>：每个词都配一个<b>可购买、可复现的参照样本</b>，并给出强度刻度。这样「蓝莓」指的不再是各自脑中的印象，而是某个具体样本在某个强度下的气味。词汇表把描述从修辞变成了测量。</p>
+  <h3>风味轮怎么读</h3>
+  <p><span class="term" data-term="Flavor Wheel" data-zh="风味轮" data-def="把风味描述词按大类到细类分层排列的圆形图表。它的用法是从中心向外逐层收窄，而不是直接从最外圈挑词。">风味轮</span>是词汇表的可视化：中心是粗类别，向外逐层细分。它的正确用法是<b>由内向外</b>——先确定「这是果香还是烘焙类」，再往外走一层「浆果还是柑橘」，最后才落到「蓝莓」。</p>
+  <p>多数人用反了：直接盯着最外圈找词，然后陷入「我到底喝没喝出蓝莓」的自我怀疑。<b>由内向外的意义在于，每一层都是一个你能做出的判断</b>，而判断的粒度可以随经验增长。说「果香」是准确的，说「浆果」更准确，说「蓝莓」需要参照样本支撑——三者都不算错，错的是跳过前两层。</p>
+  <p data-diag="说不出杯子哪里不对，只能说「不好喝」|缺少可定位的描述词（感官坐标系）|从风味轮最内层开始：先判断是酸/苦/涩/薄中的哪一类，再往外收窄一层">这也是本书把感官单列一 Part 的原因之一：<b>没有描述词，就没有诊断。</b>「不好喝」无法映射到任何一个变量；「入口酸、中段空、尾韵干」则分别指向萃取率、萃取率与均匀度——三个可操作的方向（<a href="1-3-control-chart.html">1.3</a>、<a href="1-4-espresso-pressure.html">1.4</a> 章）。</p>
+</section>
+
+<!-- ============ 交互实验 ============ -->
+<section id="lab">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Interactive Lab 交互实验</span></div>
+  <h2>点开一块，看子类与参照样本</h2>
+  <p>这是一个简化到六大类的轮盘（完整的行业风味轮层级更多）。点击任意扇区或下方按钮，看这一类里常用的子类词、可以在家准备的参照样本，以及它最容易与谁混淆。默认选中「果香」。</p>
+
+  <div class="lab" data-print-note="（在线版可点击六个扇区；打印版展示默认场景：选中「果香 Fruity」及其子类与参照样本）">
+    <div class="lab-head">
+      <span class="t">Flavor Wheel · 简化风味轮</span>
+      <span class="presets">
+        <button data-p="cat=fruity">从大类开始练</button>
+        <button data-p="cat=fermented">区分酸与发酵</button>
+        <button data-p="cat=sweet">锚定你的甜感</button>
+      </span>
+    </div>
+    <div class="lab-body">
+      <div class="chartbox">
+        <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="简化风味轮：六个大类扇区" style="max-width:340px;margin:0 auto">
+          <path id="sec0" data-cat="fruity"    d="M160.0,35.0 A125,125 0 0 1 268.3,97.5 L207.6,132.5 A55,55 0 0 0 160.0,105.0 Z" fill="var(--sour)"   fill-opacity="0.85" stroke="var(--card)" stroke-width="2" style="cursor:pointer"/>
+          <path id="sec1" data-cat="floral"    d="M268.3,97.5 A125,125 0 0 1 268.3,222.5 L207.6,187.5 A55,55 0 0 0 207.6,132.5 Z" fill="var(--accent)" fill-opacity="0.18" stroke="var(--card)" stroke-width="2" style="cursor:pointer"/>
+          <path id="sec2" data-cat="sweet"     d="M268.3,222.5 A125,125 0 0 1 160.0,285.0 L160.0,215.0 A55,55 0 0 0 207.6,187.5 Z" fill="var(--accent)" fill-opacity="0.18" stroke="var(--card)" stroke-width="2" style="cursor:pointer"/>
+          <path id="sec3" data-cat="nutty"     d="M160.0,285.0 A125,125 0 0 1 51.7,222.5 L112.4,187.5 A55,55 0 0 0 160.0,215.0 Z" fill="var(--bitter)" fill-opacity="0.18" stroke="var(--card)" stroke-width="2" style="cursor:pointer"/>
+          <path id="sec4" data-cat="roasted"   d="M51.7,222.5 A125,125 0 0 1 51.7,97.5 L112.4,132.5 A55,55 0 0 0 112.4,187.5 Z" fill="var(--bitter)" fill-opacity="0.18" stroke="var(--card)" stroke-width="2" style="cursor:pointer"/>
+          <path id="sec5" data-cat="fermented" d="M51.7,97.5 A125,125 0 0 1 160.0,35.0 L160.0,105.0 A55,55 0 0 0 112.4,132.5 Z" fill="var(--sour)" fill-opacity="0.18" stroke="var(--card)" stroke-width="2" style="cursor:pointer"/>
+          <text x="205.0" y="86" text-anchor="middle" class="zl">果香</text>
+          <text x="250.0" y="164" text-anchor="middle" class="zl">花香</text>
+          <text x="205.0" y="242" text-anchor="middle" class="zl">甜感</text>
+          <text x="115.0" y="242" text-anchor="middle" class="zl">坚果</text>
+          <text x="70.0"  y="164" text-anchor="middle" class="zl">烘焙</text>
+          <text x="115.0" y="86"  text-anchor="middle" class="zl">发酵</text>
+          <text x="160" y="156" text-anchor="middle" class="axt">由内</text>
+          <text x="160" y="172" text-anchor="middle" class="axt">向外</text>
+        </svg>
+      </div>
+
+      <div class="picker">
+        <button data-cat="fruity">果香</button>
+        <button data-cat="floral">花香</button>
+        <button data-cat="sweet">甜感</button>
+        <button data-cat="nutty">坚果与可可</button>
+        <button data-cat="roasted">焦糖与烘焙</button>
+        <button data-cat="fermented">酸与发酵</button>
+      </div>
+
+      <div class="diag">
+        <div class="zone" id="catName">果香 Fruity</div>
+        <div class="adv"><b>常用子类：</b><span id="catSubs">浆果（草莓、蓝莓）· 核果（桃、杏）· 柑橘（柠檬、橙）· 热带（芒果、菠萝）· 干果（葡萄干、枣）</span></div>
+        <div class="adv"><b>在家准备参照样本：</b><span id="catRefs">切开的新鲜水果本身就是参照样本。练法：泡一杯淡红茶，分别滴几滴柠檬汁与橙汁，记住两者「酸的形状」不同。</span></div>
+        <div class="adv"><b>最容易混淆：</b><span id="catConfuse">最常与「发酵」混淆：熟透的果香与轻微过发酵只隔一线，区别在于后者常伴随酒精感或醋酸的刺激。</span></div>
+      </div>
+    </div>
+  </div>
+
+  <p>练习的方法不是背词，而是<b>建立自己的参照库</b>：每次遇到一个你能确认的味道，就找一个实物把它钉住。三五个锚点建立起来之后，描述能力的增长会突然加速——因为新的词可以用「像 A 但更 B」的方式挂到已有锚点上。</p>
+</section>
+
+<!-- ============ 真实案例 ============ -->
+<section id="case">
+  <div class="sec-tag"><span class="cell" style="background:var(--sour)"></span><span class="lab">Case Study 真实案例</span></div>
+  <h2>风味轮的两个版本：从一个人的经验到一套可购买的样本</h2>
+  <div class="case">
+    <div class="case-head"><span class="cell"></span>1995 年版 → World Coffee Research Sensory Lexicon → 2016 年版</div>
+    <div class="case-body">
+      <p>咖啡风味轮不是一直长这样。它有过一次结构性的改版，而改版的理由恰好是本章的主题。</p>
+      <div class="stats">
+        <div class="stat"><div class="n g">1995</div><div class="l">早期版本基于行业专家的经验归纳</div></div>
+        <div class="stat"><div class="n g">2016</div><div class="l">新版由 SCA 与 World Coffee Research 合作发布</div></div>
+        <div class="stat"><div class="n g">参照样本</div><div class="l">新版背后是一份为每个描述词指定具体样本与强度刻度的词汇表</div></div>
+      </div>
+      <p>早期版本把行业内通行的描述词整理成图，好用，但每个词的含义仍依赖个人经验传承。2016 年的版本换了地基：它建立在一份由感官科学团队编制的词汇表之上，其中每个属性都对应<b>具体的参照物与强度评分</b>——评价者可以先尝参照样本，再用同一把尺子去描述咖啡。</p>
+      <p>这次改版的意义不在于「新词更准确」，而在于<b>可校准</b>：不同实验室、不同国家的评价者可以用同一批样本对齐。这也是把感官从「品味」变成「测量」的关键一步——与本书其他章节做的事情一致：先建立坐标系，再谈结论。</p>
+      <p>需要保留的怀疑是：参照样本本身带有文化与地域偏向（词表中的许多样本来自特定市场），不同语言的翻译也会引入偏移。所以本章给的练法是<b>建立你自己的参照库</b>，而不是背下某一版轮盘上的词。</p>
+      <div class="src">来源：SCA / World Coffee Research 2016 年版咖啡风味轮及配套的 WCR Sensory Lexicon；早期版本见 Ted Lingle 编制的咖啡风味轮（1995 年前后）。本章轮盘为教学用的六类简化，非官方版本。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 工具层 ============ -->
+<section id="tools">
+  <div class="sec-tag"><span class="cell" style="background:var(--neutral)"></span><span class="lab">Tooling Sidebar 工具层</span></div>
+  <div class="toolbox">
+    <div class="toolbox-head">
+      <span class="t">建立参照库的低成本做法（会过期，正文不依赖本区块）</span>
+      <span class="date">截至 2026-08</span>
+    </div>
+    <div class="toolbox-body">
+      <p><b>厨房里的参照样本</b>：柠檬汁、苹果醋、原味酸奶、无糖可可粉、原味坚果、蜂蜜、红糖、烤过头的吐司。这八样覆盖了本章六个大类里最常用的锚点，成本极低。</p>
+      <p><b>香气瓶套装</b>：市售的咖啡香气训练套装把常见描述词做成标准化香气瓶，优点是稳定、可反复使用；缺点是价格不低，且部分香气与真实食物有差距。作为进阶工具可以考虑，不是入门必需。</p>
+      <p><b>记录方式</b>：每次冲煮记三个词就够——入口、中段、尾韵各一个。比起写长段描述，固定三个位置更容易看出变化趋势。</p>
+      <p><b>官方资料</b>：风味轮与词汇表的现行版本以 SCA 与 World Coffee Research 的公开发布为准；两者都会随研究更新而修订。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Quiz ============ -->
+<section id="quiz">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Quiz 自测</span></div>
+  <h2>章末自测</h2>
+  <div class="quiz">
+
+    <details>
+      <summary><span class="qtype">概念题</span>为什么说风味轮要「由内向外」读？直接从最外圈挑词会有什么问题？</summary>
+      <div class="answer">
+        <p>因为每一层都对应一个你实际能做出的判断，而判断的可靠性由内向外递减。「这是果香类」几乎人人能判断；「这是浆果」需要一些经验；「这是蓝莓」需要参照样本支撑。由内向外，每一步都建立在上一步的确定性上。</p>
+        <p>直接从最外圈挑词的问题是<b>跳过了可验证的中间层</b>：你无法确认自己的判断是对是错，只能反复自我怀疑，或者干脆照抄包装上的词——后者会让描述失去信息量，因为它不再来自你的杯子。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">场景判断</span>朋友说「我完全喝不出蓝莓，是不是我舌头不行」。按本章的框架，你会建议他做什么？</summary>
+      <div class="answer">
+        <p>先降一层：问他能不能判断这是「果香类」还是「烘焙类」。多数人在大类上判断得很好，问题出在被要求直接命中最外层。</p>
+        <p>然后建参照：真的去尝一次蓝莓，紧接着喝那杯咖啡——不是为了「找到蓝莓」，而是为了知道自己在找什么形状的东西。很多时候会发现咖啡里的是「某种浆果的方向」，而具体是哪一种，本来就需要样本才能确定。</p>
+        <p>最后放下标准答案：包装上的词来自烘焙商的杯测，它反映了那批人在那个条件下的感受。它是<b>提示</b>，不是<b>考题</b>。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">思考题</span>为什么本书说「没有描述词，就没有诊断」？举一个把模糊描述翻译成可操作变量的例子。</summary>
+      <div class="answer">
+        <p>因为调参需要方向，而方向来自症状的定位。「不好喝」在控制图上没有位置，也不指向任何一个变量；能定位的描述才能映射到旋钮上。</p>
+        <p>例子：「这杯不好喝」→ 追问后变成「入口很酸、中段是空的、咽下去有点干」。三段分别对应：入口酸 = 萃取率偏低（<a href="1-1-dissolution-order.html">1.1 章</a>的曲线停在左侧）；中段空 = 甜感物质没跟上，同一个原因；尾韵干涩 = 均匀度问题（细粉过萃，<a href="1-4-espresso-pressure.html">1.4 章</a>）。</p>
+        <p>于是行动变得明确：先磨细一档把落点右移，如果酸和空改善但干涩加重，说明均匀度是瓶颈，转而处理研磨分布与手法。<b>描述词的精度，直接决定了你能做多细的诊断。</b></p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- nav:auto -->
+<nav class="next">
+  <a href="3-2-water-recipes.html">← 3.2 配水实践</a>
+  <a href="4-2-cupping.html">4.2 杯测方法 →</a>
+</nav>
+<!-- /nav:auto -->
+
+</div>
+
+<script src="../assets/theme.js"></script>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/lab-core.js"></script>
+<script src="../assets/labs/4-1-flavor-wheel.js"></script>
+</body>
+</html>

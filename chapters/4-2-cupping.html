@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4.2 杯测方法 · 咖啡风味科学手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/handbook.css">
+</head>
+<body>
+<button class="theme-toggle" type="button" aria-label="切换深色/浅色模式" title="切换深色/浅色模式">
+  <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+</button>
+
+<div class="wrap">
+
+<header class="ch">
+  <div class="dotrow" aria-hidden="true">
+    <i class="a"></i><i></i><i class="a"></i><i class="s"></i><i></i><i class="a"></i><i></i><i class="b"></i><i></i><i></i>
+  </div>
+  <div class="kicker"><a href="../index.html">咖啡风味科学手册</a> · Part 4 · Sensory 感官</div>
+  <h1>4.2 Cupping Protocol
+    <span class="zh">杯测方法：一个被折叠成流程的感官实验</span>
+  </h1>
+  <div class="meta">
+    <span>难度 <b>★★☆</b></span>
+    <span>阅读 + 玩 <b>~12 min</b></span>
+    <span>玄学祛魅指数 <b>中</b></span>
+    <span>前置 <b><a href="4-1-flavor-wheel.html">4.1 风味轮</a></b></span>
+  </div>
+</header>
+
+<!-- ============ 先猜一次 ============ -->
+<section id="guess">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Guess First 先猜一次</span></div>
+  <h2>凭直觉，别查</h2>
+  <p class="big">杯测为什么不用滤纸，而是让粉直接泡在碗里？</p>
+  <div class="guess" id="guessBox">
+    <div class="opts">
+      <button data-g="taste">这样风味更完整</button>
+      <button data-g="simple">因为简单省事</button>
+      <button data-g="control">为了把器具变量拿掉</button>
+    </div>
+    <div class="after">已记住你的选择。提示：杯测的目的不是「冲一杯好喝的」，而是「让几支豆子在同样条件下被比较」。</div>
+  </div>
+</section>
+
+<!-- ============ 核心概念 ============ -->
+<section id="concept">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Core Concept 核心概念</span></div>
+  <h2>它看起来像仪式，其实是实验设计</h2>
+  <p><span class="term" data-term="Cupping" data-zh="杯测" data-def="行业通用的咖啡感官评价流程：固定粉水比、研磨度、水温与时间，不使用滤纸，多杯重复并编号盲评，以便在受控条件下比较不同样品。">杯测</span>的每一个步骤——统一称粉、注水后静置、在固定时刻破渣、撇沫、每样品多杯、编号盲评——单独看都像行规，合起来看却是一份标准的<b>受控实验方案</b>。它要回答的问题很窄：<b>这几支豆子之间有没有差别，差在哪。</b></p>
+  <p>为了让这个问题有意义，方案必须把其他变量钉死。回忆 <a href="0-3-where-myths-come-from.html">0.3 章</a>的两团乱麻：壶里的变量耦合，和舌头上的感官偏差。杯测流程恰好一边治一个——</p>
+  <ul>
+    <li><b>治耦合</b>：统一粉水比与研磨、统一时间、统一水温；<b>不用滤纸</b>，因为滤纸与器具会引入流速、保留度等新变量。所有样品经历同一个物理过程。</li>
+    <li><b>治偏差</b>：多杯重复（区分意外与特征）、编号盲评（消除期望）、按温度序列品尝（让温度效应对所有样品一视同仁）。</li>
+  </ul>
+  <p data-diag="两支豆子对比不出结论，每次结果都不一样|比较时没有控制变量（时间跨度、期望、单杯偶然）|用杯测式对照：同粉水比同研磨、同时冲、每样至少两杯、编号盲评，再下结论">所以杯测的产出<b>不是「这豆子好喝」</b>，而是「在同样条件下，A 比 B 更酸、更甜、缺陷更少」。它是比较工具，不是享用方式——这也是杯测出来的味道常常和你在家冲的不一样的原因：它刻意放弃了器具带来的优化空间。</p>
+  <h3>为什么家里也值得用它的骨架</h3>
+  <p>你不必买杯测碗。真正可迁移的是三条纪律：<b>同时冲</b>（不是今天一支、明天一支）、<b>多杯重复</b>（至少两杯）、<b>编号盲评</b>（请人帮忙递杯）。这三条能挡掉家庭对比里最常见的三种错误结论，而成本几乎为零。</p>
+</section>
+
+<!-- ============ 交互实验 ============ -->
+<section id="lab">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Interactive Lab 交互实验</span></div>
+  <h2>点开每一步，看它锁住了哪个变量</h2>
+  <p>时间线上的六个节点是杯测流程的骨架。点击任意节点，看这一步控制什么、为什么需要它。上方三个预设演示「省掉这一步会发生什么」。默认选中第一步。</p>
+
+  <div class="lab" data-print-note="（在线版可点击流程节点；打印版展示默认场景：选中「① 统一称粉与研磨」）">
+    <div class="lab-head">
+      <span class="t">Cupping Protocol · 杯测流程</span>
+      <span class="presets">
+        <button data-p="skip=blind,step=blind">省掉盲评</button>
+        <button data-p="skip=replicate,step=replicate">省掉重复杯</button>
+        <button data-p="skip=break,step=break">省掉统一破渣</button>
+      </span>
+    </div>
+    <div class="lab-body">
+      <div class="chartbox">
+        <svg viewBox="0 0 640 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="杯测流程时间线：称量、注水、破渣、撇沫、重复、盲评">
+          <line x1="60" y1="55" x2="600" y2="55" stroke="var(--line)" stroke-width="3"/>
+          <circle id="n0" cx="60"  cy="55" r="17" fill="var(--accent)" fill-opacity="0.9"  stroke="var(--accent)" stroke-width="2"/>
+          <circle id="n1" cx="168" cy="55" r="17" fill="var(--accent)" fill-opacity="0.15" stroke="var(--accent)" stroke-width="2"/>
+          <circle id="n2" cx="276" cy="55" r="17" fill="var(--accent)" fill-opacity="0.15" stroke="var(--accent)" stroke-width="2"/>
+          <circle id="n3" cx="384" cy="55" r="17" fill="var(--accent)" fill-opacity="0.15" stroke="var(--accent)" stroke-width="2"/>
+          <circle id="n4" cx="492" cy="55" r="17" fill="var(--accent)" fill-opacity="0.15" stroke="var(--accent)" stroke-width="2"/>
+          <circle id="n5" cx="600" cy="55" r="17" fill="var(--accent)" fill-opacity="0.15" stroke="var(--accent)" stroke-width="2"/>
+          <text x="60"  y="60" text-anchor="middle" class="rl">①</text>
+          <text x="168" y="60" text-anchor="middle" class="rl">②</text>
+          <text x="276" y="60" text-anchor="middle" class="rl">③</text>
+          <text x="384" y="60" text-anchor="middle" class="rl">④</text>
+          <text x="492" y="60" text-anchor="middle" class="rl">⑤</text>
+          <text x="600" y="60" text-anchor="middle" class="rl">⑥</text>
+          <text x="60"  y="96" text-anchor="middle" class="zl">称量</text>
+          <text x="168" y="96" text-anchor="middle" class="zl">注水</text>
+          <text x="276" y="96" text-anchor="middle" class="zl">破渣</text>
+          <text x="384" y="96" text-anchor="middle" class="zl">撇沫</text>
+          <text x="492" y="96" text-anchor="middle" class="zl">重复</text>
+          <text x="600" y="96" text-anchor="middle" class="zl">盲评</text>
+          <text x="60"  y="122" text-anchor="middle" class="rl">治耦合 →</text>
+          <text x="546" y="122" text-anchor="middle" class="rl">→ 治感官偏差</text>
+        </svg>
+      </div>
+
+      <div class="picker">
+        <button data-step="dose">① 称量</button>
+        <button data-step="pour">② 注水</button>
+        <button data-step="break">③ 破渣</button>
+        <button data-step="skim">④ 撇沫</button>
+        <button data-step="replicate">⑤ 重复</button>
+        <button data-step="blind">⑥ 盲评</button>
+      </div>
+
+      <div class="diag">
+        <div class="zone" id="stepName">① 统一称粉与研磨</div>
+        <div class="adv"><b>锁住的变量：</b><span id="stepControls">粉水比与研磨度——也就是萃取率的两个主要输入。</span></div>
+        <div class="adv"><b>为什么需要：</b><span id="stepWhy">如果每杯的粉重或研磨不同，杯与杯的差异里混进了冲煮差异，而你想比较的是豆子。</span></div>
+      </div>
+      <div class="tds" id="skipOut" style="display:none;text-align:left;margin-top:14px"></div>
+    </div>
+  </div>
+
+  <p>三个「省掉」预设有个共同点：<b>省掉之后，实验仍然能跑完，仍然会产出一张评分表。</b>失去的不是数据，而是数据的含义——你不再知道差异来自豆子还是来自流程。这正是 <a href="0-3-where-myths-come-from.html">0.3 章</a>说的：没有控制的对比，会稳定地生产出自信的错误结论。</p>
+</section>
+
+<!-- ============ 真实案例 ============ -->
+<section id="case">
+  <div class="sec-tag"><span class="cell" style="background:var(--sour)"></span><span class="lab">Case Study 真实案例</span></div>
+  <h2>为什么行业要花力气「校准人」</h2>
+  <div class="case">
+    <div class="case-head"><span class="cell"></span>SCA 杯测协议与 Q Grader 认证体系</div>
+    <div class="case-body">
+      <p>把流程标准化只解决了一半问题：即使所有杯子都一样，两个评价者给出的分数仍然可能不同。行业的应对方式是<b>把评价者本身也纳入校准</b>。</p>
+      <div class="stats">
+        <div class="stat"><div class="n g">统一协议</div><div class="l">粉水比、水温、时间、破渣时刻均有明确规定</div></div>
+        <div class="stat"><div class="n g">评分表</div><div class="l">把整体印象拆成香气、酸质、醇厚度、余韵等分项</div></div>
+        <div class="stat"><div class="n g">定期续证</div><div class="l">资格有有效期（现行为三年、以持续进修续期），并非终身</div></div>
+      </div>
+      <p>三件事对应三种误差。<b>统一协议</b>压掉样品之间的物理差异；<b>分项评分表</b>把「好喝」拆成若干可分别判断的维度，减少整体印象的笼统性（这也是 <a href="4-1-flavor-wheel.html">4.1 章</a>描述词坐标系的作用）；<b>定期续证</b>针对的是漂移——人的判断标准会随时间、环境和最近尝过什么而移动，所以资格不能一次拿到、终身有效。</p>
+      <p>最后一条最值得普通读者借鉴：<b>评价标准会漂移，这是常态而不是失格。</b>所以专业体系给资格设有效期、要求持续进修，而不是假设「专家一次成型」。放到家里，对应的做法是保留一支熟悉的「参照豆」，隔段时间冲一次——它测的不是豆子，是你。</p>
+      <p>需要说明边界：杯测评分体系服务于交易与质量控制，它衡量的是「在这套标准下的表现」。一支在杯测桌上得分平平的豆子，在你偏好的冲煮方式下未必不好喝——分数是坐标，不是审判。</p>
+      <div class="src">来源：SCA（原 SCAA）杯测协议与 Coffee Value Assessment（CVA）评分体系（新版 Q Grader 课程以 CVA 取代了 SCA 旧版杯测表）；Q Grader 认证（2025 年 10 月起由 SCA 接手 CQI 运营，执照每三年以持续进修续期）。协议的具体参数（粉水比、水温、时间）与认证规则以现行官方文件为准，本书正文不依赖具体数值。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 工具层 ============ -->
+<section id="tools">
+  <div class="sec-tag"><span class="cell" style="background:var(--neutral)"></span><span class="lab">Tooling Sidebar 工具层</span></div>
+  <div class="toolbox">
+    <div class="toolbox-head">
+      <span class="t">在家做简化杯测（会过期，正文不依赖本区块）</span>
+      <span class="date">截至 2026-08</span>
+    </div>
+    <div class="toolbox-body">
+      <p><b>常见协议参数</b>：行业协议中常见的设定是每 150 mL 水配约 8.25 g 咖啡（约 1:18）、水温约 93 °C、注水后静置 4 分钟破渣、随后撇沫，并在液体降温过程中分几个温度段评价。具体数值以现行官方文件为准。</p>
+      <p><b>家用替代</b>：任何一组同款的玻璃杯或碗都可以，容量一致即可；勺子用普通汤匙。关键不是器皿，而是「每杯一样」。</p>
+      <p><b>秤与计时</b>：0.1 g 精度的秤、任意计时器。粉重的一致性比具体数值更重要。</p>
+      <p><b>盲评的最低成本做法</b>：让家人把杯子编号并打乱，你只拿到编号；或者自己编号后离开房间几分钟，回来时已分不清顺序。别小看这一步——它挡掉的偏移量往往大于你调半天参数带来的差异。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Quiz ============ -->
+<section id="quiz">
+  <div class="sec-tag"><span class="cell"></span><span class="lab">Quiz 自测</span></div>
+  <h2>章末自测</h2>
+  <div class="quiz">
+
+    <details>
+      <summary><span class="qtype">概念题</span>杯测不用滤纸，是因为「不过滤更能尝到全部风味」吗？</summary>
+      <div class="answer">
+        <p>不是，或者说这不是主要理由。杯测的目的是<b>比较样品</b>，任何器具（滤纸、滤杯形状、流速）都会引入新的变量，而且不同器具对不同豆子的影响并不相同——那样比较的就不再是豆子。</p>
+        <p>不用滤纸的做法把所有样品放进同一个极简的浸泡过程：同样的粉水比、同样的时间、同样的静置状态。代价是杯感与你在家冲的不同（悬浮细粉更多、油脂保留更多），但这不是缺点，因为杯测本来就不追求「最好喝的那一杯」。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">场景判断</span>你想比较两支豆子。手头只有一套手冲装备和两个杯子。列出你会采取的三条纪律，并说明各自挡掉了什么错误。</summary>
+      <div class="answer">
+        <p><b>一、同时冲、同参数。</b>同一天、同一壶水、同一研磨设定、同粉水比。挡掉的是时间跨度带来的干扰——不同天的水、心情与豆子状态都不同（<a href="3-1-minerals.html">3.1 章</a>的水就是典型的隐藏变量）。</p>
+        <p><b>二、每支至少两杯。</b>挡掉单杯的偶然：一次注水失误、一颗缺陷豆都会让结论反转，而你察觉不到。</p>
+        <p><b>三、编号盲评。</b>请人打乱并编号，或自己编号后离开一会儿。挡掉期望效应——尤其当两支豆子的价格或名气差距明显时。</p>
+        <p>做到这三条，剩下的差异才有资格被称为「豆子的差异」。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qtype">思考题</span>为什么专业评价者的资格要「定期续证」，而不是一次认证终身有效？这对个人爱好者意味着什么？</summary>
+      <div class="answer">
+        <p>因为人的评价标准会漂移：最近常喝的豆子会重设你的参照点，环境、身体状态、甚至上一杯尝的东西都会影响判断（顺序效应）。认证体系因此给资格设有效期、要求持续进修才能续期，而不是假设一次培训终身有效。</p>
+        <p>对个人爱好者，可迁移的做法是保留一支<b>参照豆</b>：熟悉、稳定、常备，隔一段时间用固定参数冲一次。如果它突然「变了」，先怀疑的不该是豆子，而是你的仪器状态、水源或器具——这是一次对<b>自己</b>的校准。</p>
+        <p>这与本书反复出现的方法一致：<a href="0-1-four-layers.html">0.1 章</a>用参照豆定位责任层，<a href="3-2-water-recipes.html">3.2 章</a>用自配水固定水质，这里用参照豆校准感官。<b>都是先把一个变量钉死，再去观察其余。</b></p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- nav:auto -->
+<nav class="next">
+  <a href="4-1-flavor-wheel.html">← 4.1 风味轮与描述词校准</a>
+  <a href="4-3-sensory-bias.html">4.3 味觉这台仪器的系统误差 →</a>
+</nav>
+<!-- /nav:auto -->
+
+</div>
+
+<script src="../assets/theme.js"></script>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/lab-core.js"></script>
+<script src="../assets/labs/4-2-cupping.js"></script>
+</body>
+</html>
